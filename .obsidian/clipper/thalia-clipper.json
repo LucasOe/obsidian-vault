@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Thalia",
+	"behavior": "create",
+	"noteContentFormat": "# Summary\n\n{{schema:@Book:description|markdown}}",
+	"properties": [
+		{
+			"name": "author",
+			"value": "{{schema:@Book:author[0].name|markdown|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "pages",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Seitenzahl)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first}}",
+			"type": "number"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:\\\"YYYY\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image|first}}",
+			"type": "text"
+		},
+		{
+			"name": "language",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Sprache)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:\\\"Deutsch\\\":\\\"German\\\",\\\"Englisch\\\":\\\"English\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "Unread",
+			"type": "multitext"
+		},
+		{
+			"name": "format",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Einband)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:\\\"Taschenbuch\\\":\\\"Paperback\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "lists",
+			"value": "{{selector:.serie-link|replace:\\\"/Band [0-9]/\\\":\\\"\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "book",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.thalia.de/"
+	],
+	"noteNameFormat": "{{schema:@Book:name|replace:\": \":\" - \"}}",
+	"path": "Objects/Books"
+}

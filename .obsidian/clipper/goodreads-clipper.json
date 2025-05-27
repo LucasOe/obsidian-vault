@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Goodreads",
+	"behavior": "create",
+	"noteContentFormat": "# Summary\n\n{{selector:.BookPageMetadataSection__description .Formatted|markdown}}",
+	"properties": [
+		{
+			"name": "author",
+			"value": "{{schema:author[*].name|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|replace:\\\"Audiobook\\\":\\\"\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "pages",
+			"value": "{{schema:numberOfPages}}",
+			"type": "number"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"Published \\\"|last|date:\\\"YYYY\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "language",
+			"value": "{{schema:inLanguage}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "status",
+			"value": "Unread",
+			"type": "multitext"
+		},
+		{
+			"name": "format",
+			"value": "{{schema:bookFormat|split:\\\"/\\\"|last|replace:\\\"Audible Audio\\\":\\\"Audiobook\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "lists",
+			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:[\\(\\)#]|first|trim|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "book",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com/book/"
+	],
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1.Text__title1|replace:\": \":\" - \"}}",
+	"path": "Objects/Books"
+}

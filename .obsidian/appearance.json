@@ -1,0 +1,26 @@
+{
+  "cssTheme": "AnuPpuccin",
+  "translucency": false,
+  "baseFontSizeAction": false,
+  "monospaceFontFamily": "Roboto Mono",
+  "textFontFamily": "Roboto",
+  "interfaceFontFamily": "Roboto",
+  "enabledCssSnippets": [
+    "border",
+    "custom-rainbow-colors",
+    "callout-chatgpt",
+    "better-command-palette",
+    "excalidraw",
+    "extended-colorschemes",
+    "anuppuccin",
+    "css-classes",
+    "cssclasses",
+    "fonts"
+  ],
+  "accentColor": "",
+  "showViewHeader": false,
+  "nativeMenus": false,
+  "baseFontSize": 18,
+  "showRibbon": false,
+  "theme": "system"
+}

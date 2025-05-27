@@ -1,0 +1,50 @@
+.theme-dark {
+	--shadow-s: transparent;
+	--shadow-l: transparent;
+	
+	/* --metadata-input-font: var(--font-text-override); */
+}
+
+.workspace-split:not(.mod-sidedock) .workspace-tab-header-container {
+	padding-left: 0px;
+	
+    .workspace-tab-header-container-inner {
+		padding: 0px 5px;
+		
+		.workspace-tab-header {
+			padding: 0px;
+		}
+	}
+	
+	.workspace-tab-header-new-tab {
+		padding: 5px;
+	}
+}
+
+/* Hide Mobile Navbar */
+.mobile-navbar {
+	display: none;
+}
+
+/* Fix icon color on mobile */
+.clickable-icon {
+	--icon-color: var(--tx2);
+	--icon-color-hover: var(--tx2);
+	--icon-color-active: var(--tx1);
+	--icon-color-focus: var(--tx1);
+}
+
+/* Property Pills */
+.multi-select-pill {
+	background-color: var(--color-base-30);
+	padding: 0px 8px;
+	
+	&:hover {
+		background-color: var(--color-base-30);
+	}
+}
+
+/* Change table background to header color */
+.bases-thead, .bases-tbody {
+	background-color: var(--bases-table-header-background);
+}

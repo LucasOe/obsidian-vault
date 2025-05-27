@@ -1,0 +1,13 @@
+body {
+	--prompt-max-height: 40vh;
+}
+.prompt {
+	top: 20vh;
+}
+.better-command-palette-title,
+.hidden-items-header {
+	display: none;
+}
+.prompt-instructions {
+	border-color: rgba(var(--mono-rgb-100), 0.05);
+}

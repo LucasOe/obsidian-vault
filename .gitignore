@@ -1,0 +1,30 @@
+# Ignore everything
+*
+
+# Except
+!.obsidian
+!.obsidian/**
+!.gitignore
+!Objects
+!objects/*
+!Templates
+!Templates/**
+
+# Obsidian
+.obsidian/icons
+.obsidian/plugins/**
+.obsidian/themes
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/core-plugins-migration.json
+
+# Obsidian Plugin Settings
+!.obsidian/plugins/*
+!.obsidian/plugins/*/data.json
+
+# LanguageTool API Key
+.obsidian/plugins/languagetool
+
+# System
+.trash/
+.DS_Store

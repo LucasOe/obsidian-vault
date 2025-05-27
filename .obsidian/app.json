@@ -1,0 +1,43 @@
+{
+  "foldHeading": true,
+  "spellcheck": false,
+  "spellcheckLanguages": null,
+  "readableLineLength": true,
+  "strictLineBreaks": false,
+  "showFrontmatter": false,
+  "foldIndent": true,
+  "showLineNumber": false,
+  "showIndentGuide": false,
+  "showInlineTitle": true,
+  "useTab": true,
+  "smartIndentList": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  },
+  "promptDelete": false,
+  "propertiesInDocument": "visible",
+  "alwaysUpdateLinks": true,
+  "autoPairMarkdown": false,
+  "livePreview": true,
+  "autoPairBrackets": false,
+  "focusNewTab": true,
+  "mobileQuickRibbonItem": "graph:Open graph view",
+  "mobileToolbarCommands": [
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:toggle-strikethrough",
+    "editor:toggle-bullet-list",
+    "editor:toggle-numbered-list",
+    "editor:cycle-list-checklist",
+    "editor:insert-link"
+  ],
+  "mobilePullAction": "editor:save-file",
+  "defaultViewMode": "source",
+  "userIgnoreFilters": [
+    "Templates/"
+  ]
+}

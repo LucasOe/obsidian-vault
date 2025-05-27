@@ -1,0 +1,98 @@
+filters:
+  and:
+    - contains(property.tags, "book")
+display:
+  file.name: Name
+  property.status: Status
+  property.author: Author
+  property.year: Year
+  property.format: Format
+  property.genres: Genres
+  property.lists: Lists
+  property.date: Finished
+views:
+  - type: table
+    name: Currently Reading
+    filters:
+      and:
+        - contains(property.status, "Reading")
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+      - lists
+    columnSize:
+      property.status: 150
+      file.name: 300
+      property.author: 220
+      property.year: 65
+      property.format: 220
+      property.lists: 220
+  - type: table
+    name: Completed
+    filters:
+      and:
+        - contains(property.status, "Completed")
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+      - lists
+      - date
+    sort:
+      - column: property.date
+        direction: DESC
+    columnSize:
+      property.status: 150
+      file.name: 300
+      property.author: 220
+      property.year: 65
+      property.format: 220
+      property.lists: 220
+      property.date: 140
+  - type: table
+    name: Unread
+    filters:
+      or:
+        - contains(property.status, "Unread")
+        - empty(property.status)
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+      - lists
+    sort:
+      - column: property.date
+        direction: DESC
+    columnSize:
+      property.status: 150
+      file.name: 300
+      property.author: 220
+      property.year: 65
+      property.format: 220
+      property.lists: 220
+  - type: table
+    name: Dropped
+    filters:
+      and:
+        - contains(property.status, "Dropped")
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+      - lists
+    columnSize:
+      property.status: 150
+      file.name: 300
+      property.author: 220
+      property.year: 65
+      property.format: 220
+      property.lists: 220

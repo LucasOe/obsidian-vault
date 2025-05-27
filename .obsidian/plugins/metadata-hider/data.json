@@ -1,0 +1,45 @@
+{
+  "autoFold": false,
+  "hideEmptyEntry": false,
+  "hideEmptyEntryInSideDock": false,
+  "propertiesVisible": "",
+  "propertyHideAll": "",
+  "entries": [
+    {
+      "name": "cssclasses",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    },
+    {
+      "name": "tags",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    },
+    {
+      "name": "isbn",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    },
+    {
+      "name": "cover",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": false,
+        "allProperties": false
+      }
+    }
+  ]
+}

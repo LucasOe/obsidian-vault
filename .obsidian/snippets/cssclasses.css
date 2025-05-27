@@ -1,0 +1,8 @@
+.view-content .wide {
+    --file-line-width: 100%;
+}
+
+.hide-metadata {
+    --metadata-display-editing: none;
+    --metadata-display-reading: none;
+}

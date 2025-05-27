@@ -1,0 +1,146 @@
+/* Excalidraw overwrites these variables
+ * https://minimal.guide/plugins/style-settings
+ */
+.theme-dark {
+	--theme-bg1: var(--bg1, var(--color-base-10));
+	--theme-bg2: var(--bg2, var(--color-base-00));
+	--theme-bg3: var(--bg3, var(--color-base-20));
+	--theme-tx1: var(--tx1, var(--text-normal));
+	--theme-tx2: var(--tx2, var(--text-muted));
+	--theme-ui1: var(--ui1, var(--color-base-20));
+	--theme-ax1: var(--ax1, var(--color-accent));
+	--theme-ax2: var(--ax2, var(--color-accent));
+	--theme-ax3: var(--ax3, var(--color-accent));
+}
+
+.excalidraw {
+	--button-active-bg: var(--theme-bg3) !important;
+	--button-hover-bg: var(--theme-bg3) !important;
+	--color-brand-active: unset !important;
+	--color-gray-50: var(--theme-bg1) !important;
+	--color-gray-70: var(--theme-tx2) !important;
+	--color-on-primary-container: var(--theme-tx1) !important;
+	--color-on-surface: var(--theme-tx2) !important;
+	--color-primary: var(--theme-ax1) !important;
+	--color-promo: var(--theme-ax1) !important;
+	--color-surface-high: var(--theme-bg3) !important;
+	--color-surface-low: var(--theme-bg3) !important;
+	--color-surface-lowest: var(--theme-bg1) !important;
+	--color-surface-mid: var(--theme-bg3) !important;
+	--color-surface-primary-container: var(--theme-ax1) !important;
+	--default-bg-color: var(--theme-bg1) !important;
+	--default-border-color: var(--theme-ui1) !important;
+	--icon-fill-color: var(--theme-tx1) !important;
+	--island-bg-color: var(--theme-bg1) !important;
+	--keybinding-color: var(--theme-tx2) !important;
+	--popup-secondary-bg-color: var(--background-secondary) !important;
+	--popup-text-color: var(--theme-tx1) !important;
+	--sidebar-bg-color: var(--theme-bg2) !important;
+	--sidebar-border-color: var(--theme-ui1) !important;
+	--text-primary-color: var(--theme-tx1) !important;
+	--button-gray-2: var(--theme-ax1) !important;
+	--button-selected-bg: var(--theme-ax1) !important;
+	--button-selected-border: transparent !important;
+	color: var(--theme-tx1) !important;
+}
+
+/* Consistent Context Menu */
+.excalidraw .context-menu {
+	padding: var(--size-2-3);
+	/* border: 1px solid var(--background-modifier-border-hover); */
+	border-radius: var(--radius-m);
+	box-shadow: var(--shadow-s);
+}
+.excalidraw .context-menu button:hover {
+	background-color: var(--background-modifier-hover);
+}
+.excalidraw .context-menu button {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-2);
+	/* padding: var(--size-4-1) var(--size-4-2); */
+	cursor: var(--cursor);
+	font-size: var(--font-ui-small);
+	border-radius: var(--radius-s);
+	white-space: nowrap;
+
+	line-height: var(--line-height-tight);
+	height: unset;
+}
+.context-menu-item-separator {
+	height: 0 !important;
+	margin: var(--size-2-3) calc(var(--size-2-3) * -1) !important;
+	border-top: 1px solid var(--background-modifier-border) !important;
+}
+
+/* Consistent Tray Menu Button Size */
+.excalidraw .ToolIcon__icon:empty {
+	display: none;
+}
+.excalidraw .dropdown-menu--mobile {
+	width: unset !important;
+}
+.excalidraw .ToolIcon__icon,
+.excalidraw .dropdown-menu-button,
+.excalidraw .App-toolbar-container .ToolIcon__icon {
+	height: var(--default-button-size);
+	width: var(--default-button-size);
+}
+.excalidraw .tray-zoom,
+.Island > .Stack > .Stack,
+.excalidraw .App-toolbar-content {
+	padding: 0 !important;
+}
+.excalidraw .tray-zoom {
+	height: var(--default-button-size);
+}
+.excalidraw .ToolIcon_type_button {
+	height: 100%;
+}
+.excalidraw .App-bottom-bar .Island {
+	--padding: 0 !important;
+	padding: 6px !important;
+}
+.excalidraw .reset-zoom-button {
+	padding: 0 0 !important;
+	width: unset !important;
+}
+.excalidraw .App-toolbar-content {
+	gap: 3px;
+}
+.excalidraw .eraser-buttons,
+.excalidraw .finalize-button,
+.excalidraw .undo-redo-buttons {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* Miscellaneous */
+.excalidraw .mobile-misc-tools-container .sidebar-trigger {
+	border-radius: 0px;
+}
+.excalidraw .help-icon {
+	display: none;
+}
+.excalidraw .dropdown-menu-button:hover {
+	--background: var(--button-hover-bg) !important;
+}
+.excalidraw .popover {
+	box-shadow: none !important;
+}
+.excalidraw .sidebar-tab-trigger[data-state="active"] {
+	--icon-fill-color: var(--theme-bg1) !important;
+}
+.excalidraw .App-menu__left {
+	margin-top: 3px;
+}
+.excalidraw .sidebar-trigger {
+	height: var(--default-button-size);
+	width: var(--default-button-size);
+}
+.excalidraw .layer-ui__wrapper__top-right {
+	gap: 3px;
+}
+.excalidraw .layer-ui__wrapper__top-right .ToolIcon__icon {
+	background-color: var(--theme-bg3);
+}

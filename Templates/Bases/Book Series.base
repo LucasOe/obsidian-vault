@@ -1,0 +1,22 @@
+filters:
+  and:
+    - contains(property.tags, "book")
+    - contains(concat(property.lists), this.file.name)
+views:
+  - type: table
+    name: Series
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+    columnSize:
+      property.status: 150
+      file.name: 300
+      property.author: 300
+      property.year: 100
+      property.format: 300
+    sort:
+      - column: property.year
+        direction: ASC
