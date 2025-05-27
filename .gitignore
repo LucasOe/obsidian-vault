@@ -5,10 +5,15 @@
 !.obsidian
 !.obsidian/**
 !.gitignore
+# Objects
 !Objects
 !objects/*
+# Templates
 !Templates
 !Templates/**
+# 00 - Home
+!00\ -\ Home
+!00\ -\ Home/**
 
 # Obsidian
 .obsidian/icons
