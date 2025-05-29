@@ -31,6 +31,9 @@
     "00 - Home/Movies.md": {
       "icon": "lucide-clapperboard"
     },
+    "00 - Home/TV Shows.md": {
+      "icon": "lucide-film"
+    },
     "01 - Notes": {
       "icon": "lucide-clipboard-pen"
     },

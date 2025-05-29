@@ -33,14 +33,15 @@ views:
       file.name: 300
       property.director: 220
       property.year: 65
-      property.format: 220
-      property.lists: 220
+      property.site: 300
+      property.lists: 300
       property.date: 140
   - type: table
-    name: Unread
+    name: To Watch
     filters:
       or:
-        - contains(property.status, "Unwatched")
+        - contains(property.status, "To Watch")
+        - contains(property.status, "To Read")
         - empty(property.status)
     order:
       - status
@@ -48,6 +49,7 @@ views:
       - year
       - site
       - lists
+    limit: 10
     sort:
       - column: property.date
         direction: DESC
@@ -56,5 +58,5 @@ views:
       file.name: 300
       property.director: 220
       property.year: 65
-      property.format: 220
-      property.lists: 220
+      property.site: 300
+      property.lists: 300

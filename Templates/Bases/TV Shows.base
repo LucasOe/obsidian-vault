@@ -1,37 +1,41 @@
 filters:
   and:
-    - contains(property.tags, "book")
+    - contains(property.tags, "tv-series")
     - file.folder != "Templates"
+formulas:
+  progress_percent: watched-episodes / total-episodes
+  progress_bar: concat(if(formula.progress_percent > 0, slice("⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤", 0, formula.progress_percent * 10), ""), if(formula.progress_percent < 1, slice("○○○○○○○○○○", 0, 11 - formula.progress_percent * 10), ""))
+  progress_text: concat(if(formula.progress_percent > 0, round(formula.progress_percent * 100), "0"), "%")
+  progress: concat(concat(formula.progress_bar, " "), formula.progress_text)
 display:
   file.name: Name
   property.status: Status
-  property.author: Author
+  property.director: Director
   property.year: Year
-  property.format: Format
   property.genres: Genres
-  property.lists: Series
+  property.site: Site
   property.date: Finished
+  formula.progress: Progress
 views:
   - type: table
-    name: Reading
+    name: Watching
     filters:
       or:
-        - contains(property.status, "Reading")
         - contains(property.status, "Watching")
+        - contains(property.status, "Reading")
     order:
       - status
       - file.name
-      - author
       - year
-      - format
-      - lists
+      - site
+      - formula.progress
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 220
+      property.director: 220
       property.year: 65
-      property.format: 220
-      property.lists: 220
+      property.site: 600
+      formula.progress: 300
   - type: table
     name: Completed
     filters:
@@ -40,10 +44,8 @@ views:
     order:
       - status
       - file.name
-      - author
       - year
-      - format
-      - lists
+      - site
       - date
     limit: 100
     sort:
@@ -52,25 +54,22 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 220
+      property.director: 220
       property.year: 65
-      property.format: 220
-      property.lists: 220
+      property.site: 600
       property.date: 140
   - type: table
-    name: To Read
+    name: To Watch
     filters:
       or:
-        - contains(property.status, "To Read")
         - contains(property.status, "To Watch")
+        - contains(property.status, "To Read")
         - empty(property.status)
     order:
       - status
       - file.name
-      - author
       - year
-      - format
-      - lists
+      - site
     limit: 10
     sort:
       - column: property.date
@@ -78,26 +77,6 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 220
+      property.director: 220
       property.year: 65
-      property.format: 220
-      property.lists: 220
-  - type: table
-    name: Dropped
-    filters:
-      and:
-        - contains(property.status, "Dropped")
-    order:
-      - status
-      - file.name
-      - author
-      - year
-      - format
-      - lists
-    columnSize:
-      property.status: 150
-      file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
+      property.site: 600

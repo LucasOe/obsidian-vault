@@ -5,7 +5,7 @@ cssclasses:
 ---
 
 > [!clapperboard|green] Watch Next
-> ![[Movies.base#Unread]]
+> ![[Movies.base#To Watch]]
 
 > [!library|purple]- Series
 > ![[Movie Series.base#Series]]
