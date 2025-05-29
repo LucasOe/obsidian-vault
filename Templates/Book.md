@@ -1,5 +1,5 @@
 ---
-author: []
+author:
 genres:
 pages:
 year:

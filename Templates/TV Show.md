@@ -3,11 +3,12 @@ director:
 genres:
 year:
 cover:
-lists:
 site:
 status:
+total-episodes:
+watched-episodes:
 date:
 tags:
-  - movie
+  - tv-series
 ---
 # Summary
