@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "IMDB Movie",
+	"behavior": "create",
+	"noteContentFormat": "# Summary\n\n{{schema:description}}",
+	"properties": [
+		{
+			"name": "director",
+			"value": "{{schema:director[*].name|wikilink|join}}{{schema:creator[*].name|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "{{schema:genre|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+			"type": "date"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "lists",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "site",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "movie",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"schema:@Movie"
+	],
+	"noteNameFormat": "{{schema:name}}",
+	"path": "Objects/Movies"
+}

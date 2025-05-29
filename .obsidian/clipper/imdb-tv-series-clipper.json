@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "IMDB TV Series",
+	"behavior": "create",
+	"noteContentFormat": "# Summary\n\n{{schema:description}}",
+	"properties": [
+		{
+			"name": "director",
+			"value": "{{schema:director[*].name|wikilink|join}}{{schema:creator[*].name|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "{{schema:genre|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+			"type": "date"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "site",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "total-episodes",
+			"value": "{{selector:.ipc-title[data-testid=\\\"episodes-header\\\"] .ipc-title__subtext}}",
+			"type": "text"
+		},
+		{
+			"name": "watched-episodes",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "tv-series",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"schema:@TVSeries"
+	],
+	"noteNameFormat": "{{schema:name}}",
+	"path": "Objects/TV Series"
+}

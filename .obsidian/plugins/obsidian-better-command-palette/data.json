@@ -92,7 +92,8 @@
     "iconic:toggle-all-folder-icons",
     "iconic:toggle-minimal.folder-icons",
     "iconic:toggle-bigger-search-results",
-    "iconic:change-icon-current-file"
+    "iconic:change-icon-current-file",
+    "obsidian-style-settings:show-style-settings-leaf"
   ],
   "hiddenFiles": [],
   "hiddenTags": [],

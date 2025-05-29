@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "year",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:\\\"YYYY\\\"}}",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:(\\\"YYYY\\\", \\\"DD.MM.YYYY\\\")}}",
 			"type": "date"
 		},
 		{
@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "language",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Sprache)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:\\\"Deutsch\\\":\\\"German\\\",\\\"Englisch\\\":\\\"English\\\"}}",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Sprache)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Deutsch\\\":\\\"German\\\",\\\"Englisch\\\":\\\"English\\\")}}",
 			"type": "text"
 		},
 		{
@@ -40,18 +40,18 @@
 			"type": "text"
 		},
 		{
-			"name": "status",
-			"value": "Unread",
-			"type": "multitext"
-		},
-		{
 			"name": "format",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Einband)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:\\\"Taschenbuch\\\":\\\"Paperback\\\"}}",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Einband)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Taschenbuch\\\":\\\"Paperback\\\",\\\"Gebundene Ausgabe\\\":\\\"Hardcover\\\")}}",
 			"type": "multitext"
 		},
 		{
 			"name": "lists",
-			"value": "{{selector:.serie-link|replace:\\\"/Band [0-9]/\\\":\\\"\\\"}}",
+			"value": "{{selector:.serie-link|replace:\\\"/Band [0-9]/\\\":\\\"\\\"|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
 			"type": "multitext"
 		},
 		{

@@ -28,14 +28,20 @@
     "00 - Home/Books.md": {
       "icon": "lucide-book"
     },
+    "00 - Home/Movies.md": {
+      "icon": "lucide-clapperboard"
+    },
     "01 - Notes": {
       "icon": "lucide-clipboard-pen"
     },
     "01 - Notes/Code": {
       "icon": "lucide-code-xml"
     },
-    "03 - Excalidraw": {
+    "02 - Excalidraw": {
       "icon": "lucide-pen-tool"
+    },
+    "03 - Knowledge": {
+      "icon": "lucide-brain"
     },
     "Objects": {
       "icon": "lucide-package"
@@ -45,12 +51,6 @@
     },
     "Templates/Bases": {
       "icon": "lucide-database"
-    },
-    "Templates/Bases/Book Series.base": {
-      "icon": "lucide-book-copy"
-    },
-    "Templates/Bases/Books.base": {
-      "icon": "lucide-book"
     }
   },
   "bookmarkIcons": {},

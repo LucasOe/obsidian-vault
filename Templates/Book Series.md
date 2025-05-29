@@ -1,8 +1,10 @@
 ---
 cssclasses:
-  - wide
-  - hide-metadata
+  - max
 tags:
   - book-series
+author: []
 ---
-![[Book Series.base]]
+
+> [!book] Entries
+> ![[Book Series.base#Entries]]

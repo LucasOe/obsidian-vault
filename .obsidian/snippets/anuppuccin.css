@@ -48,3 +48,13 @@
 .bases-thead, .bases-tbody {
 	background-color: var(--bases-table-header-background);
 }
+
+/* Fix Bookmark icon color */
+.view-action.mod-bookmarked {
+	--icon-color: var(--text-normal);
+}
+
+/* Folder Notes Plugin */
+.folder-note-underline .has-folder-note .nav-folder-title-content {
+	text-decoration-color: unset;
+}

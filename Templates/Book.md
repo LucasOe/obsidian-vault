@@ -1,15 +1,15 @@
 ---
-author:
+author: []
 genres:
 pages:
 year:
 cover:
 language:
 isbn:
-status:
 format:
   - Paperback
 lists:
+status:
 date:
 tags:
   - book

@@ -1,11 +1,14 @@
 ---
 cssclasses:
-  - wide
+  - max
   - hide-metadata
 ---
 
-> [!note] Currently Reading
+> [!book|green] Currently Reading
 > ![[Books.base#Currently Reading]]
 
-> [!example] Reading History
+> [!library|purple]- Series
+> ![[Book Series.base#Series]]
+
+> [!list]+ Reading History
 > ![[Books.base#Completed]]

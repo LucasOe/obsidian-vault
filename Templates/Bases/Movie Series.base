@@ -4,42 +4,42 @@ filters:
 display:
   file.name: Name
   property.status: Status
-  property.author: Author
+  property.director: Director
   property.year: Year
-  property.format: Format
   property.genres: Genres
   property.lists: Lists
+  property.site: Site
   property.date: Finished
 views:
   - type: table
     name: Series
     filters:
       and:
-        - contains(property.tags, "book-series")
+        - contains(property.tags, "movie-series")
         - file.folder != "Templates"
     order:
       - file.name
-      - author
+      - director
     limit: 100
     columnSize:
       file.name: 730
-      property.author: 300
+      property.director: 300
   - type: table
     name: Entries
     filters:
       and:
-        - contains(property.tags, "book")
+        - contains(property.tags, "movie")
         - contains(concat(property.lists), this.file.name)
     order:
       - status
       - file.name
-      - author
+      - director
       - year
       - format
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 300
+      property.director: 300
       property.year: 100
       property.format: 300
     sort:

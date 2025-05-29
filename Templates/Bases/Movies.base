@@ -1,36 +1,17 @@
 filters:
   and:
-    - contains(property.tags, "book")
+    - contains(property.tags, "movie")
     - file.folder != "Templates"
 display:
   file.name: Name
   property.status: Status
-  property.author: Author
+  property.director: Director
   property.year: Year
-  property.format: Format
   property.genres: Genres
   property.lists: Lists
+  property.site: Site
   property.date: Finished
 views:
-  - type: table
-    name: Currently Reading
-    filters:
-      and:
-        - contains(property.status, "Reading")
-    order:
-      - status
-      - file.name
-      - author
-      - year
-      - format
-      - lists
-    columnSize:
-      property.status: 150
-      file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
   - type: table
     name: Completed
     filters:
@@ -39,9 +20,8 @@ views:
     order:
       - status
       - file.name
-      - author
       - year
-      - format
+      - site
       - lists
       - date
     limit: 100
@@ -51,7 +31,7 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 220
+      property.director: 220
       property.year: 65
       property.format: 220
       property.lists: 220
@@ -60,14 +40,13 @@ views:
     name: Unread
     filters:
       or:
-        - contains(property.status, "Unread")
+        - contains(property.status, "Unwatched")
         - empty(property.status)
     order:
       - status
       - file.name
-      - author
       - year
-      - format
+      - site
       - lists
     sort:
       - column: property.date
@@ -75,26 +54,7 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
-  - type: table
-    name: Dropped
-    filters:
-      and:
-        - contains(property.status, "Dropped")
-    order:
-      - status
-      - file.name
-      - author
-      - year
-      - format
-      - lists
-    columnSize:
-      property.status: 150
-      file.name: 300
-      property.author: 220
+      property.director: 220
       property.year: 65
       property.format: 220
       property.lists: 220

@@ -1,0 +1,44 @@
+/* https://help.obsidian.md/callouts#Customize%20callouts */
+
+/* Colors */
+.callout[data-callout-metadata="red"] {
+    --callout-color: var(--color-red-rgb);
+}
+.callout[data-callout-metadata="blue"] {
+    --callout-color: var(--color-blue-rgb);
+}
+.callout[data-callout-metadata="purple"] {
+    --callout-color: var(--color-purple-rgb);
+}
+.callout[data-callout-metadata="cyan"] {
+    --callout-color: var(--color-cyan-rgb);
+}
+.callout[data-callout-metadata="orange"] {
+    --callout-color: var(--color-orange-rgb);
+}
+.callout[data-callout-metadata="green"] {
+    --callout-color: var(--color-green-rgb);
+}
+.callout[data-callout-metadata="yellow"] {
+    --callout-color: var(--color-yellow-rgb);
+}
+.callout[data-callout-metadata="pink"] {
+    --callout-color: var(--color-pink-rgb);
+}
+
+/* Icons */
+.callout[data-callout="book"] {
+    --callout-icon: lucide-book-open;
+}
+.callout[data-callout="list"] {
+    --callout-icon: lucide-list;
+}
+.callout[data-callout="clapperboard"] {
+    --callout-icon: lucide-clapperboard;
+}
+.callout[data-callout="film"] {
+    --callout-icon: lucide-film;
+}
+.callout[data-callout="library"] {
+    --callout-icon: lucide-library-big;
+}

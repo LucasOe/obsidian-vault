@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "author",
-			"value": "{{schema:author[*].name|wikilink|join}}",
+			"value": "{{schema:author[0].name|wikilink|join}}",
 			"type": "multitext"
 		},
 		{
@@ -40,11 +40,6 @@
 			"type": "text"
 		},
 		{
-			"name": "status",
-			"value": "Unread",
-			"type": "multitext"
-		},
-		{
 			"name": "format",
 			"value": "{{schema:bookFormat|split:\\\"/\\\"|last|replace:\\\"Audible Audio\\\":\\\"Audiobook\\\"}}",
 			"type": "multitext"
@@ -52,6 +47,11 @@
 		{
 			"name": "lists",
 			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:[\\(\\)#]|first|trim|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "status",
+			"value": "",
 			"type": "multitext"
 		},
 		{

@@ -23,12 +23,17 @@
     "excalidraw-autoexport": "text",
     "excalidraw-embeddable-theme": "text",
     "excalidraw-open-md": "checkbox",
-    "status": "multitext",
-    "format": "multitext",
-    "pages": "number",
-    "lists": "multitext",
-    "date": "date",
+    "author": "multitext",
+    "director": "multitext",
     "genres": "multitext",
-    "hide": "checkbox"
+    "year": "number",
+    "pages": "number",
+    "cover": "text",
+    "banner": "text",
+    "lists": "multitext",
+    "format": "multitext",
+    "site": "multitext",
+    "status": "multitext",
+    "date": "date"
   }
 }

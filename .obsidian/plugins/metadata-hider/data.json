@@ -40,6 +40,15 @@
         "fileProperties": false,
         "allProperties": false
       }
+    },
+    {
+      "name": "banner",
+      "hide": {
+        "tableInactive": true,
+        "tableActive": true,
+        "fileProperties": false,
+        "allProperties": false
+      }
     }
   ]
 }

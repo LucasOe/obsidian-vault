@@ -33,7 +33,7 @@
   "spacing": "8",
   "advancedToolbar": {
     "rowHeight": 48,
-    "rowCount": 1,
+    "rowCount": 0,
     "spacing": 0,
     "buttonWidth": 48,
     "columnLayout": false,
