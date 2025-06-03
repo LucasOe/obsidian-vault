@@ -1,8 +1,8 @@
 ---
-director:
 genres:
 year:
 cover:
+lists:
 status:
 total-episodes:
 watched-episodes:

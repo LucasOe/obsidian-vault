@@ -36,6 +36,7 @@
     "status": "multitext",
     "date": "date",
     "total-episodes": "number",
-    "watched-episodes": "number"
+    "watched-episodes": "number",
+    "entry": "number"
   }
 }

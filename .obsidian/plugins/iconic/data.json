@@ -173,13 +173,13 @@
     },
     {
       "id": "5aXJ4",
-      "name": "Book Series",
+      "name": "Book Lists",
       "match": "all",
       "conditions": [
         {
           "source": "tags",
           "operator": "includes",
-          "value": "book-series"
+          "value": "book-list"
         }
       ],
       "enabled": true,
@@ -203,13 +203,13 @@
     },
     {
       "id": "u9xrs",
-      "name": "Movie Series",
+      "name": "Movie Lists",
       "match": "all",
       "conditions": [
         {
           "source": "tags",
           "operator": "includes",
-          "value": "movie-series"
+          "value": "movie-list"
         }
       ],
       "enabled": true,
@@ -229,6 +229,21 @@
       ],
       "enabled": true,
       "icon": "lucide-film",
+      "color": "gray"
+    },
+    {
+      "id": "CU23U",
+      "name": "TV Show Lists",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "tv-series-list"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-tv",
       "color": "gray"
     }
   ],

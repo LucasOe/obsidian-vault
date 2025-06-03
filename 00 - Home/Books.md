@@ -11,7 +11,7 @@ cssclasses:
 > ![[Books.base#To Read]]
 
 > [!library|purple]- Series
-> ![[Book Series.base#Series]]
+> ![[Book List.base#Series]]
 
 > [!list]+ Reading History
 > ![[Books.base#Completed]]

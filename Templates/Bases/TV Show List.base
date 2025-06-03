@@ -4,45 +4,39 @@ filters:
 display:
   file.name: Name
   property.status: Status
-  property.director: Director
   property.year: Year
   property.genres: Genres
   property.lists: Lists
-  property.site: Site
   property.date: Finished
 views:
   - type: table
-    name: Series
+    name: List
     filters:
       and:
-        - contains(property.tags, "movie-series")
+        - contains(property.tags, "tv-series-list")
         - file.folder != "Templates"
     order:
       - file.name
     limit: 100
     columnSize:
       file.name: 730
-      property.director: 300
   - type: table
     name: Entries
     filters:
       and:
-        - contains(property.tags, "movie")
+        - contains(property.tags, "tv-series")
         - or:
-          - contains(concat(property.lists), this.file.name)
-          - contains(concat(property.director), this.file.name)
+            - contains(concat(property.lists), this.file.name)
+            - contains(concat(property.director), this.file.name)
+    group_by: property.status
     order:
       - status
       - file.name
-      - director
       - year
-      - format
     columnSize:
       property.status: 150
       file.name: 300
-      property.director: 300
       property.year: 100
-      property.format: 300
     sort:
       - column: property.year
         direction: DESC

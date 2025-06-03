@@ -3,6 +3,7 @@ filters:
     - file.folder != "Templates"
 display:
   file.name: Name
+  property.entry: Entry
   property.status: Status
   property.author: Author
   property.year: Year
@@ -15,7 +16,7 @@ views:
     name: Series
     filters:
       and:
-        - contains(property.tags, "book-series")
+        - contains(property.tags, "book-list")
         - file.folder != "Templates"
     order:
       - file.name
@@ -30,9 +31,11 @@ views:
       and:
         - contains(property.tags, "book")
         - or:
-          - contains(concat(property.lists), this.file.name)
-          - contains(concat(property.author), this.file.name)
+            - contains(concat(property.lists), this.file.name)
+            - contains(concat(property.author), this.file.name)
+    group_by: property.status
     order:
+      - entry
       - status
       - file.name
       - author
@@ -45,5 +48,7 @@ views:
       property.year: 100
       property.format: 300
     sort:
+      - column: property.entry
+        direction: ASC
       - column: property.year
-        direction: DESC
+        direction: ASC

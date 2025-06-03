@@ -2,9 +2,9 @@
 cssclasses:
   - max
 tags:
-  - book-series
+  - book-list
 author: []
 ---
 
 > [!book] Entries
-> ![[Book Series.base#Entries]]
+> ![[Book List.base#Entries]]

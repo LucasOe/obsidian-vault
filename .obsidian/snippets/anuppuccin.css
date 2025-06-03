@@ -73,3 +73,7 @@
 .bases-thead .bases-td[data-sort] .bases-table-header-name {
 	padding-inline-end: 0;
 }
+/* Disable Header interaction */
+.bases-thead {
+	pointer-events: none;
+}

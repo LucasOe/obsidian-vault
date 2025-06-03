@@ -10,10 +10,9 @@ formulas:
 display:
   file.name: Name
   property.status: Status
-  property.director: Director
   property.year: Year
   property.genres: Genres
-  property.site: Site
+  property.lists: Lists
   property.date: Finished
   formula.progress: Progress
 views:
@@ -27,14 +26,13 @@ views:
       - status
       - file.name
       - year
-      - site
+      - lists
       - formula.progress
     columnSize:
       property.status: 150
       file.name: 300
-      property.director: 220
       property.year: 65
-      property.site: 600
+      property.lists: 580
       formula.progress: 300
   - type: table
     name: Completed
@@ -45,7 +43,7 @@ views:
       - status
       - file.name
       - year
-      - site
+      - lists
       - date
     limit: 100
     sort:
@@ -54,9 +52,8 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.director: 220
       property.year: 65
-      property.site: 600
+      property.lists: 660
       property.date: 140
   - type: table
     name: To Watch
@@ -69,7 +66,7 @@ views:
       - status
       - file.name
       - year
-      - site
+      - lists
     limit: 10
     sort:
       - column: property.date
@@ -77,6 +74,5 @@ views:
     columnSize:
       property.status: 150
       file.name: 300
-      property.director: 220
       property.year: 65
-      property.site: 600
+      property.lists: 580

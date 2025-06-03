@@ -119,7 +119,7 @@
       "Templates/Book Series.md"
     ],
     "Templates/Bases": [
-      "Templates/Bases/Book Series.base",
+      "Templates/Bases/Book List.base",
       "Templates/Bases/Books.base"
     ]
   },

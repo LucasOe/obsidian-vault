@@ -3,8 +3,8 @@ cssclasses:
   - max
   - hide-metadata
 tags:
-  - movie-series
+  - tv-series-list
 ---
 
 > [!movie] Entries
-> ![[Movie Series.base#Entries]]
+> ![[TV Show List.base#Entries]]

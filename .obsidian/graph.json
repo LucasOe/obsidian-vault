@@ -22,7 +22,7 @@
       }
     },
     {
-      "query": "tag:#book-series  ",
+      "query": "tag:#book-list  ",
       "color": {
         "a": 1,
         "rgb": 14725458
@@ -36,7 +36,7 @@
       }
     },
     {
-      "query": "tag:#movie-series  ",
+      "query": "tag:#movie-list  ",
       "color": {
         "a": 1,
         "rgb": 5431378
@@ -47,6 +47,13 @@
       "color": {
         "a": 1,
         "rgb": 5431473
+      }
+    },
+    {
+      "query": "tag:#tv-series-list  ",
+      "color": {
+        "a": 1,
+        "rgb": 5395168
       }
     }
   ],
@@ -60,6 +67,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.3628873693012283,
+  "scale": 0.2588386562181748,
   "close": true
 }
