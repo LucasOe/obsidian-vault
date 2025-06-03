@@ -4,7 +4,7 @@ filters:
     - file.folder != "Templates"
 formulas:
   progress_percent: watched-episodes / total-episodes
-  progress_bar: concat(if(formula.progress_percent > 0, slice("⬤⬤⬤⬤⬤⬤⬤⬤⬤⬤", 0, formula.progress_percent * 10), ""), if(formula.progress_percent < 1, slice("○○○○○○○○○○", 0, 11 - formula.progress_percent * 10), ""))
+  progress_bar: concat(if(formula.progress_percent > 0, slice("●●●●●●●●●●", 0, formula.progress_percent * 10), ""), if(formula.progress_percent < 1, slice("○○○○○○○○○○", 0, 11 - formula.progress_percent * 10), ""))
   progress_text: concat(if(formula.progress_percent > 0, round(formula.progress_percent * 100), "0"), "%")
   progress: concat(concat(formula.progress_bar, " "), formula.progress_text)
 display:

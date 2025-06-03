@@ -68,6 +68,6 @@
 	"triggers": [
 		"https://www.goodreads.com/book/"
 	],
-	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1.Text__title1|replace:\": \":\" - \"}}",
+	"noteNameFormat": "{{selector:.BookPageTitleSection__title h1.Text__title1||replace:\":\":\"꞉\"}}",
 	"path": "Objects/Books"
 }

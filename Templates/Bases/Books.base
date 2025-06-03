@@ -49,6 +49,8 @@ views:
     sort:
       - column: property.date
         direction: DESC
+      - column: property.year
+        direction: DESC
     columnSize:
       property.status: 150
       file.name: 300
@@ -72,9 +74,6 @@ views:
       - format
       - lists
     limit: 10
-    sort:
-      - column: property.date
-        direction: DESC
     columnSize:
       property.status: 150
       file.name: 300

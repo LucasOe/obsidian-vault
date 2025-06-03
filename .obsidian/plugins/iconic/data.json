@@ -26,13 +26,16 @@
       "icon": "lucide-home"
     },
     "00 - Home/Books.md": {
-      "icon": "lucide-book"
+      "icon": "lucide-book",
+      "color": "red"
     },
     "00 - Home/Movies.md": {
-      "icon": "lucide-clapperboard"
+      "icon": "lucide-clapperboard",
+      "color": "orange"
     },
     "00 - Home/TV Shows.md": {
-      "icon": "lucide-film"
+      "icon": "lucide-film",
+      "color": "yellow"
     },
     "01 - Notes": {
       "icon": "lucide-clipboard-pen"
@@ -60,6 +63,174 @@
   "tagIcons": {},
   "propertyIcons": {},
   "ribbonIcons": {},
-  "fileRules": [],
+  "fileRules": [
+    {
+      "id": "fhOj8",
+      "name": "Note",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "extension",
+          "operator": "endsWith",
+          "value": "md"
+        },
+        {
+          "source": "tags",
+          "operator": "countIs",
+          "value": "0"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-file",
+      "color": "gray"
+    },
+    {
+      "id": "Zj9Al",
+      "name": "Excalidraw",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "excalidraw"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-pen-tool",
+      "color": "gray"
+    },
+    {
+      "id": "ILWRv",
+      "name": "Bases",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "extension",
+          "operator": "endsWith",
+          "value": "base"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-database",
+      "color": "gray"
+    },
+    {
+      "id": "2yiyI",
+      "name": "Clipping",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "clippings"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-file",
+      "color": "gray"
+    },
+    {
+      "id": "Cvwc3",
+      "name": "ChatGPT",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "chatgpt"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-bot",
+      "color": "gray"
+    },
+    {
+      "id": "5SNB3",
+      "name": "Book",
+      "match": "all",
+      "enabled": true,
+      "icon": "lucide-book",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "book"
+        }
+      ],
+      "color": "gray"
+    },
+    {
+      "id": "5aXJ4",
+      "name": "Book Series",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "book-series"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-book-copy",
+      "color": "gray"
+    },
+    {
+      "id": "TQuIJ",
+      "name": "Movie",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "movie"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-clapperboard",
+      "color": "gray"
+    },
+    {
+      "id": "u9xrs",
+      "name": "Movie Series",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "movie-series"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-clapperboard",
+      "color": "gray"
+    },
+    {
+      "id": "oyFbP",
+      "name": "TV Show",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "tv-series"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-film",
+      "color": "gray"
+    }
+  ],
   "folderRules": []
 }

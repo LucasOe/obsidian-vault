@@ -16,18 +16,13 @@
 		},
 		{
 			"name": "year",
-			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
-			"type": "date"
+			"value": "{{schema:datePublished|split:\\\"-\\\"|first}}",
+			"type": "number"
 		},
 		{
 			"name": "cover",
 			"value": "{{schema:image}}",
 			"type": "text"
-		},
-		{
-			"name": "site",
-			"value": "",
-			"type": "multitext"
 		},
 		{
 			"name": "status",
@@ -58,6 +53,6 @@
 	"triggers": [
 		"schema:@TVSeries"
 	],
-	"noteNameFormat": "{{schema:name}}",
+	"noteNameFormat": "{{schema:name|replace:\":\":\"꞉\"}}",
 	"path": "Objects/TV Series"
 }

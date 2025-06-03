@@ -1,5 +1,5 @@
 {
-  "launchOnStartup": true,
+  "launchOnStartup": false,
   "hideOnLaunch": true,
   "runInBackground": true,
   "hideTaskbarIcon": false,

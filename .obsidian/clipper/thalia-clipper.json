@@ -68,6 +68,6 @@
 	"triggers": [
 		"https://www.thalia.de/"
 	],
-	"noteNameFormat": "{{schema:@Book:name|replace:\": \":\" - \"}}",
+	"noteNameFormat": "{{schema:@Book:name|replace:\":\":\"꞉\"}}",
 	"path": "Objects/Books"
 }

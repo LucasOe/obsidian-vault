@@ -38,6 +38,7 @@
   "mobilePullAction": "editor:save-file",
   "defaultViewMode": "source",
   "userIgnoreFilters": [
+    "00 - Home/",
     "Templates/"
   ]
 }

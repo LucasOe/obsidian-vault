@@ -1,14 +1,21 @@
 {
   "collapse-filter": true,
   "search": "",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#book",
+      "query": "tag:#person  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
+      }
+    },
+    {
+      "query": "tag:#book  ",
       "color": {
         "a": 1,
         "rgb": 14701138
@@ -19,6 +26,27 @@
       "color": {
         "a": 1,
         "rgb": 14725458
+      }
+    },
+    {
+      "query": "tag:#movie  ",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "tag:#movie-series  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431378
+      }
+    },
+    {
+      "query": "tag:#tv-series  ",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
       }
     }
   ],
@@ -32,6 +60,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.7132754626224649,
-  "close": false
+  "scale": 0.3628873693012283,
+  "close": true
 }

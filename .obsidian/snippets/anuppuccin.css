@@ -21,6 +21,11 @@
 	}
 }
 
+/* Left align icons */
+.nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
+	justify-content: left;
+}
+
 /* Hide Mobile Navbar */
 .mobile-navbar {
 	display: none;
@@ -35,13 +40,12 @@
 }
 
 /* Property Pills */
-.multi-select-pill {
-	background-color: var(--color-base-30);
-	padding: 0px 8px;
-	
-	&:hover {
-		background-color: var(--color-base-30);
-	}
+.metadata-property-value .multi-select-pill {
+	/* https://docs.obsidian.md/Reference/CSS+variables/Components/Multi-select */
+	--pill-background: var(--color-base-30);
+	--pill-background-hover: var(--color-base-30);
+	--pill-padding-x: 8px;
+	--pill-padding-y: 0px;
 }
 
 /* Change table background to header color */
@@ -57,4 +61,15 @@
 /* Folder Notes Plugin */
 .folder-note-underline .has-folder-note .nav-folder-title-content {
 	text-decoration-color: unset;
+}
+
+/* Hide Header Sort icon */
+.bases-table-header-sort {
+	display: none;
+}
+.bases-thead .bases-td[data-sort] .bases-table-header {
+	mask-image: none;
+}
+.bases-thead .bases-td[data-sort] .bases-table-header-name {
+	padding-inline-end: 0;
 }

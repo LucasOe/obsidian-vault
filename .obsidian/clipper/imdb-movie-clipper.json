@@ -17,7 +17,7 @@
 		{
 			"name": "year",
 			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
-			"type": "date"
+			"type": "number"
 		},
 		{
 			"name": "cover",
@@ -26,11 +26,6 @@
 		},
 		{
 			"name": "lists",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "site",
 			"value": "",
 			"type": "multitext"
 		},
@@ -53,6 +48,6 @@
 	"triggers": [
 		"schema:@Movie"
 	],
-	"noteNameFormat": "{{schema:name}}",
+	"noteNameFormat": "{{schema:name|replace:\":\":\"꞉\"}}",
 	"path": "Objects/Movies"
 }

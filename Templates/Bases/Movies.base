@@ -9,7 +9,6 @@ display:
   property.year: Year
   property.genres: Genres
   property.lists: Lists
-  property.site: Site
   property.date: Finished
 views:
   - type: table
@@ -21,7 +20,7 @@ views:
       - status
       - file.name
       - year
-      - site
+      - director
       - lists
       - date
     limit: 100
@@ -30,11 +29,10 @@ views:
         direction: DESC
     columnSize:
       property.status: 150
-      file.name: 300
-      property.director: 220
+      file.name: 450
       property.year: 65
-      property.site: 300
-      property.lists: 300
+      property.director: 200
+      property.lists: 310
       property.date: 140
   - type: table
     name: To Watch
@@ -47,16 +45,12 @@ views:
       - status
       - file.name
       - year
-      - site
+      - director
       - lists
     limit: 10
-    sort:
-      - column: property.date
-        direction: DESC
     columnSize:
       property.status: 150
-      file.name: 300
-      property.director: 220
+      file.name: 450
       property.year: 65
-      property.site: 300
-      property.lists: 300
+      property.director: 200
+      property.lists: 310

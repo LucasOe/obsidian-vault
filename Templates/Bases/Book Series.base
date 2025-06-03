@@ -29,7 +29,9 @@ views:
     filters:
       and:
         - contains(property.tags, "book")
-        - contains(concat(property.lists), this.file.name)
+        - or:
+          - contains(concat(property.lists), this.file.name)
+          - contains(concat(property.author), this.file.name)
     order:
       - status
       - file.name

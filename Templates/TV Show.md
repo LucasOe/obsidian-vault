@@ -3,7 +3,6 @@ director:
 genres:
 year:
 cover:
-site:
 status:
 total-episodes:
 watched-episodes:

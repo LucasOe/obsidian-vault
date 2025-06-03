@@ -19,7 +19,6 @@ views:
         - file.folder != "Templates"
     order:
       - file.name
-      - director
     limit: 100
     columnSize:
       file.name: 730
@@ -29,7 +28,9 @@ views:
     filters:
       and:
         - contains(property.tags, "movie")
-        - contains(concat(property.lists), this.file.name)
+        - or:
+          - contains(concat(property.lists), this.file.name)
+          - contains(concat(property.director), this.file.name)
     order:
       - status
       - file.name

@@ -17,7 +17,7 @@
 		{
 			"name": "year",
 			"value": "{{schema:releasedEvent[0].startDate|date:\\\"YYYY\\\"}}",
-			"type": "date"
+			"type": "number"
 		},
 		{
 			"name": "cover",
@@ -31,11 +31,6 @@
 		},
 		{
 			"name": "lists",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "site",
 			"value": "",
 			"type": "multitext"
 		},
@@ -58,6 +53,6 @@
 	"triggers": [
 		"https://letterboxd.com/film/"
 	],
-	"noteNameFormat": "{{schema:name}}",
+	"noteNameFormat": "{{schema:name|replace:\":\":\"꞉\"}}",
 	"path": "Objects/Movies"
 }
