@@ -1,27 +1,34 @@
 filters:
   and:
-    - contains(property.tags, "tv-series")
+    - tags.contains("tv-series")
     - file.folder != "Templates"
 formulas:
-  progress_percent: watched-episodes / total-episodes
-  progress_bar: concat(if(formula.progress_percent > 0, slice("●●●●●●●●●●", 0, formula.progress_percent * 10), ""), if(formula.progress_percent < 1, slice("○○○○○○○○○○", 0, 11 - formula.progress_percent * 10), ""))
-  progress_text: concat(if(formula.progress_percent > 0, round(formula.progress_percent * 100), "0"), "%")
-  progress: concat(concat(formula.progress_bar, " "), formula.progress_text)
-display:
-  file.name: Name
-  property.status: Status
-  property.year: Year
-  property.genres: Genres
-  property.lists: Lists
-  property.date: Finished
-  formula.progress: Progress
+  progress_percent: 'note["watched-episodes"] / note["total-episodes"]'
+  progress_bar: 'if(formula.progress_percent > 0, "●●●●●●●●●●".slice(0, formula.progress_percent * 10), "") + if(formula.progress_percent > 0, "○○○○○○○○○○".slice(0, 11 - formula.progress_percent * 10), "")'
+  progress_text: 'if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"'
+  progress: 'formula.progress_bar + " " + formula.progress_text'
+properties:
+  file.name:
+    displayName: Name
+  note.status:
+    displayName: Status
+  note.year:
+    displayName: Year
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Lists
+  note.date:
+    displayName: Finished
+  formula.progress:
+    displayName: Progress
 views:
   - type: table
     name: Watching
     filters:
       or:
-        - contains(property.status, "Watching")
-        - contains(property.status, "Reading")
+        - status.contains("Watching")
+        - status.contains("Reading")
     order:
       - status
       - file.name
@@ -29,16 +36,16 @@ views:
       - lists
       - formula.progress
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.year: 65
-      property.lists: 580
+      note.year: 65
+      note.lists: 580
       formula.progress: 300
   - type: table
     name: Completed
     filters:
       and:
-        - contains(property.status, "Completed")
+        - status.contains("Completed")
     order:
       - status
       - file.name
@@ -47,21 +54,21 @@ views:
       - date
     limit: 100
     sort:
-      - column: property.date
+      - column: date
         direction: DESC
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.year: 65
-      property.lists: 660
-      property.date: 140
+      note.year: 65
+      note.lists: 660
+      note.date: 140
   - type: table
     name: To Watch
     filters:
       or:
-        - contains(property.status, "To Watch")
-        - contains(property.status, "To Read")
-        - empty(property.status)
+        - status.contains("To Watch")
+        - status.contains("To Read")
+        - status.isEmpty()
     order:
       - status
       - file.name
@@ -69,10 +76,10 @@ views:
       - lists
     limit: 10
     sort:
-      - column: property.date
+      - column: date
         direction: DESC
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.year: 65
-      property.lists: 580
+      note.year: 65
+      note.lists: 580

@@ -1,23 +1,31 @@
 filters:
   and:
-    - contains(property.tags, "book")
+    - tags.contains("book")
     - file.folder != "Templates"
-display:
-  file.name: Name
-  property.status: Status
-  property.author: Author
-  property.year: Year
-  property.format: Format
-  property.genres: Genres
-  property.lists: Series
-  property.date: Finished
+properties:
+  file.name:
+    displayName: Name
+  note.status:
+    displayName: Status
+  note.author:
+    displayName: Author
+  note.year:
+    displayName: Year
+  note.format:
+    displayName: Format
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Series
+  note.date:
+    displayName: Finished
 views:
   - type: table
     name: Reading
     filters:
       or:
-        - contains(property.status, "Reading")
-        - contains(property.status, "Watching")
+        - status.contains("Reading")
+        - status.contains("Watching")
     order:
       - status
       - file.name
@@ -26,17 +34,17 @@ views:
       - format
       - lists
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
+      note.author: 220
+      note.year: 65
+      note.format: 220
+      note.lists: 220
   - type: table
     name: Completed
     filters:
       and:
-        - contains(property.status, "Completed")
+        - status.contains("Completed")
     order:
       - status
       - file.name
@@ -47,25 +55,25 @@ views:
       - date
     limit: 100
     sort:
-      - column: property.date
+      - column: date
         direction: DESC
-      - column: property.year
+      - column: year
         direction: DESC
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
-      property.date: 140
+      note.author: 220
+      note.year: 65
+      note.format: 220
+      note.lists: 220
+      note.date: 140
   - type: table
     name: To Read
     filters:
       or:
-        - contains(property.status, "To Read")
-        - contains(property.status, "To Watch")
-        - empty(property.status)
+        - status.contains("To Read")
+        - status.contains("To Watch")
+        - status.isEmpty()
     order:
       - status
       - file.name
@@ -75,17 +83,17 @@ views:
       - lists
     limit: 10
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
+      note.author: 220
+      note.year: 65
+      note.format: 220
+      note.lists: 360
   - type: table
     name: Dropped
     filters:
       and:
-        - contains(property.status, "Dropped")
+        - status.contains("Dropped")
     order:
       - status
       - file.name
@@ -94,9 +102,9 @@ views:
       - format
       - lists
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.author: 220
-      property.year: 65
-      property.format: 220
-      property.lists: 220
+      note.author: 220
+      note.year: 65
+      note.format: 220
+      note.lists: 360

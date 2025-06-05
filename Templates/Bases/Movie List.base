@@ -1,46 +1,53 @@
 filters:
   and:
     - file.folder != "Templates"
-display:
-  file.name: Name
-  property.status: Status
-  property.director: Director
-  property.year: Year
-  property.genres: Genres
-  property.lists: Lists
-  property.date: Finished
+properties:
+  file.name:
+    displayName: Name
+  note.status:
+    displayName: Status
+  note.director:
+    displayName: Director
+  note.year:
+    displayName: Year
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Lists
+  note.date:
+    displayName: Finished
 views:
   - type: table
     name: List
     filters:
       and:
-        - contains(property.tags, "movie-list")
+        - tags.contains("movie-list")
         - file.folder != "Templates"
     order:
       - file.name
     limit: 100
     columnSize:
       file.name: 730
-      property.director: 300
+      note.director: 300
   - type: table
     name: Entries
     filters:
       and:
-        - contains(property.tags, "movie")
+        - contains(tags, "movie")
         - or:
-            - contains(concat(property.lists), this.file.name)
-            - contains(concat(property.director), this.file.name)
-    group_by: property.status
+            - lists.contains(this.file.name)
+            - director.contains(this.file.name)
+    group_by: status
     order:
       - status
       - file.name
       - director
       - year
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.director: 300
-      property.year: 100
+      note.director: 300
+      note.year: 100
     sort:
-      - column: property.year
+      - column: year
         direction: DESC

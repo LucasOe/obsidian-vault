@@ -1,19 +1,25 @@
 filters:
   and:
     - file.folder != "Templates"
-display:
-  file.name: Name
-  property.status: Status
-  property.year: Year
-  property.genres: Genres
-  property.lists: Lists
-  property.date: Finished
+properties:
+  file.name:
+    displayName: Name
+  note.status:
+    displayName: Status
+  note.year:
+    displayName: Year
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Lists
+  note.date:
+    displayName: Finished
 views:
   - type: table
     name: List
     filters:
       and:
-        - contains(property.tags, "tv-series-list")
+        - tags.contains("tv-series-list")
         - file.folder != "Templates"
     order:
       - file.name
@@ -24,19 +30,19 @@ views:
     name: Entries
     filters:
       and:
-        - contains(property.tags, "tv-series")
+        - tags.contains("tv-series")
         - or:
-            - contains(concat(property.lists), this.file.name)
-            - contains(concat(property.director), this.file.name)
-    group_by: property.status
+            - lists.contains(this.file.name)
+            - director.contains(this.file.name)
+    group_by: status
     order:
       - status
       - file.name
       - year
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.year: 100
+      note.year: 100
     sort:
-      - column: property.year
+      - column: year
         direction: DESC

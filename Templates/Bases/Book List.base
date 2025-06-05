@@ -1,22 +1,31 @@
 filters:
   and:
     - file.folder != "Templates"
-display:
-  file.name: Name
-  property.entry: Entry
-  property.status: Status
-  property.author: Author
-  property.year: Year
-  property.format: Format
-  property.genres: Genres
-  property.lists: Lists
-  property.date: Finished
+properties:
+  file.name:
+    displayName: Name
+  note.entry:
+    displayName: Entry
+  note.status:
+    displayName: Status
+  note.author:
+    displayName: Author
+  note.year:
+    displayName: Year
+  note.format:
+    displayName: Format
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Lists
+  note.date:
+    displayName: Finished
 views:
   - type: table
     name: Series
     filters:
       and:
-        - contains(property.tags, "book-list")
+        - tags.contains("book-list")
         - file.folder != "Templates"
     order:
       - file.name
@@ -24,16 +33,16 @@ views:
     limit: 100
     columnSize:
       file.name: 730
-      property.author: 300
+      note.author: 300
   - type: table
     name: Entries
     filters:
       and:
-        - contains(property.tags, "book")
+        - tags.contains("book")
         - or:
-            - contains(concat(property.lists), this.file.name)
-            - contains(concat(property.author), this.file.name)
-    group_by: property.status
+            - lists.contains(this.file.name)
+            - author.contains(this.file.name)
+    group_by: status
     order:
       - entry
       - status
@@ -42,13 +51,13 @@ views:
       - year
       - format
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 300
-      property.author: 300
-      property.year: 100
-      property.format: 300
+      note.author: 300
+      note.year: 100
+      note.format: 300
     sort:
-      - column: property.entry
+      - column: entry
         direction: ASC
-      - column: property.year
+      - column: year
         direction: ASC

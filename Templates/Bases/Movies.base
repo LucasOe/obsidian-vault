@@ -1,21 +1,28 @@
 filters:
   and:
-    - contains(property.tags, "movie")
+    - tags.contains("movie")
     - file.folder != "Templates"
-display:
-  file.name: Name
-  property.status: Status
-  property.director: Director
-  property.year: Year
-  property.genres: Genres
-  property.lists: Lists
-  property.date: Finished
+properties:
+  file.name:
+    displayName: Name
+  note.status:
+    displayName: Status
+  note.director:
+    displayName: Director
+  note.year:
+    displayName: Year
+  note.genres:
+    displayName: Genres
+  note.lists:
+    displayName: Lists
+  note.date:
+    displayName: Finished
 views:
   - type: table
     name: Completed
     filters:
       and:
-        - contains(property.status, "Completed")
+        - status.contains("Completed")
     order:
       - status
       - file.name
@@ -25,22 +32,22 @@ views:
       - date
     limit: 100
     sort:
-      - column: property.date
+      - column: date
         direction: DESC
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 450
-      property.year: 65
-      property.director: 200
-      property.lists: 310
-      property.date: 140
+      note.year: 65
+      note.director: 200
+      note.lists: 310
+      note.date: 140
   - type: table
     name: To Watch
     filters:
       or:
-        - contains(property.status, "To Watch")
-        - contains(property.status, "To Read")
-        - empty(property.status)
+        - status.contains("To Watch")
+        - status.contains("To Read")
+        - status.isEmpty()
     order:
       - status
       - file.name
@@ -49,8 +56,8 @@ views:
       - lists
     limit: 10
     columnSize:
-      property.status: 150
+      note.status: 150
       file.name: 450
-      property.year: 65
-      property.director: 200
-      property.lists: 310
+      note.year: 65
+      note.director: 200
+      note.lists: 310
