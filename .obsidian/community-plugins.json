@@ -1,7 +1,6 @@
 [
   "obsidian-style-settings",
   "obsidian-excalidraw-plugin",
-  "iconic",
   "languagetool",
   "cmdr",
   "obsidian-better-command-palette",
@@ -16,5 +15,7 @@
   "obsidian-reading-time",
   "obsidian-minimal-settings",
   "obsidian-smart-typography",
-  "folder-notes"
+  "folder-notes",
+  "template-folder",
+  "iconic"
 ]
