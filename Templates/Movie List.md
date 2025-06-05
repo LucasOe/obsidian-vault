@@ -1,4 +1,5 @@
 ---
+folder: Objects/Movie Lists
 cssclasses:
   - max
   - hide-metadata

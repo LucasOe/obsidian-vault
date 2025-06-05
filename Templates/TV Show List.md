@@ -1,4 +1,5 @@
 ---
+folder: Objects/TV Show Lists
 cssclasses:
   - max
   - hide-metadata

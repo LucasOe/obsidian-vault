@@ -1,4 +1,5 @@
 ---
+folder: Objects/Book Lists
 cssclasses:
   - max
 tags:

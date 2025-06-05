@@ -1,4 +1,5 @@
 ---
+folder: Objects/Books
 author:
 genres:
 pages:

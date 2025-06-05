@@ -1,4 +1,5 @@
 ---
+folder: Objects/TV Shows
 genres:
 year:
 cover:

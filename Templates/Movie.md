@@ -1,4 +1,5 @@
 ---
+folder: Objects/Movies
 director:
 genres:
 year:
