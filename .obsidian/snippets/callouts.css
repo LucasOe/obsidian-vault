@@ -42,3 +42,6 @@
 .callout[data-callout="library"] {
     --callout-icon: lucide-library-big;
 }
+.callout[data-callout="tv"] {
+    --callout-icon: lucide-tv;
+}

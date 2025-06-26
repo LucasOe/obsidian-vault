@@ -48,9 +48,20 @@
 	--pill-padding-y: 0px;
 }
 
-/* Change table background to header color */
-.bases-thead, .bases-tbody {
-	background-color: var(--bases-table-header-background);
+/* Change table background and border */
+.bases-thead, .bases-tbody, .bases-embed .bases-view {
+	--bases-table-header-background: var(--background-primary);
+	--bases-table-header-background-hover: var(--background-primary);
+	--bases-embed-border-color: var(--background-modifier-border);
+	--bases-table-border-color: var(--background-modifier-border);
+	--table-border-color: var(--background-modifier-border);
+	--bases-cards-group-padding: var(--size-4-2);
+	
+	background-color: var(--background-primary);
+	
+	.bases-cards-item {
+		background-color: var(--color-base-10);
+	}
 }
 
 /* Fix Bookmark icon color */

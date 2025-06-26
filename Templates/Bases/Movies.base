@@ -30,10 +30,10 @@ views:
       - director
       - lists
       - date
-    limit: 100
     sort:
-      - column: date
+      - property: date
         direction: DESC
+    limit: 100
     columnSize:
       note.status: 150
       file.name: 450
@@ -41,6 +41,16 @@ views:
       note.director: 200
       note.lists: 310
       note.date: 140
+  - type: cards
+    name: Completed Cards
+    filters:
+      or:
+        - status.contains("Completed")
+    order:
+      - file.name
+      - year
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: To Watch
     filters:
@@ -61,3 +71,15 @@ views:
       note.year: 65
       note.director: 200
       note.lists: 310
+  - type: cards
+    name: To Watch Cards
+    filters:
+      or:
+        - status.contains("To Watch")
+        - status.contains("To Read")
+        - status.isEmpty()
+    order:
+      - file.name
+      - year
+    image: cover
+    imageAspectRatio: 1.55

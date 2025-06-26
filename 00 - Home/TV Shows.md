@@ -4,10 +4,10 @@ cssclasses:
   - hide-metadata
 ---
 
-> [!film|green] Currently Watching
+> [!tv|green] Currently Watching
 > ![[TV Shows.base#Watching]]
 
-> [!clapperboard|purple]+ Watch Next
+> [!film|purple]+ Watch Next
 > ![[TV Shows.base#To Watch]]
 
 > [!list|blue]+ Watch History

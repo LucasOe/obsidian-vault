@@ -40,6 +40,17 @@ views:
       note.year: 65
       note.format: 220
       note.lists: 220
+  - type: cards
+    name: Reading Cards
+    filters:
+      or:
+        - status.contains("Reading")
+        - status.contains("Watching")
+    order:
+      - file.name
+      - author
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: Completed
     filters:
@@ -53,12 +64,12 @@ views:
       - format
       - lists
       - date
-    limit: 100
     sort:
-      - column: date
+      - property: date
         direction: DESC
-      - column: year
+      - property: year
         direction: DESC
+    limit: 100
     columnSize:
       note.status: 150
       file.name: 300
@@ -67,6 +78,16 @@ views:
       note.format: 220
       note.lists: 220
       note.date: 140
+  - type: cards
+    name: Completed Cards
+    filters:
+      or:
+        - status.contains("Completed")
+    order:
+      - file.name
+      - author
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: To Read
     filters:
@@ -89,6 +110,18 @@ views:
       note.year: 65
       note.format: 220
       note.lists: 360
+  - type: cards
+    name: To Read Cards
+    filters:
+      or:
+        - status.contains("To Read")
+        - status.contains("To Watch")
+        - status.isEmpty()
+    order:
+      - file.name
+      - author
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: Dropped
     filters:

@@ -18,7 +18,7 @@ properties:
     displayName: Finished
 views:
   - type: table
-    name: List
+    name: Lists
     filters:
       and:
         - tags.contains("movie-list")
@@ -28,26 +28,25 @@ views:
     limit: 100
     columnSize:
       file.name: 730
-      note.director: 300
   - type: table
     name: Entries
     filters:
       and:
-        - contains(tags, "movie")
+        - tags.contains("movie")
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
-    group_by: status
     order:
       - status
       - file.name
       - director
       - year
+    sort:
+      - property: year
+        direction: DESC
+    groupBy: status
     columnSize:
       note.status: 150
       file.name: 300
       note.director: 300
       note.year: 100
-    sort:
-      - column: year
-        direction: DESC

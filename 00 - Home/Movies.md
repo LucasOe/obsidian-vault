@@ -8,7 +8,7 @@ cssclasses:
 > ![[Movies.base#To Watch]]
 
 > [!library|purple]- Lists
-> ![[Movie List.base#List]]
+> ![[Movie List.base#Lists]]
 
 > [!list|blue]+ Watch History
 > ![[Movies.base#Completed]]

@@ -42,7 +42,6 @@ views:
         - or:
             - lists.contains(this.file.name)
             - author.contains(this.file.name)
-    group_by: status
     order:
       - entry
       - status
@@ -50,14 +49,15 @@ views:
       - author
       - year
       - format
+    sort:
+      - property: entry
+        direction: ASC
+      - property: year
+        direction: ASC
+    groupBy: status
     columnSize:
       note.status: 150
       file.name: 300
       note.author: 300
       note.year: 100
       note.format: 300
-    sort:
-      - column: entry
-        direction: ASC
-      - column: year
-        direction: ASC

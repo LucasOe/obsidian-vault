@@ -34,7 +34,7 @@
       "color": "orange"
     },
     "00 - Home/TV Shows.md": {
-      "icon": "lucide-film",
+      "icon": "lucide-tv",
       "color": "yellow"
     },
     "01 - Notes": {
@@ -55,13 +55,64 @@
     "Templates": {
       "icon": "lucide-book-template"
     },
+    "Templates/Author.md": {
+      "icon": "lucide-user-pen",
+      "color": "gray"
+    },
     "Templates/Bases": {
       "icon": "lucide-database"
+    },
+    "Templates/Director.md": {
+      "icon": "lucide-user",
+      "color": "gray"
     }
   },
   "bookmarkIcons": {},
   "tagIcons": {},
-  "propertyIcons": {},
+  "propertyIcons": {
+    "aliases": {
+      "icon": "lucide-circle-arrow-right"
+    },
+    "author": {
+      "icon": "lucide-user-pen"
+    },
+    "date": {
+      "icon": "lucide-calendar"
+    },
+    "director": {
+      "icon": "lucide-user"
+    },
+    "entry": {
+      "icon": "lucide-hash"
+    },
+    "format": {
+      "icon": "lucide-book"
+    },
+    "genres": {
+      "icon": "lucide-tags"
+    },
+    "language": {
+      "icon": "lucide-languages"
+    },
+    "lists": {
+      "icon": "links-going-out"
+    },
+    "pages": {
+      "icon": "lucide-file"
+    },
+    "status": {
+      "icon": "lucide-check-circle-2"
+    },
+    "total-episodes": {
+      "icon": "lucide-binary"
+    },
+    "watched-episodes": {
+      "icon": "lucide-binary"
+    },
+    "year": {
+      "icon": "lucide-calendar"
+    }
+  },
   "ribbonIcons": {},
   "fileRules": [
     {
@@ -135,6 +186,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "clippings"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
@@ -150,6 +205,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "chatgpt"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
@@ -167,6 +226,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "book"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "color": "gray"
@@ -180,6 +243,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "book-list"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
@@ -195,6 +262,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "movie"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
@@ -210,6 +281,10 @@
           "source": "tags",
           "operator": "includes",
           "value": "movie-list"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
@@ -225,10 +300,14 @@
           "source": "tags",
           "operator": "includes",
           "value": "tv-series"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
-      "icon": "lucide-film",
+      "icon": "lucide-tv",
       "color": "gray"
     },
     {
@@ -240,10 +319,14 @@
           "source": "tags",
           "operator": "includes",
           "value": "tv-series-list"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
         }
       ],
       "enabled": true,
-      "icon": "lucide-tv",
+      "icon": "lucide-film",
       "color": "gray"
     }
   ],

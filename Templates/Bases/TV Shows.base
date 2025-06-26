@@ -41,6 +41,17 @@ views:
       note.year: 65
       note.lists: 580
       formula.progress: 300
+  - type: cards
+    name: Watching Cards
+    filters:
+      or:
+        - status.contains("Watching")
+        - status.contains("Reading")
+    order:
+      - file.name
+      - year
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: Completed
     filters:
@@ -62,6 +73,16 @@ views:
       note.year: 65
       note.lists: 660
       note.date: 140
+  - type: cards
+    name: Completed Cards
+    filters:
+      or:
+        - status.contains("Completed")
+    order:
+      - file.name
+      - year
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: To Watch
     filters:
@@ -83,3 +104,15 @@ views:
       file.name: 300
       note.year: 65
       note.lists: 580
+  - type: cards
+    name: To Watch Cards
+    filters:
+      or:
+        - status.contains("To Watch")
+        - status.contains("To Read")
+        - status.isEmpty()
+    order:
+      - file.name
+      - year
+    image: cover
+    imageAspectRatio: 1.55
