@@ -36,6 +36,7 @@ views:
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
+    groupBy: status
     order:
       - status
       - file.name
@@ -44,7 +45,6 @@ views:
     sort:
       - property: year
         direction: DESC
-    groupBy: status
     columnSize:
       note.status: 150
       file.name: 300

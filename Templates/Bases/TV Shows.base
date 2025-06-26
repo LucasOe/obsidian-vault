@@ -3,10 +3,10 @@ filters:
     - tags.contains("tv-series")
     - file.folder != "Templates"
 formulas:
-  progress_percent: 'note["watched-episodes"] / note["total-episodes"]'
-  progress_bar: 'if(formula.progress_percent > 0, "●●●●●●●●●●".slice(0, formula.progress_percent * 10), "") + if(formula.progress_percent > 0, "○○○○○○○○○○".slice(0, 11 - formula.progress_percent * 10), "")'
-  progress_text: 'if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"'
-  progress: 'formula.progress_bar + " " + formula.progress_text'
+  progress_percent: note["watched-episodes"] / note["total-episodes"]
+  progress_bar: if(formula.progress_percent > 0, "●●●●●●●●●●".slice(0, formula.progress_percent * 10), "") + if(formula.progress_percent > 0, "○○○○○○○○○○".slice(0, 11 - formula.progress_percent * 10), "")
+  progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
+  progress: formula.progress_bar + " " + formula.progress_text
 properties:
   file.name:
     displayName: Name
@@ -23,6 +23,52 @@ properties:
   formula.progress:
     displayName: Progress
 views:
+  - type: cards
+    name: Completed Cards
+    filters:
+      or:
+        - status.contains("Completed")
+    order:
+      - file.name
+      - year
+    sort:
+      - property: date
+        direction: DESC
+    image: cover
+    imageAspectRatio: 1.55
+  - type: table
+    name: Completed
+    filters:
+      and:
+        - status.contains("Completed")
+    order:
+      - status
+      - file.name
+      - year
+      - lists
+      - date
+    sort:
+      - property: date
+        direction: DESC
+    limit: 100
+    columnSize:
+      note.status: 150
+      file.name: 300
+      note.year: 65
+      note.lists: 660
+      note.date: 140
+  - type: cards
+    name: Watching Cards
+    filters:
+      or:
+        - status.contains("Watching")
+        - status.contains("Reading")
+    order:
+      - file.name
+      - year
+      - formula.progress
+    image: cover
+    imageAspectRatio: 1.55
   - type: table
     name: Watching
     filters:
@@ -42,45 +88,19 @@ views:
       note.lists: 580
       formula.progress: 300
   - type: cards
-    name: Watching Cards
+    name: To Watch Cards
     filters:
       or:
-        - status.contains("Watching")
-        - status.contains("Reading")
+        - status.contains("To Watch")
+        - status.contains("To Read")
+        - status.isEmpty()
     order:
       - file.name
       - year
-    image: cover
-    imageAspectRatio: 1.55
-  - type: table
-    name: Completed
-    filters:
-      and:
-        - status.contains("Completed")
-    order:
-      - status
-      - file.name
-      - year
-      - lists
-      - date
-    limit: 100
     sort:
-      - column: date
+      - property: date
         direction: DESC
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.year: 65
-      note.lists: 660
-      note.date: 140
-  - type: cards
-    name: Completed Cards
-    filters:
-      or:
-        - status.contains("Completed")
-    order:
-      - file.name
-      - year
+    limit: 6
     image: cover
     imageAspectRatio: 1.55
   - type: table
@@ -95,24 +115,12 @@ views:
       - file.name
       - year
       - lists
-    limit: 10
     sort:
-      - column: date
+      - property: date
         direction: DESC
+    limit: 10
     columnSize:
       note.status: 150
       file.name: 300
       note.year: 65
-      note.lists: 580
-  - type: cards
-    name: To Watch Cards
-    filters:
-      or:
-        - status.contains("To Watch")
-        - status.contains("To Read")
-        - status.isEmpty()
-    order:
-      - file.name
-      - year
-    image: cover
-    imageAspectRatio: 1.55
+      note.lists: 999

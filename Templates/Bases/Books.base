@@ -20,35 +20,19 @@ properties:
   note.date:
     displayName: Finished
 views:
-  - type: table
-    name: Reading
-    filters:
-      or:
-        - status.contains("Reading")
-        - status.contains("Watching")
-    order:
-      - status
-      - file.name
-      - author
-      - year
-      - format
-      - lists
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.author: 220
-      note.year: 65
-      note.format: 220
-      note.lists: 220
   - type: cards
-    name: Reading Cards
+    name: Completed Cards
     filters:
       or:
-        - status.contains("Reading")
-        - status.contains("Watching")
+        - status.contains("Completed")
     order:
       - file.name
       - author
+    sort:
+      - property: date
+        direction: DESC
+      - property: year
+        direction: DESC
     image: cover
     imageAspectRatio: 1.55
   - type: table
@@ -79,13 +63,47 @@ views:
       note.lists: 220
       note.date: 140
   - type: cards
-    name: Completed Cards
+    name: Reading Cards
     filters:
       or:
-        - status.contains("Completed")
+        - status.contains("Reading")
+        - status.contains("Watching")
     order:
       - file.name
       - author
+    image: cover
+    imageAspectRatio: 1.55
+  - type: table
+    name: Reading
+    filters:
+      or:
+        - status.contains("Reading")
+        - status.contains("Watching")
+    order:
+      - status
+      - file.name
+      - author
+      - year
+      - format
+      - lists
+    columnSize:
+      note.status: 150
+      file.name: 300
+      note.author: 220
+      note.year: 65
+      note.format: 220
+      note.lists: 999
+  - type: cards
+    name: To Read Cards
+    filters:
+      or:
+        - status.contains("To Read")
+        - status.contains("To Watch")
+        - status.isEmpty()
+    order:
+      - file.name
+      - author
+    limit: 6
     image: cover
     imageAspectRatio: 1.55
   - type: table
@@ -111,12 +129,10 @@ views:
       note.format: 220
       note.lists: 360
   - type: cards
-    name: To Read Cards
+    name: Dropped Cards
     filters:
       or:
-        - status.contains("To Read")
-        - status.contains("To Watch")
-        - status.isEmpty()
+        - status.contains("Dropped")
     order:
       - file.name
       - author

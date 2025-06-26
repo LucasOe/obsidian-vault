@@ -58,10 +58,10 @@
 	--bases-cards-group-padding: var(--size-4-2);
 	
 	background-color: var(--background-primary);
-	
-	.bases-cards-item {
-		background-color: var(--color-base-10);
-	}
+}
+
+.bases-cards-item {
+	background-color: var(--color-base-10);
 }
 
 /* Fix Bookmark icon color */
