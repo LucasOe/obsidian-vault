@@ -1,0 +1,32 @@
+{
+  "mySetting": "default",
+  "hiddenProperties": [
+    "isbn",
+    "tags",
+    "cssclasses",
+    "cover",
+    "banner",
+    "entry"
+  ],
+  "propertyPillColors": {
+    "To Watch": "green",
+    "Completed": "blue",
+    "To Read": "yellow",
+    "Reading": "green",
+    "Audiobook": "blue"
+  },
+  "enableBanner": true,
+  "enableCover": false,
+  "bannerProperty": "banner",
+  "coverProperty": "cover",
+  "extraCoverProperties": [],
+  "bannerHeight": 250,
+  "bannerHeightMobile": 100,
+  "bannerMargin": 15,
+  "bannerFading": true,
+  "coverVerticalWidth": 200,
+  "coverHorizontalWidth": 300,
+  "coverSquareWidth": 250,
+  "coverCircleWidth": 250,
+  "progressProperties": {}
+}

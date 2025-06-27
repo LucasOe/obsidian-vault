@@ -1,8 +1,11 @@
+body {
+	--pill-background: var(--color-base-30);
+	--pill-background-hover: var(--color-base-40);
+}
+
 .theme-dark {
 	--shadow-s: transparent;
 	--shadow-l: transparent;
-	
-	/* --metadata-input-font: var(--font-text-override); */
 }
 
 .workspace-split:not(.mod-sidedock) .workspace-tab-header-container {
@@ -39,11 +42,8 @@
 	--icon-color-focus: var(--tx1);
 }
 
-/* Property Pills */
+/* https://docs.obsidian.md/Reference/CSS+variables/Components/Multi-select */
 .metadata-property-value .multi-select-pill {
-	/* https://docs.obsidian.md/Reference/CSS+variables/Components/Multi-select */
-	--pill-background: var(--color-base-30);
-	--pill-background-hover: var(--color-base-30);
 	--pill-padding-x: 8px;
 	--pill-padding-y: 0px;
 }

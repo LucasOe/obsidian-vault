@@ -10,7 +10,6 @@
   "obsidian-view-mode-by-frontmatter",
   "highlightr-plugin",
   "obsidian-linter",
-  "metadata-hider",
   "url-into-selection",
   "obsidian-reading-time",
   "obsidian-minimal-settings",
@@ -18,5 +17,5 @@
   "folder-notes",
   "template-folder",
   "iconic",
-  "simple-banner"
+  "pretty-properties"
 ]

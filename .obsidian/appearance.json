@@ -6,20 +6,13 @@
   "textFontFamily": "Roboto,Inter",
   "interfaceFontFamily": "Roboto,Inter",
   "enabledCssSnippets": [
-    "border",
-    "custom-rainbow-colors",
-    "css-classes",
-    "fonts",
-    "callout-fix",
     "anuppuccin",
     "better-command-palette",
     "callout-chatgpt",
     "callouts",
     "cssclasses",
     "excalidraw",
-    "extended-colorschemes",
-    "banner",
-    "colored-properties"
+    "extended-colorschemes"
   ],
   "accentColor": "",
   "showViewHeader": true,
