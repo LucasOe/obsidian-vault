@@ -1,0 +1,57 @@
+/* https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/Rainbow-File-Browser/colors.scss */
+
+.nav-files-container > div > .nav-folder,
+[data-type="bookmarks"] .tree-item {
+  --nav-item-color: rgba(var(--folder-color), 1);
+  --nav-item-color-hover: rgba(var(--folder-color), 1);
+  --nav-item-color-active: rgba(var(--folder-color), 1);
+  
+  .tree-item-self .tree-item-icon {
+	--icon-color: rgba(var(--folder-color), 1);
+  }
+  
+  /* Colors */
+  &:nth-child(11n + 2) {
+	--folder-color: var(--ctp-red);
+  }
+  
+  &:nth-child(11n + 3) {
+	--folder-color: var(--ctp-maroon);
+  }
+  
+  &:nth-child(11n + 4) {
+	--folder-color: var(--ctp-peach);
+  }
+  
+  &:nth-child(11n + 5) {
+	--folder-color: var(--ctp-yellow);
+  }
+  
+  &:nth-child(11n + 6) {
+	--folder-color: var(--ctp-green);
+  }
+  
+  &:nth-child(11n + 7) {
+	--folder-color: var(--ctp-teal);
+  }
+  
+  &:nth-child(11n + 8) {
+	--folder-color: var(--ctp-sky);
+  }
+  
+  &:nth-child(11n + 9) {
+	--folder-color: var(--ctp-sapphire);
+  }
+  
+  &:nth-child(11n + 10) {
+	--folder-color: var(---ctp-blue);
+  }
+  
+  &:nth-child(11n + 11) {
+	--folder-color: var(--ctp-lavender);
+  }
+  
+  &:nth-child(11n + 12) {
+	--folder-color: var(--ctp-mauve);
+  }
+}

@@ -29,16 +29,13 @@
       "icon": "lucide-home"
     },
     "00 - Home/Books.md": {
-      "icon": "lucide-book",
-      "color": "red"
+      "icon": "lucide-book"
     },
     "00 - Home/Movies.md": {
-      "icon": "lucide-clapperboard",
-      "color": "orange"
+      "icon": "lucide-clapperboard"
     },
     "00 - Home/TV Shows.md": {
-      "icon": "lucide-tv",
-      "color": "yellow"
+      "icon": "lucide-tv"
     },
     "01 - Notes": {
       "icon": "lucide-clipboard-pen"
@@ -59,15 +56,13 @@
       "icon": "lucide-book-template"
     },
     "Templates/Author.md": {
-      "icon": "lucide-user-pen",
-      "color": "gray"
+      "icon": "lucide-user-pen"
     },
     "Templates/Bases": {
       "icon": "lucide-database"
     },
     "Templates/Director.md": {
-      "icon": "lucide-user",
-      "color": "gray"
+      "icon": "lucide-user"
     }
   },
   "bookmarkIcons": {},
@@ -139,8 +134,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-file",
-      "color": "gray"
+      "icon": "lucide-file"
     },
     {
       "id": "Zj9Al",
@@ -158,8 +152,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-pen-tool",
-      "color": "gray"
+      "icon": "lucide-pen-tool"
     },
     {
       "id": "ILWRv",
@@ -177,8 +170,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-database",
-      "color": "gray"
+      "icon": "lucide-database"
     },
     {
       "id": "2yiyI",
@@ -196,8 +188,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-file",
-      "color": "gray"
+      "icon": "lucide-file"
     },
     {
       "id": "Cvwc3",
@@ -215,8 +206,25 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-bot",
-      "color": "gray"
+      "icon": "lucide-bot"
+    },
+    {
+      "id": "g4LoN",
+      "name": "Person",
+      "match": "all",
+      "conditions": [
+        {
+          "source": "tags",
+          "operator": "includes",
+          "value": "person"
+        },
+        {
+          "source": "icon",
+          "operator": "!hasValue"
+        }
+      ],
+      "enabled": true,
+      "icon": "lucide-user"
     },
     {
       "id": "5SNB3",
@@ -234,8 +242,7 @@
           "source": "icon",
           "operator": "!hasValue"
         }
-      ],
-      "color": "gray"
+      ]
     },
     {
       "id": "5aXJ4",
@@ -253,8 +260,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-book-copy",
-      "color": "gray"
+      "icon": "lucide-book-copy"
     },
     {
       "id": "TQuIJ",
@@ -272,8 +278,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-clapperboard",
-      "color": "gray"
+      "icon": "lucide-clapperboard"
     },
     {
       "id": "u9xrs",
@@ -291,8 +296,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-clapperboard",
-      "color": "gray"
+      "icon": "lucide-clapperboard"
     },
     {
       "id": "oyFbP",
@@ -310,8 +314,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-tv",
-      "color": "gray"
+      "icon": "lucide-tv"
     },
     {
       "id": "RQLsA",
@@ -329,8 +332,7 @@
         }
       ],
       "enabled": true,
-      "icon": "lucide-film",
-      "color": "gray"
+      "icon": "lucide-film"
     }
   ],
   "folderRules": []

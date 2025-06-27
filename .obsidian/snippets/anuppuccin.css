@@ -46,6 +46,17 @@ body {
 .metadata-property-value .multi-select-pill {
 	--pill-padding-x: 8px;
 	--pill-padding-y: 0px;
+	
+	/* Add underline to links in Bases */
+	&.internal-link,
+	&.internal-link:hover {
+		text-decoration-line: var(--link-decoration);
+	}
+	
+	/* pretty-properties plugin */
+	&:not(.internal-link) {
+		color: rgba(var(--pill-color-rgb), 1);
+	}
 }
 
 /* Change table background and border */
