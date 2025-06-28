@@ -1,7 +1,7 @@
 /* https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/Rainbow-File-Browser/colors.scss */
 
 .nav-files-container > div > .nav-folder,
-[data-type="bookmarks"] .tree-item {
+[data-type="bookmarks"] > div > div > .tree-item {
   --nav-item-color: rgba(var(--folder-color), 1);
   --nav-item-color-hover: rgba(var(--folder-color), 1);
   --nav-item-color-active: rgba(var(--folder-color), 1);

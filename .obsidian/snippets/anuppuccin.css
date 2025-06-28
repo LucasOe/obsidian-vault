@@ -8,6 +8,7 @@ body {
 	--shadow-l: transparent;
 }
 
+/* Fix padding in tab header */
 .workspace-split:not(.mod-sidedock) .workspace-tab-header-container {
 	padding-left: 0px;
 	
@@ -42,6 +43,11 @@ body {
 	--icon-color-focus: var(--tx1);
 }
 
+/* Fix Bookmark icon color */
+.view-action.mod-bookmarked {
+	--icon-color: var(--text-normal);
+}
+
 /* https://docs.obsidian.md/Reference/CSS+variables/Components/Multi-select */
 .metadata-property-value .multi-select-pill {
 	--pill-padding-x: 8px;
@@ -59,6 +65,11 @@ body {
 	}
 }
 
+/* Folder Notes Plugin */
+.folder-note-underline .has-folder-note .nav-folder-title-content {
+	text-decoration-color: unset;
+}
+
 /* Change table background and border */
 .bases-thead, .bases-tbody, .bases-embed .bases-view {
 	--bases-table-header-background: var(--background-primary);
@@ -70,19 +81,8 @@ body {
 	
 	background-color: var(--background-primary);
 }
-
 .bases-cards-item {
 	background-color: var(--color-base-10);
-}
-
-/* Fix Bookmark icon color */
-.view-action.mod-bookmarked {
-	--icon-color: var(--text-normal);
-}
-
-/* Folder Notes Plugin */
-.folder-note-underline .has-folder-note .nav-folder-title-content {
-	text-decoration-color: unset;
 }
 
 /* Hide Header Sort icon */
@@ -98,4 +98,14 @@ body {
 /* Disable Header interaction */
 .bases-thead {
 	pointer-events: none;
+}
+/* Hide Toolbar items in Reading mode */
+.workspace-leaf-content[data-mode="preview"] .query-toolbar-item {
+	display: none;
+	
+	&.mod-views,
+	&.bases-toolbar-result-count,
+	&.mod-add-note {
+		display: block;
+	}
 }

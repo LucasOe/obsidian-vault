@@ -21,7 +21,7 @@
   "coverProperty": "cover",
   "extraCoverProperties": [],
   "bannerHeight": 250,
-  "bannerHeightMobile": 100,
+  "bannerHeightMobile": 150,
   "bannerMargin": 15,
   "bannerFading": true,
   "coverVerticalWidth": 200,
