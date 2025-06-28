@@ -20,27 +20,18 @@ properties:
   note.date:
     displayName: Finished
 views:
-  - type: table
+  - type: cards
     name: Reading
     filters:
       or:
         - status.contains("Reading")
         - status.contains("Watching")
     order:
-      - status
       - file.name
       - author
-      - year
-      - format
-      - lists
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.author: 220
-      note.year: 65
-      note.format: 220
-      note.lists: 999
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: To Read
     filters:
       or:
@@ -48,63 +39,32 @@ views:
         - status.contains("To Watch")
         - status.isEmpty()
     order:
-      - status
       - file.name
       - author
-      - year
-      - format
-      - lists
-    limit: 10
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.author: 220
-      note.year: 65
-      note.format: 220
-      note.lists: 360
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: Completed
     filters:
-      and:
+      or:
         - status.contains("Completed")
     order:
-      - status
       - file.name
       - author
-      - year
-      - format
-      - lists
-      - date
     sort:
       - property: date
         direction: DESC
       - property: year
         direction: DESC
-    limit: 100
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.author: 220
-      note.year: 65
-      note.format: 220
-      note.lists: 220
-      note.date: 140
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: Dropped
     filters:
-      and:
+      or:
         - status.contains("Dropped")
     order:
-      - status
       - file.name
       - author
-      - year
-      - format
-      - lists
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.author: 220
-      note.year: 65
-      note.format: 220
-      note.lists: 360
+    image: cover
+    imageAspectRatio: 1.55

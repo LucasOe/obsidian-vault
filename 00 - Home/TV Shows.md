@@ -2,13 +2,14 @@
 cssclasses:
   - max
   - hide-metadata
+  - callout-title-color
 ---
 
-> [!tv|green] Currently Watching
+> [!tv|green] [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]
 
-> [!film|purple]+ Watch Next
+> [!film|purple]+ [[TV Shows Gallery.base#To Watch|Watch Next]]
 > ![[TV Shows.base#To Watch]]
 
-> [!list|blue]+ Watch History
+> [!list|blue]+ [[TV Shows Gallery.base#Completed|Watch History]]
 > ![[TV Shows.base#Completed]]

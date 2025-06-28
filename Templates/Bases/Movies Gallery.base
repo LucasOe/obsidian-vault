@@ -18,7 +18,7 @@ properties:
   note.date:
     displayName: Finished
 views:
-  - type: table
+  - type: cards
     name: To Watch
     filters:
       or:
@@ -26,38 +26,20 @@ views:
         - status.contains("To Read")
         - status.isEmpty()
     order:
-      - status
       - file.name
       - year
-      - director
-      - lists
-    limit: 10
-    columnSize:
-      note.status: 150
-      file.name: 450
-      note.year: 65
-      note.director: 200
-      note.lists: 999
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: Completed
     filters:
-      and:
+      or:
         - status.contains("Completed")
     order:
-      - status
       - file.name
       - year
-      - director
-      - lists
-      - date
     sort:
       - property: date
         direction: DESC
-    limit: 100
-    columnSize:
-      note.status: 150
-      file.name: 450
-      note.year: 65
-      note.director: 200
-      note.lists: 310
-      note.date: 140
+    image: cover
+    imageAspectRatio: 1.55

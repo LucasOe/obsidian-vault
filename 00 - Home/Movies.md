@@ -2,13 +2,14 @@
 cssclasses:
   - max
   - hide-metadata
+  - callout-title-color
 ---
 
-> [!clapperboard|green] Watch Next
+> [!clapperboard|green] [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]
 
 > [!library|purple]- Lists
 > ![[Movie List.base#Lists]]
 
-> [!list|blue]+ Watch History
+> [!list|blue]+ [[Movies Gallery.base#Completed|Watch History]]
 > ![[Movies.base#Completed]]

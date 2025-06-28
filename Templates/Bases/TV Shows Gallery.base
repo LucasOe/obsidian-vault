@@ -23,25 +23,19 @@ properties:
   formula.progress:
     displayName: Progress
 views:
-  - type: table
+  - type: cards
     name: Watching
     filters:
       or:
         - status.contains("Watching")
         - status.contains("Reading")
     order:
-      - status
       - file.name
       - year
-      - lists
       - formula.progress
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.year: 65
-      note.lists: 580
-      formula.progress: 300
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: To Watch
     filters:
       or:
@@ -49,37 +43,23 @@ views:
         - status.contains("To Read")
         - status.isEmpty()
     order:
-      - status
       - file.name
       - year
-      - lists
     sort:
       - property: date
         direction: DESC
-    limit: 10
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.year: 65
-      note.lists: 999
-  - type: table
+    image: cover
+    imageAspectRatio: 1.55
+  - type: cards
     name: Completed
     filters:
-      and:
+      or:
         - status.contains("Completed")
     order:
-      - status
       - file.name
       - year
-      - lists
-      - date
     sort:
       - property: date
         direction: DESC
-    limit: 100
-    columnSize:
-      note.status: 150
-      file.name: 300
-      note.year: 65
-      note.lists: 660
-      note.date: 140
+    image: cover
+    imageAspectRatio: 1.55

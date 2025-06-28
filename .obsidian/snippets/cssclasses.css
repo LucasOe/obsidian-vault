@@ -6,3 +6,11 @@
     --metadata-display-editing: none;
     --metadata-display-reading: none;
 }
+
+/* changes the color of internal links in callout titles to the callout color */
+.callout-title-color {
+    .callout-title-inner > .internal-link {
+        color: var(--callout-title-color);
+        text-decoration-line: underline;
+    }
+}
