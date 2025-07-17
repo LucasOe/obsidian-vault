@@ -13,7 +13,8 @@
     "Completed": "blue",
     "To Read": "yellow",
     "Reading": "green",
-    "Audiobook": "blue"
+    "Audiobook": "cyan",
+    "Animation": "cyan"
   },
   "enableBanner": true,
   "enableCover": false,
@@ -28,5 +29,9 @@
   "coverHorizontalWidth": 300,
   "coverSquareWidth": 250,
   "coverCircleWidth": 250,
-  "progressProperties": {}
+  "progressProperties": {
+    "watched-episodes": {
+      "maxProperty": "total-episodes"
+    }
+  }
 }

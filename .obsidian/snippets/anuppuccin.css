@@ -82,7 +82,7 @@ body {
 	background-color: var(--background-primary);
 }
 .bases-cards-item {
-	background-color: var(--color-base-10);
+	background-color: var(--background-secondary);
 }
 
 /* Hide Header Sort icon */
@@ -98,14 +98,4 @@ body {
 /* Disable Header interaction */
 .bases-thead {
 	pointer-events: none;
-}
-/* Hide Toolbar items in Reading mode */
-.workspace-leaf-content[data-mode="preview"] .query-toolbar-item {
-	display: none;
-	
-	&.mod-views,
-	&.bases-toolbar-result-count,
-	&.mod-add-note {
-		display: block;
-	}
 }

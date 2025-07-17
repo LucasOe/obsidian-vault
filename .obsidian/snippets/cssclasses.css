@@ -14,3 +14,14 @@
         text-decoration-line: underline;
     }
 }
+
+/* Hides the toolbar items Sort, Filter and Properties for Bases */
+.hide-bases-toolbar {
+    .query-toolbar-item {
+        display: none;
+        
+        &.mod-views, &.bases-toolbar-result-count, &.mod-add-note {
+            display: block;
+        }
+    }
+}
