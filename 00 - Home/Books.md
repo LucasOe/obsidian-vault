@@ -3,6 +3,7 @@ cssclasses:
   - max
   - hide-metadata
   - callout-title-color
+  - hide-bases-toolbar
 ---
 
 > [!book|green]+ [[Books Gallery.base#Reading|Currently Reading]]

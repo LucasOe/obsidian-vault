@@ -3,9 +3,10 @@ cssclasses:
   - max
   - hide-metadata
   - callout-title-color
+  - hide-bases-toolbar
 ---
 
-> [!tv|green] [[TV Shows Gallery.base#Watching|Currently Watching]]
+> [!tv|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]
 
 > [!film|purple]+ [[TV Shows Gallery.base#To Watch|Watch Next]]

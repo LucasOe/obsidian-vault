@@ -3,9 +3,10 @@ cssclasses:
   - max
   - hide-metadata
   - callout-title-color
+  - hide-bases-toolbar
 ---
 
-> [!clapperboard|green] [[Movies Gallery.base#To Watch|Watch Next]]
+> [!clapperboard|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]
 
 > [!library|purple]- Lists
