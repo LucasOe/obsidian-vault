@@ -54,6 +54,9 @@ views:
       - year
       - format
       - lists
+    sort:
+      - property: file.ctime
+        direction: DESC
     limit: 10
     columnSize:
       note.status: 150

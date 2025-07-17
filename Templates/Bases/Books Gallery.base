@@ -31,6 +31,7 @@ views:
       - author
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
   - type: cards
     name: To Read
     filters:
@@ -43,6 +44,7 @@ views:
       - author
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
   - type: cards
     name: Completed
     filters:
@@ -58,6 +60,7 @@ views:
         direction: DESC
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
   - type: cards
     name: Dropped
     filters:
@@ -68,3 +71,4 @@ views:
       - author
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190

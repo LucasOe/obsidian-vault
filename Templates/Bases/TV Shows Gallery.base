@@ -35,6 +35,7 @@ views:
       - formula.progress
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
   - type: cards
     name: To Watch
     filters:
@@ -50,6 +51,7 @@ views:
         direction: DESC
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
   - type: cards
     name: Completed
     filters:
@@ -63,3 +65,4 @@ views:
         direction: DESC
     image: cover
     imageAspectRatio: 1.55
+    cardSize: 190
