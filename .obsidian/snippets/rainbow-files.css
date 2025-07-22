@@ -1,4 +1,5 @@
 /* https://github.com/AnubisNekhet/AnuPpuccin/blob/main/src/modules/Features/Rainbow-File-Browser/colors.scss */
+/* https://github.com/dee158/obsidian-rainbow-folders-fixer */
 
 .nav-files-container > div > .nav-folder,
 [data-type="bookmarks"] > div > div > .tree-item {
@@ -11,47 +12,58 @@
   }
   
   /* Colors */
-  &:nth-child(11n + 2) {
-	--folder-color: var(--ctp-red);
+  &:nth-child(11n + 2),
+  &[data-foldernumber="1"] {
+	  --folder-color: var(--ctp-red);
   }
   
-  &:nth-child(11n + 3) {
-	--folder-color: var(--ctp-maroon);
+  &:nth-child(11n + 3),
+  &[data-foldernumber="2"] {
+	  --folder-color: var(--ctp-maroon);
   }
   
-  &:nth-child(11n + 4) {
-	--folder-color: var(--ctp-peach);
+  &:nth-child(11n + 4),
+  &[data-foldernumber="3"] {
+	  --folder-color: var(--ctp-peach);
   }
   
-  &:nth-child(11n + 5) {
-	--folder-color: var(--ctp-yellow);
+  &:nth-child(11n + 5),
+  &[data-foldernumber="4"] {
+	  --folder-color: var(--ctp-yellow);
   }
   
-  &:nth-child(11n + 6) {
-	--folder-color: var(--ctp-green);
+  &:nth-child(11n + 6),
+  &[data-foldernumber="5"] {
+	  --folder-color: var(--ctp-green);
   }
   
-  &:nth-child(11n + 7) {
-	--folder-color: var(--ctp-teal);
+  &:nth-child(11n + 7),
+  &[data-foldernumber="6"] {
+	  --folder-color: var(--ctp-teal);
   }
   
-  &:nth-child(11n + 8) {
-	--folder-color: var(--ctp-sky);
+  &:nth-child(11n + 8),
+  &[data-foldernumber="7"] {
+	  --folder-color: var(--ctp-sky);
   }
   
-  &:nth-child(11n + 9) {
-	--folder-color: var(--ctp-sapphire);
+  &:nth-child(11n + 9),
+  &[data-foldernumber="8"] {
+	  --folder-color: var(--ctp-sapphire);
   }
   
-  &:nth-child(11n + 10) {
-	--folder-color: var(---ctp-blue);
+  &:nth-child(11n + 10),
+  &[data-foldernumber="9"] {
+	  --folder-color: var(---ctp-blue);
   }
   
-  &:nth-child(11n + 11) {
-	--folder-color: var(--ctp-lavender);
+  &:nth-child(11n + 11),
+  &[data-foldernumber="10"] {
+	  --folder-color: var(--ctp-lavender);
   }
   
-  &:nth-child(11n + 12) {
-	--folder-color: var(--ctp-mauve);
+  &:nth-child(11n + 12),
+  &[data-foldernumber="11"] {
+	  --folder-color: var(--ctp-mauve);
   }
 }

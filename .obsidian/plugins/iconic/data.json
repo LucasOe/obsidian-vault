@@ -5,7 +5,10 @@
   "showAllFolderIcons": false,
   "minimalFolderIcons": false,
   "showMarkdownTabIcons": true,
+  "showTitleIcons": true,
+  "showTagPillIcons": true,
   "showMenuActions": true,
+  "showSuggestionIcons": true,
   "showQuickSwitcherIcons": true,
   "showItemName": "desktop",
   "biggerSearchResults": "mobile",
@@ -66,7 +69,29 @@
     }
   },
   "bookmarkIcons": {},
-  "tagIcons": {},
+  "tagIcons": {
+    "book": {
+      "icon": "lucide-book"
+    },
+    "book-list": {
+      "icon": "lucide-book-copy"
+    },
+    "movie": {
+      "icon": "lucide-clapperboard"
+    },
+    "movie-list": {
+      "icon": "lucide-clapperboard"
+    },
+    "person": {
+      "icon": "lucide-user"
+    },
+    "tv-series": {
+      "icon": "lucide-tv"
+    },
+    "tv-series-list": {
+      "icon": "lucide-film"
+    }
+  },
   "propertyIcons": {
     "aliases": {
       "icon": "lucide-circle-arrow-right"
