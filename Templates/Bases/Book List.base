@@ -6,7 +6,7 @@ properties:
     displayName: Name
   note.entry:
     displayName: Entry
-  note.status:
+  note.book-status:
     displayName: Status
   note.author:
     displayName: Author
@@ -42,10 +42,10 @@ views:
         - or:
             - lists.contains(this.file.name)
             - author.contains(this.file.name)
-    groupBy: status
+    groupBy: book-status
     order:
       - entry
-      - status
+      - book-status
       - file.name
       - author
       - year
@@ -56,7 +56,7 @@ views:
       - property: year
         direction: ASC
     columnSize:
-      note.status: 150
+      note.book-status: 150
       file.name: 300
       note.author: 300
       note.year: 100

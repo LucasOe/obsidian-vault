@@ -123,7 +123,13 @@
     "pages": {
       "icon": "lucide-file"
     },
-    "status": {
+    "book-status": {
+      "icon": "lucide-check-circle-2"
+    },
+    "movie-status": {
+      "icon": "lucide-check-circle-2"
+    },
+    "tv-status": {
       "icon": "lucide-check-circle-2"
     },
     "total-episodes": {

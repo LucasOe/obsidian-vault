@@ -4,7 +4,7 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.status:
+  note.tv-status:
     displayName: Status
   note.year:
     displayName: Year
@@ -34,15 +34,15 @@ views:
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
-    groupBy: status
+    groupBy: tv-status
     order:
-      - status
+      - tv-status
       - file.name
       - year
     sort:
       - property: year
         direction: DESC
     columnSize:
-      note.status: 150
+      note.tv-status: 150
       file.name: 300
       note.year: 100

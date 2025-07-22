@@ -4,7 +4,7 @@ genres:
 year:
 cover:
 lists:
-status:
+tv-status:
 total-episodes:
 watched-episodes:
 date:

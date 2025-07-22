@@ -10,7 +10,7 @@ isbn:
 format:
   - Paperback
 lists:
-status:
+book-status:
 date:
 tags:
   - book

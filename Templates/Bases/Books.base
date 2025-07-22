@@ -5,7 +5,7 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.status:
+  note.book-status:
     displayName: Status
   note.author:
     displayName: Author
@@ -24,17 +24,16 @@ views:
     name: Reading
     filters:
       or:
-        - status.contains("Reading")
-        - status.contains("Watching")
+        - note["book-status"].contains("Reading")
     order:
-      - status
+      - book-status
       - file.name
       - author
       - year
       - format
       - lists
     columnSize:
-      note.status: 150
+      note.book-status: 150
       file.name: 300
       note.author: 220
       note.year: 65
@@ -44,11 +43,10 @@ views:
     name: To Read
     filters:
       or:
-        - status.contains("To Read")
-        - status.contains("To Watch")
-        - status.isEmpty()
+        - note["book-status"].contains("To Read")
+        - note["book-status"].isEmpty()
     order:
-      - status
+      - book-status
       - file.name
       - author
       - year
@@ -59,7 +57,7 @@ views:
         direction: DESC
     limit: 10
     columnSize:
-      note.status: 150
+      note.book-status: 150
       file.name: 300
       note.author: 220
       note.year: 65
@@ -69,9 +67,9 @@ views:
     name: Completed
     filters:
       and:
-        - status.contains("Completed")
+        - note["book-status"].contains("Completed")
     order:
-      - status
+      - book-status
       - file.name
       - author
       - year
@@ -85,7 +83,7 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.status: 150
+      note.book-status: 150
       file.name: 300
       note.author: 220
       note.year: 65
@@ -96,16 +94,16 @@ views:
     name: Dropped
     filters:
       and:
-        - status.contains("Dropped")
+        - note["book-status"].contains("Dropped")
     order:
-      - status
+      - book-status
       - file.name
       - author
       - year
       - format
       - lists
     columnSize:
-      note.status: 150
+      note.book-status: 150
       file.name: 300
       note.author: 220
       note.year: 65

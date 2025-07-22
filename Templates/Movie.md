@@ -5,7 +5,7 @@ genres:
 year:
 cover:
 lists:
-status:
+movie-status:
 date:
 tags:
   - movie

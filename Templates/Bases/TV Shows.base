@@ -13,7 +13,7 @@ formulas:
 properties:
   file.name:
     displayName: Name
-  note.status:
+  note.tv-status:
     displayName: Status
   note.year:
     displayName: Year
@@ -32,16 +32,15 @@ views:
     name: Watching
     filters:
       or:
-        - status.contains("Watching")
-        - status.contains("Reading")
+        - note["tv-status"].contains("Watching")
     order:
-      - status
+      - tv-status
       - file.name
       - year
       - formula.lists
       - formula.progress
     columnSize:
-      note.status: 150
+      note.tv-status: 150
       file.name: 300
       note.year: 65
       formula.lists: 580
@@ -50,11 +49,10 @@ views:
     name: To Watch
     filters:
       or:
-        - status.contains("To Watch")
-        - status.contains("To Read")
-        - status.isEmpty()
+        - note["tv-status"].contains("To Watch")
+        - note["tv-status"].isEmpty()
     order:
-      - status
+      - tv-status
       - file.name
       - year
       - formula.lists
@@ -63,7 +61,7 @@ views:
         direction: DESC
     limit: 10
     columnSize:
-      note.status: 150
+      note.tv-status: 150
       file.name: 300
       note.year: 65
       formula.lists: 999
@@ -71,9 +69,9 @@ views:
     name: Completed
     filters:
       and:
-        - status.contains("Completed")
+        - note["tv-status"].contains("Completed")
     order:
-      - status
+      - tv-status
       - file.name
       - year
       - formula.lists
@@ -83,7 +81,7 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.status: 150
+      note.tv-status: 150
       file.name: 300
       note.year: 65
       formula.lists: 660

@@ -4,7 +4,7 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.status:
+  note.movie-status:
     displayName: Status
   note.director:
     displayName: Director
@@ -36,9 +36,9 @@ views:
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
-    groupBy: status
+    groupBy: movie-status
     order:
-      - status
+      - movie-status
       - file.name
       - director
       - year
@@ -46,7 +46,7 @@ views:
       - property: year
         direction: DESC
     columnSize:
-      note.status: 150
+      note.movie-status: 150
       file.name: 300
       note.director: 300
       note.year: 100
