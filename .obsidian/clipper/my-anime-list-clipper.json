@@ -1,27 +1,27 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "IMDB TV Series",
+	"name": "My Anime List",
 	"behavior": "create",
-	"noteContentFormat": "# Summary\n\n{{schema:description}}",
+	"noteContentFormat": "# Summary\n\n{{selector:p[itemprop=\"description\"|markdown|replace:\" \\\\[Written by MAL Rewrite\\\\]\":\"\"}}",
 	"properties": [
 		{
 			"name": "genres",
-			"value": "{{schema:genre|join}}",
+			"value": "Animation,{{selector:span[itemprop=\\\"genre\\\"]|slice:0,3|join}}",
 			"type": "multitext"
 		},
 		{
 			"name": "year",
-			"value": "{{schema:datePublished|split:\\\"-\\\"|first}}",
+			"value": "{{selector:a[href*=\\\"myanimelist.net/anime/season/\\\"]?href|split:\\\".\\\"|last}}",
 			"type": "number"
 		},
 		{
 			"name": "cover",
-			"value": "{{schema:image}}",
+			"value": "{{meta:property:og:image}}",
 			"type": "text"
 		},
 		{
 			"name": "lists",
-			"value": "{{schema:name|replace:\\\":\\\":\\\"꞉\\\"}}",
+			"value": "",
 			"type": "multitext"
 		},
 		{
@@ -31,12 +31,12 @@
 		},
 		{
 			"name": "total-episodes",
-			"value": "{{selector:.ipc-title[data-testid=\\\"episodes-header\\\"] .ipc-title__subtext}}",
+			"value": "{{selector:#curEps?data-num}}",
 			"type": "number"
 		},
 		{
 			"name": "watched-episodes",
-			"value": "0",
+			"value": "{{selector:#myinfo_watchedeps?value}}",
 			"type": "number"
 		},
 		{
@@ -51,8 +51,8 @@
 		}
 	],
 	"triggers": [
-		"schema:@TVSeries"
+		"https://myanimelist.net/anime/"
 	],
-	"noteNameFormat": "{{schema:name|replace:\":\":\"꞉\"}}",
+	"noteNameFormat": "{{selector:.title-name,.title-english|last|replace:\":\":\"꞉\"}}",
 	"path": "Objects/TV Shows"
 }

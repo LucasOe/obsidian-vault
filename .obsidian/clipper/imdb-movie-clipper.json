@@ -30,7 +30,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "status",
+			"name": "movie-status",
 			"value": "",
 			"type": "multitext"
 		},

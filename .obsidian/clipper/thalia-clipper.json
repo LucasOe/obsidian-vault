@@ -22,7 +22,7 @@
 		{
 			"name": "year",
 			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:(\\\"YYYY\\\", \\\"DD.MM.YYYY\\\")}}",
-			"type": "date"
+			"type": "number"
 		},
 		{
 			"name": "cover",
@@ -50,7 +50,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "status",
+			"name": "book-status",
 			"value": "",
 			"type": "multitext"
 		},
