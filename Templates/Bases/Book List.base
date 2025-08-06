@@ -1,6 +1,18 @@
 filters:
-  and:
-    - file.folder != "Templates"
+  not:
+    - file.inFolder("Templates")
+formulas:
+  # Entries
+  entries: file.backlinks.map(value.asFile()).filter(value.hasLink(file) && value.hasTag("book")).unique()
+  entries_total: formula.entries.length
+  entries_completed: formula.entries.filter(value.properties["book-status"].contains("Completed")).length
+  # Progress
+  progress_percent: formula.entries_completed / formula.entries_total
+  progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
+  progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
+  progress: formula.progress_bar + " " + formula.progress_text
+  # Group
+  is_finished: formula.progress_percent >= 1.0
 properties:
   file.name:
     displayName: Name
@@ -20,25 +32,38 @@ properties:
     displayName: Lists
   note.date:
     displayName: Finished
+  formula.entries_total:
+    displayName: Entries
+  formula.progress:
+    displayName: Progress
 views:
   - type: table
     name: Series
     filters:
       and:
-        - tags.contains("book-list")
-        - file.folder != "Templates"
+        - file.hasTag("book-list")
+    groupBy: formula.is_finished
     order:
       - file.name
       - author
+      - formula.entries_total
+      - formula.progress
+    sort:
+      - property: formula.progress_percent
+        direction: DESC
+      - property: file.name
+        direction: ASC
     limit: 100
     columnSize:
-      file.name: 730
-      note.author: 300
+      file.name: 450
+      note.author: 505
+      formula.entries_total: 85
+      formula.progress: 300
   - type: table
     name: Entries
     filters:
       and:
-        - tags.contains("book")
+        - file.hasTag("book")
         - or:
             - lists.contains(this.file.name)
             - author.contains(this.file.name)

@@ -1,7 +1,8 @@
 filters:
   and:
-    - tags.contains("movie")
-    - file.folder != "Templates"
+    - file.hasTag("movie")
+    - not:
+      - file.inFolder("Templates")
 properties:
   file.name:
     displayName: Name
@@ -35,10 +36,10 @@ views:
         direction: DESC
     limit: 10
     columnSize:
-      note.status: 150
+      note.movie-status: 150
       file.name: 450
       note.year: 65
-      note.director: 200
+      note.director: 290
       note.lists: 999
   - type: table
     name: Completed

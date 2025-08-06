@@ -1,6 +1,18 @@
 filters:
-  and:
-    - file.folder != "Templates"
+  not:
+    - file.inFolder("Templates")
+formulas:
+  # Entries
+  entries: file.backlinks.map(value.asFile()).filter(value.hasLink(file) && value.hasTag("movie")).unique()
+  entries_total: formula.entries.length
+  entries_completed: formula.entries.filter(value.properties["movie-status"].contains("Completed")).length
+  # Progress
+  progress_percent: formula.entries_completed / formula.entries_total
+  progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
+  progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
+  progress: formula.progress_bar + " " + formula.progress_text
+  # Group
+  is_finished: formula.progress_percent >= 1.0
 properties:
   file.name:
     displayName: Name
@@ -16,23 +28,30 @@ properties:
     displayName: Lists
   note.date:
     displayName: Finished
+  formula.entries_total:
+    displayName: Entries
+  formula.progress:
+    displayName: Progress
 views:
   - type: table
     name: Lists
     filters:
       and:
-        - tags.contains("movie-list")
-        - file.folder != "Templates"
+        - file.hasTag("movie-list")
     order:
       - file.name
+      - formula.entries_total
+      - formula.progress
     limit: 100
     columnSize:
-      file.name: 730
+      file.name: 955
+      formula.entries_total: 85
+      formula.progress: 300
   - type: table
     name: Entries
     filters:
       and:
-        - tags.contains("movie")
+        - file.hasTag("movie")
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)

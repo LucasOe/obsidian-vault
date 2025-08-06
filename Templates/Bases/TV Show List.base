@@ -1,6 +1,6 @@
 filters:
-  and:
-    - file.folder != "Templates"
+  not:
+    - file.inFolder("Templates")
 properties:
   file.name:
     displayName: Name
@@ -19,8 +19,7 @@ views:
     name: List
     filters:
       and:
-        - tags.contains("tv-series-list")
-        - file.folder != "Templates"
+        - file.hasTag("tv-series-list")
     order:
       - file.name
     limit: 100
@@ -30,7 +29,7 @@ views:
     name: Entries
     filters:
       and:
-        - tags.contains("tv-series")
+        - file.hasTag("tv-series")
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)

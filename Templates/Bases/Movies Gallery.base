@@ -1,7 +1,8 @@
 filters:
   and:
-    - tags.contains("movie")
-    - file.folder != "Templates"
+    - file.hasTag("movie")
+    - not:
+      - file.inFolder("Templates")
 properties:
   file.name:
     displayName: Name

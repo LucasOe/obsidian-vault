@@ -1,7 +1,8 @@
 filters:
   and:
-    - tags.contains("book")
-    - file.folder != "Templates"
+    - file.hasTag("book")
+    - not:
+      - file.inFolder("Templates")
 properties:
   file.name:
     displayName: Name
