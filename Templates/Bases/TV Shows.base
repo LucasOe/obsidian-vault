@@ -10,7 +10,11 @@ formulas:
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
   # Show a link to the note itself if no list is found, otherwise show list
-  lists: if(note["lists"].isEmpty(), file.asLink(file.name + " ↺"), note["lists"])
+  lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
+  # Filter by the first entry for each list
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series"))
+  backlink_first: formula.backlinks.filter(value.properties["tv-status"].contains("To Watch")).sort()[0]
+  is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
 properties:
   file.name:
     displayName: Name
@@ -49,9 +53,11 @@ views:
   - type: table
     name: To Watch
     filters:
-      or:
-        - note["tv-status"].contains("To Watch")
-        - note["tv-status"].isEmpty()
+      and:
+        - formula.is_first
+        - or:
+          - note["tv-status"].contains("To Watch")
+          - note["tv-status"].isEmpty()
     order:
       - tv-status
       - file.name
