@@ -99,6 +99,9 @@
     "author": {
       "icon": "lucide-user-pen"
     },
+    "book-status": {
+      "icon": "lucide-check-circle-2"
+    },
     "date": {
       "icon": "lucide-calendar"
     },
@@ -120,20 +123,17 @@
     "lists": {
       "icon": "links-going-out"
     },
-    "pages": {
-      "icon": "lucide-file"
-    },
-    "book-status": {
-      "icon": "lucide-check-circle-2"
-    },
     "movie-status": {
       "icon": "lucide-check-circle-2"
     },
-    "tv-status": {
-      "icon": "lucide-check-circle-2"
+    "pages": {
+      "icon": "lucide-file"
     },
     "total-episodes": {
       "icon": "lucide-binary"
+    },
+    "tv-status": {
+      "icon": "lucide-check-circle-2"
     },
     "watched-episodes": {
       "icon": "lucide-binary"
