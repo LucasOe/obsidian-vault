@@ -37,6 +37,7 @@
     "date": "date",
     "total-episodes": "number",
     "watched-episodes": "number",
-    "entry": "number"
+    "entry": "number",
+    "excalidraw-embed-md": "checkbox"
   }
 }
