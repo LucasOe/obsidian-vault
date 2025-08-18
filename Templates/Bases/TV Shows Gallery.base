@@ -2,7 +2,7 @@ filters:
   and:
     - file.hasTag("tv-series")
     - not:
-      - file.inFolder("Templates")
+        - file.inFolder("Templates")
 formulas:
   progress_percent: note["watched-episodes"] / note["total-episodes"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
