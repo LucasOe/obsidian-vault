@@ -6,15 +6,17 @@
     "cssclasses",
     "cover",
     "banner",
-    "entry"
+    "entry",
+    "offset"
   ],
   "propertyPillColors": {
-    "To Watch": "green",
+    "To Watch": "yellow",
     "Completed": "blue",
     "To Read": "yellow",
     "Reading": "green",
     "Audiobook": "cyan",
-    "Animation": "cyan"
+    "Animation": "cyan",
+    "Watching": "green"
   },
   "enableBanner": true,
   "enableIcon": true,
@@ -61,5 +63,9 @@
   "bannerIconGapMobile": 20,
   "iconColor": "",
   "iconBackground": false,
-  "enableBases": false
+  "enableBases": true,
+  "bannerPositionProperty": "banner_position",
+  "addPillPadding": "all",
+  "addBaseTagColor": true,
+  "styleFormulaTags": true
 }

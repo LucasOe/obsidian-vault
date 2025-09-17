@@ -10,6 +10,7 @@
   "showMenuActions": true,
   "showSuggestionIcons": true,
   "showQuickSwitcherIcons": true,
+  "showMoveFileIcons": true,
   "showItemName": "desktop",
   "biggerSearchResults": "mobile",
   "maxSearchResults": 50,
@@ -125,6 +126,9 @@
     },
     "movie-status": {
       "icon": "lucide-check-circle-2"
+    },
+    "offset": {
+      "icon": "lucide-arrow-down-10"
     },
     "pages": {
       "icon": "lucide-file"

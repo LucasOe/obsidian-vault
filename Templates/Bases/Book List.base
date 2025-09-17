@@ -72,8 +72,8 @@ views:
       - entry
       - book-status
       - file.name
-      - author
       - year
+      - author
       - format
     sort:
       - property: entry
@@ -83,6 +83,6 @@ views:
     columnSize:
       note.book-status: 150
       file.name: 300
+      note.year: 65
       note.author: 300
-      note.year: 100
       note.format: 300

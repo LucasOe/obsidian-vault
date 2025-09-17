@@ -9,7 +9,7 @@ formulas:
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
   lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
-  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series"))
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
   backlink_first: formula.backlinks.filter(value.properties["tv-status"].contains("To Watch")).sort()[0]
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
 properties:

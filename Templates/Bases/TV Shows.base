@@ -12,9 +12,13 @@ formulas:
   # Show a link to the note itself if no list is found, otherwise show list
   lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
   # Filter by the first entry for each list
-  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series"))
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
   backlink_first: formula.backlinks.filter(value.properties["tv-status"].contains("To Watch")).sort()[0]
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
+  # Next Episode
+  next_normal: note["watched-episodes"] + 1
+  next_offset: note["watched-episodes"] + note["offset"] + 1
+  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal))
 properties:
   file.name:
     displayName: Name
@@ -32,6 +36,8 @@ properties:
     displayName: Progress
   formula.lists:
     displayName: Lists
+  formula.next:
+    displayName: Next Episode
 views:
   - type: table
     name: Watching
@@ -43,12 +49,14 @@ views:
       - file.name
       - year
       - formula.lists
+      - formula.next
       - formula.progress
     columnSize:
       note.tv-status: 150
       file.name: 300
       note.year: 65
-      formula.lists: 580
+      formula.lists: 450
+      formula.next: 130
       formula.progress: 300
   - type: table
     name: To Watch
