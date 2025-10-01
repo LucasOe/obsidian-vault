@@ -3,6 +3,8 @@ filters:
     - file.hasTag("movie")
     - not:
       - file.inFolder("Templates")
+formulas:
+  random: random()
 properties:
   file.name:
     displayName: Name
@@ -32,8 +34,8 @@ views:
       - director
       - lists
     sort:
-      - property: file.ctime
-        direction: DESC
+      - property: formula.random
+        direction: ASC
     limit: 10
     columnSize:
       note.movie-status: 150

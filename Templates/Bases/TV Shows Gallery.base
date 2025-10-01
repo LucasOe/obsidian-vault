@@ -4,14 +4,11 @@ filters:
     - not:
         - file.inFolder("Templates")
 formulas:
-  # Progress
   progress_percent: note["watched-episodes"] / note["total-episodes"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
-  # Show a link to the note itself if no list is found, otherwise show list
   lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
-  # Filter by the first entry for each list
   backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
   backlink_first: formula.backlinks.filter(value.properties["tv-status"].contains("To Watch")).sort()[0]
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
