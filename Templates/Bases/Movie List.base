@@ -32,16 +32,26 @@ properties:
     displayName: Entries
   formula.progress:
     displayName: Progress
+  formula.is_finished:
+    displayName: Finished
 views:
   - type: table
     name: Lists
     filters:
       and:
         - file.hasTag("movie-list")
+    groupBy:
+      property: formula.is_finished
+      direction: ASC
     order:
       - file.name
       - formula.entries_total
       - formula.progress
+    sort:
+      - property: formula.progress_percent
+        direction: DESC
+      - property: file.name
+        direction: ASC
     limit: 100
     columnSize:
       file.name: 955
@@ -55,7 +65,9 @@ views:
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
-    groupBy: movie-status
+    groupBy:
+      property: movie-status
+      direction: DESC
     order:
       - movie-status
       - file.name

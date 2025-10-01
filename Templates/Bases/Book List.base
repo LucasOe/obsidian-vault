@@ -36,13 +36,17 @@ properties:
     displayName: Entries
   formula.progress:
     displayName: Progress
+  formula.is_finished:
+    displayName: Finished
 views:
   - type: table
     name: Series
     filters:
       and:
         - file.hasTag("book-list")
-    groupBy: formula.is_finished
+    groupBy:
+      property: formula.is_finished
+      direction: ASC
     order:
       - file.name
       - author
@@ -67,7 +71,9 @@ views:
         - or:
             - lists.contains(this.file.name)
             - author.contains(this.file.name)
-    groupBy: book-status
+    groupBy:
+      property: book-status
+      direction: DESC
     order:
       - entry
       - book-status
