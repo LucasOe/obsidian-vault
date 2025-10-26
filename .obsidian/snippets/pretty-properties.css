@@ -1,0 +1,13 @@
+/* Tweaks and adjustments for the Pretty Properties plugin */
+body {
+	--pill-background: var(--interactive-hover);
+	--pill-background-hover: var(--interactive-hover);
+	--pill-color-remove: var(--text-normal);
+}
+
+.multi-select-pill {
+	max-width: unset;
+}
+.multi-select-pill-remove-button {
+	cursor: pointer;
+}

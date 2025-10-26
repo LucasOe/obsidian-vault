@@ -3,67 +3,53 @@
 
 .nav-files-container > div > .nav-folder,
 [data-type="bookmarks"] > div > div > .tree-item {
-  --nav-item-color: rgba(var(--folder-color), 1);
-  --nav-item-color-hover: rgba(var(--folder-color), 1);
-  --nav-item-color-active: rgba(var(--folder-color), 1);
+  --nav-item-color: var(--folder-color);
+  --nav-item-color-hover: var(--folder-color);
+  --nav-item-color-active: var(--folder-color);
   
   .tree-item-self .tree-item-icon {
-	--icon-color: rgba(var(--folder-color), 1);
+	  --icon-color: var(--folder-color);
   }
   
   /* Colors */
   &:nth-child(11n + 2),
   &[data-foldernumber="1"] {
-	  --folder-color: var(--ctp-red);
+	  --folder-color: #E06C75;
   }
   
   &:nth-child(11n + 3),
   &[data-foldernumber="2"] {
-	  --folder-color: var(--ctp-maroon);
+	  --folder-color: #D19A66;
   }
   
   &:nth-child(11n + 4),
   &[data-foldernumber="3"] {
-	  --folder-color: var(--ctp-peach);
+	  --folder-color: #E5C07B;
   }
   
   &:nth-child(11n + 5),
   &[data-foldernumber="4"] {
-	  --folder-color: var(--ctp-yellow);
+	  --folder-color: #98C379;
   }
   
   &:nth-child(11n + 6),
   &[data-foldernumber="5"] {
-	  --folder-color: var(--ctp-green);
+	  --folder-color: #56B6C2;
   }
   
   &:nth-child(11n + 7),
   &[data-foldernumber="6"] {
-	  --folder-color: var(--ctp-teal);
+	  --folder-color: #61AFEF;
   }
   
   &:nth-child(11n + 8),
   &[data-foldernumber="7"] {
-	  --folder-color: var(--ctp-sky);
+	  --folder-color: #C678DD;
   }
   
   &:nth-child(11n + 9),
   &[data-foldernumber="8"] {
-	  --folder-color: var(--ctp-sapphire);
+	  --folder-color: #C678DD;
   }
-  
-  &:nth-child(11n + 10),
-  &[data-foldernumber="9"] {
-	  --folder-color: var(---ctp-blue);
-  }
-  
-  &:nth-child(11n + 11),
-  &[data-foldernumber="10"] {
-	  --folder-color: var(--ctp-lavender);
-  }
-  
-  &:nth-child(11n + 12),
-  &[data-foldernumber="11"] {
-	  --folder-color: var(--ctp-mauve);
-  }
+
 }

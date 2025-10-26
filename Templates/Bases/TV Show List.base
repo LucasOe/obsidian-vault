@@ -9,7 +9,7 @@ formulas:
   progress: formula.progress_bar + " " + formula.progress_text
   next_normal: note["watched-episodes"] + 1
   next_offset: note["watched-episodes"] + note["offset"] + 1
-  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal))
+  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
 properties:
   file.name:
     displayName: Name
@@ -62,8 +62,8 @@ views:
       - property: year
         direction: DESC
     columnSize:
-      note.tv-status: 150
-      file.name: 300
+      note.tv-status: 130
+      file.name: 320
       note.year: 65
       formula.spacer: 450
       formula.next: 130

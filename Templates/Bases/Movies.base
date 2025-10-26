@@ -38,8 +38,8 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      note.movie-status: 150
-      file.name: 450
+      note.movie-status: 130
+      file.name: 470
       note.year: 65
       note.director: 290
       note.lists: 999
@@ -60,8 +60,8 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.movie-status: 150
-      file.name: 450
+      note.movie-status: 130
+      file.name: 470
       note.year: 65
       note.director: 200
       note.lists: 310

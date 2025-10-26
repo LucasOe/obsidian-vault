@@ -36,8 +36,8 @@ views:
       - format
       - lists
     columnSize:
-      note.book-status: 150
-      file.name: 300
+      note.book-status: 130
+      file.name: 320
       note.author: 220
       note.year: 65
       note.format: 220
@@ -60,8 +60,8 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      note.book-status: 150
-      file.name: 300
+      note.book-status: 130
+      file.name: 320
       note.author: 220
       note.year: 65
       note.format: 220
@@ -86,8 +86,8 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.book-status: 150
-      file.name: 300
+      note.book-status: 130
+      file.name: 320
       note.author: 220
       note.year: 65
       note.format: 220
@@ -106,8 +106,8 @@ views:
       - format
       - lists
     columnSize:
-      note.book-status: 150
-      file.name: 300
+      note.book-status: 130
+      file.name: 320
       note.author: 220
       note.year: 65
       note.format: 220

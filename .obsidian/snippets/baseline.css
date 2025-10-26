@@ -1,0 +1,23 @@
+/* Tweaks and adjustments for the Baseline theme */
+body {
+	--callout-padding: 8px;
+	--bases-table-header-color: var(--text-normal);
+}
+
+/* RGB colors don't inherit from colors by default */
+body.theme-dark.css-settings-manager {
+	--color-red-rgb: 225, 109, 118;
+	--color-orange-rgb: 209, 154, 102;
+	--color-yellow-rgb: 229, 192, 123;
+	--color-green-rgb: 152, 195, 121;
+	--color-cyan-rgb: 88, 182, 194;
+	--color-blue-rgb: 98, 175, 239;
+	--color-purple-rgb: 198, 120, 222;
+	--color-pink-rgb: 225, 109, 118;
+}
+
+/* Fix height shift on focus */
+.bases-td:focus-within {
+	box-shadow: unset;
+	height: var(--bases-table-row-height);
+}

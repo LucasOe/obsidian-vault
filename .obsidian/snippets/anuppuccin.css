@@ -1,6 +1,4 @@
 body {
-	--pill-background: var(--color-base-30);
-	--pill-background-hover: var(--color-base-40);
 	--metadata-label-width: 10em;
 }
 
@@ -27,7 +25,11 @@ body {
 }
 
 /* Left align icons */
-.nav-buttons-container, .view-actions, .workspace-tab-header-inner, .side-dock-settings, .side-dock-actions {
+.nav-buttons-container,
+.view-actions,
+.workspace-tab-header-inner,
+.side-dock-settings,
+.side-dock-actions {
 	justify-content: left;
 }
 
@@ -69,39 +71,4 @@ body {
 /* Folder Notes Plugin */
 .folder-note-underline .has-folder-note .nav-folder-title-content {
 	text-decoration-color: unset;
-}
-
-/* Change table background and border */
-.bases-thead, .bases-tbody, .bases-embed .bases-view {
-	--bases-table-header-background: var(--background-primary);
-	--bases-table-header-background-hover: var(--background-primary);
-	--bases-embed-border-color: var(--background-modifier-border);
-	--bases-table-border-color: var(--background-modifier-border);
-	--table-border-color: var(--background-modifier-border);
-	--bases-cards-group-padding: var(--size-4-2);
-	
-	background-color: var(--background-primary);
-}
-.bases-cards-item {
-	background-color: var(--background-secondary);
-}
-/* Fix height shift on focus */
-.bases-td:focus-within {
-	box-shadow: unset;
-	height: var(--bases-table-row-height);
-}
-
-/* Hide Header Sort icon */
-.bases-table-header-sort {
-	display: none;
-}
-.bases-thead .bases-td[data-sort] .bases-table-header {
-	mask-image: none;
-}
-.bases-thead .bases-td[data-sort] .bases-table-header-name {
-	padding-inline-end: 0;
-}
-/* Disable Header interaction */
-.bases-thead {
-	pointer-events: none;
 }

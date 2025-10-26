@@ -4,6 +4,8 @@ cssclasses:
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
+color: "#e06c75"
+icon: lucide-book
 ---
 
 > [!book|green]+ [[Books Gallery.base#Reading|Currently Reading]]

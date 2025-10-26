@@ -2,15 +2,15 @@
  * https://minimal.guide/plugins/style-settings
  */
 .theme-dark {
-	--theme-bg1: var(--bg1, var(--color-base-10));
-	--theme-bg2: var(--bg2, var(--color-base-00));
-	--theme-bg3: var(--bg3, var(--color-base-20));
-	--theme-tx1: var(--tx1, var(--text-normal));
-	--theme-tx2: var(--tx2, var(--text-muted));
-	--theme-ui1: var(--ui1, var(--color-base-20));
-	--theme-ax1: var(--ax1, var(--color-accent));
-	--theme-ax2: var(--ax2, var(--color-accent));
-	--theme-ax3: var(--ax3, var(--color-accent));
+	--theme-bg1: var(--background-primary, var(--color-base-10));
+	--theme-bg2: var(--background-secondary, var(--color-base-00));
+	--theme-bg3: var(--interactive-hover, var(--color-base-20));
+	--theme-tx1: var(--text-normal, var(--text-normal));
+	--theme-tx2: var(--text-muted, var(--text-muted));
+	--theme-ui1: var(--divider-color, var(--color-base-20));
+	--theme-ax1: var(--color-accent);
+	--theme-ax2: var(--color-accent);
+	--theme-ax3: var(--color-accent);
 }
 
 .excalidraw {

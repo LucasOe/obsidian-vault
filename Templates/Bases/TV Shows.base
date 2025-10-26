@@ -2,7 +2,7 @@ filters:
   and:
     - file.hasTag("tv-series")
     - not:
-      - file.inFolder("Templates")
+        - file.inFolder("Templates")
 formulas:
   random: random()
   progress_percent: note["watched-episodes"] / note["total-episodes"]
@@ -15,7 +15,7 @@ formulas:
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
   next_normal: note["watched-episodes"] + 1
   next_offset: note["watched-episodes"] + note["offset"] + 1
-  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal))
+  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
 properties:
   file.name:
     displayName: Name
@@ -49,8 +49,8 @@ views:
       - formula.next
       - formula.progress
     columnSize:
-      note.tv-status: 150
-      file.name: 300
+      note.tv-status: 130
+      file.name: 320
       note.year: 65
       formula.lists: 450
       formula.next: 130
@@ -61,8 +61,8 @@ views:
       and:
         - formula.is_first
         - or:
-          - note["tv-status"].contains("To Watch")
-          - note["tv-status"].isEmpty()
+            - note["tv-status"].contains("To Watch")
+            - note["tv-status"].isEmpty()
     order:
       - tv-status
       - file.name
@@ -73,8 +73,8 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      note.tv-status: 150
-      file.name: 300
+      note.tv-status: 130
+      file.name: 320
       note.year: 65
       formula.lists: 999
   - type: table
@@ -93,8 +93,8 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.tv-status: 150
-      file.name: 300
+      note.tv-status: 130
+      file.name: 320
       note.year: 65
       formula.lists: 660
       note.date: 140

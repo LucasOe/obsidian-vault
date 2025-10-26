@@ -1,19 +1,19 @@
 {
-  "cssTheme": "AnuPpuccin",
+  "cssTheme": "Baseline",
   "translucency": false,
   "baseFontSizeAction": false,
   "monospaceFontFamily": "Roboto Mono,Inter",
   "textFontFamily": "Roboto,Inter",
   "interfaceFontFamily": "Roboto,Inter",
   "enabledCssSnippets": [
-    "anuppuccin",
     "better-command-palette",
     "callout-chatgpt",
     "callouts",
     "cssclasses",
     "excalidraw",
-    "extended-colorschemes",
-    "rainbow-files"
+    "base-callouts",
+    "pretty-properties",
+    "baseline"
   ],
   "accentColor": "",
   "showViewHeader": true,

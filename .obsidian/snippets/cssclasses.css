@@ -17,10 +17,10 @@
 
 /* Hides the toolbar items Sort, Filter and Properties for Bases */
 .hide-bases-toolbar {
-    .query-toolbar-item {
+    .bases-toolbar-item {
         display: none;
         
-        &.mod-views, &.bases-toolbar-result-count, &.mod-add-note {
+        &.bases-toolbar-views-menu, &.bases-toolbar-result-count, &.bases-toolbar-new-item-menu {
             display: block;
         }
     }

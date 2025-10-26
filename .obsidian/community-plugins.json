@@ -1,21 +1,18 @@
 [
   "table-editor-obsidian",
   "auto-template-trigger",
-  "obsidian-style-settings",
   "template-folder",
-  "obsidian-better-command-palette",
-  "cmdr",
   "cursor-goaway",
-  "iconic",
   "obsidian-excalidraw-plugin",
-  "folder-notes",
   "highlightr-plugin",
   "languagetool",
   "obsidian-linter",
   "url-into-selection",
-  "pretty-properties",
   "obsidian-reading-time",
   "obsidian-smart-typography",
-  "rainbow-folders-fixer",
-  "obsidian-view-mode-by-frontmatter"
+  "obsidian-view-mode-by-frontmatter",
+  "obsidian-style-settings",
+  "pretty-properties",
+  "obsidian-better-command-palette",
+  "notebook-navigator"
 ]

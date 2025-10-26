@@ -4,6 +4,8 @@ cssclasses:
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
+color: "#e5c07b"
+icon: lucide-tv
 ---
 
 > [!tv|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]

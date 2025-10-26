@@ -74,7 +74,7 @@ views:
       - property: year
         direction: DESC
     columnSize:
-      note.movie-status: 150
-      file.name: 300
+      note.movie-status: 130
+      file.name: 320
       note.year: 65
       note.director: 9999
