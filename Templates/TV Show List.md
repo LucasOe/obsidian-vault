@@ -1,11 +1,11 @@
 ---
-folder: Objects/TV Show Lists
 cssclasses:
   - max
   - hide-metadata
+folder: Objects/TV Show Lists
+icon: lucide-tv
 tags:
   - tv-series-list
-icon: lucide-tv
 ---
 
 > [!movie] Entries

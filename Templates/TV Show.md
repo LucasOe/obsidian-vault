@@ -1,15 +1,15 @@
 ---
+cover:
+date:
+eps-total:
+eps-watched:
 folder: Objects/TV Shows
 genres:
-year:
-cover:
+icon: lucide-tv
 lists:
-tv-status:
-total-episodes:
-watched-episodes:
-date:
+status-tv:
 tags:
   - tv-series
-icon: lucide-tv
+year:
 ---
 # Summary

@@ -60,7 +60,7 @@
     "author": {
       "icon": "lucide-user-pen"
     },
-    "book-status": {
+    "status-book": {
       "icon": "lucide-check-circle-2"
     },
     "date": {
@@ -84,7 +84,7 @@
     "lists": {
       "icon": "links-going-out"
     },
-    "movie-status": {
+    "status-movie": {
       "icon": "lucide-check-circle-2"
     },
     "offset": {
@@ -93,13 +93,13 @@
     "pages": {
       "icon": "lucide-file"
     },
-    "total-episodes": {
+    "eps-total": {
       "icon": "lucide-binary"
     },
-    "tv-status": {
+    "status-tv": {
       "icon": "lucide-check-circle-2"
     },
-    "watched-episodes": {
+    "eps-watched": {
       "icon": "lucide-binary"
     },
     "year": {

@@ -5,24 +5,9 @@
 	"noteContentFormat": "{{content}}",
 	"properties": [
 		{
-			"name": "title",
-			"value": "{{title}}",
-			"type": "text"
-		},
-		{
-			"name": "source",
-			"value": "{{url}}",
-			"type": "text"
-		},
-		{
 			"name": "author",
 			"value": "{{author|split:\\\", \\\"|wikilink|join}}",
 			"type": "multitext"
-		},
-		{
-			"name": "published",
-			"value": "{{published}}",
-			"type": "date"
 		},
 		{
 			"name": "created",
@@ -35,13 +20,28 @@
 			"type": "text"
 		},
 		{
+			"name": "icon",
+			"value": "lucide-file",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{published}}",
+			"type": "date"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
 			"name": "tags",
 			"value": "clippings",
 			"type": "multitext"
 		},
 		{
-			"name": "icon",
-			"value": "lucide-file",
+			"name": "title",
+			"value": "{{title}}",
 			"type": "text"
 		}
 	],

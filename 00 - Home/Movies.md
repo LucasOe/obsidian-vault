@@ -1,10 +1,10 @@
 ---
+color: "#d19a66"
 cssclasses:
   - max
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
-color: "#d19a66"
 icon: lucide-clapperboard
 ---
 

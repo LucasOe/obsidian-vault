@@ -1,11 +1,11 @@
 ---
-folder: Objects/Movie Lists
 cssclasses:
   - max
   - hide-metadata
+folder: Objects/Movie Lists
+icon: lucide-clapperboard
 tags:
   - movie-list
-icon: lucide-clapperboard
 ---
 
 > [!movie] Entries

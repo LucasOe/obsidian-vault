@@ -5,6 +5,16 @@
 	"noteContentFormat": "# Summary\n\n{{schema:description}}",
 	"properties": [
 		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
+		},
+		{
 			"name": "director",
 			"value": "{{schema:director[*].name|wikilink|join}}{{schema:creator[*].name|wikilink|join}}",
 			"type": "multitext"
@@ -15,13 +25,8 @@
 			"type": "multitext"
 		},
 		{
-			"name": "year",
-			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
-			"type": "number"
-		},
-		{
-			"name": "cover",
-			"value": "{{schema:image}}",
+			"name": "icon",
+			"value": "lucide-clapperboard",
 			"type": "text"
 		},
 		{
@@ -30,14 +35,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "movie-status",
+			"name": "status-movie",
 			"value": "",
 			"type": "text"
-		},
-		{
-			"name": "date",
-			"value": "",
-			"type": "date"
 		},
 		{
 			"name": "tags",
@@ -45,9 +45,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "icon",
-			"value": "lucide-clapperboard",
-			"type": "text"
+			"name": "year",
+			"value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+			"type": "number"
 		}
 	],
 	"triggers": [

@@ -10,6 +10,11 @@
 			"type": "date"
 		},
 		{
+			"name": "icon",
+			"value": "lucide-bot-message-square",
+			"type": "text"
+		},
+		{
 			"name": "source",
 			"value": "{{url}}",
 			"type": "text"
@@ -18,11 +23,6 @@
 			"name": "tags",
 			"value": "clippings, chatgpt",
 			"type": "multitext"
-		},
-		{
-			"name": "icon",
-			"value": "lucide-bot-message-square",
-			"type": "text"
 		}
 	],
 	"triggers": [

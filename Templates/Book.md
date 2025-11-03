@@ -1,19 +1,19 @@
 ---
-folder: Objects/Books
 author:
-genres:
-pages:
-year:
 cover:
-language:
-isbn:
+date:
+folder: Objects/Books
 format:
   - Paperback
+genres:
+icon: lucide-book
+isbn:
+language:
 lists:
-book-status:
-date:
+pages:
+status-book:
 tags:
   - book
-icon: lucide-book
+year:
 ---
 # Summary

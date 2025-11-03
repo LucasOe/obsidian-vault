@@ -1,11 +1,11 @@
 ---
-folder: Objects/Book Lists
+author: []
 cssclasses:
   - max
+folder: Objects/Book Lists
+icon: lucide-book
 tags:
   - book-list
-author: []
-icon: lucide-book
 ---
 
 > [!book] Entries

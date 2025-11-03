@@ -1,12 +1,12 @@
 ---
-folder: Objects/People/Directors
 cssclasses:
   - max
   - hide-metadata
+folder: Objects/People/Directors
+icon: lucide-user
 tags:
   - tv-series-list
   - person
-icon: lucide-user
 ---
 
 > [!movie] Entries

@@ -57,8 +57,8 @@
   "coverCircleWidth": 250,
   "coverMaxWidthPopover": 150,
   "progressProperties": {
-    "watched-episodes": {
-      "maxProperty": "total-episodes"
+    "eps-watched": {
+      "maxProperty": "eps-total"
     }
   },
   "allTasksCount": "tasks",
@@ -98,7 +98,7 @@
   "enableCustomDateFormat": false,
   "enableCustomDateFormatInBases": false,
   "enableRelativeDateColors": false,
-  "settingsTab": "PROPERTY_SETTINGS",
+  "settingsTab": "OTHER",
   "enableTaskNotesCount": false,
   "allTNTasksCount": "tn_tasks",
   "completedTNTasksCount": "tn_tasks_completed",

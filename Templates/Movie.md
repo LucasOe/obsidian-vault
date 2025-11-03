@@ -1,14 +1,14 @@
 ---
-folder: Objects/Movies
-director:
-genres:
-year:
 cover:
-lists:
-movie-status:
 date:
+director:
+folder: Objects/Movies
+genres:
+icon: lucide-clapperboard
+lists:
+status-movie:
 tags:
   - movie
-icon: lucide-clapperboard
+year:
 ---
 # Summary

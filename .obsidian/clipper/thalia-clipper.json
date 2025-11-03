@@ -10,48 +10,8 @@
 			"type": "multitext"
 		},
 		{
-			"name": "genres",
-			"value": "",
-			"type": "multitext"
-		},
-		{
-			"name": "pages",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Seitenzahl)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first}}",
-			"type": "number"
-		},
-		{
-			"name": "year",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:(\\\"YYYY\\\", \\\"DD.MM.YYYY\\\")}}",
-			"type": "number"
-		},
-		{
 			"name": "cover",
 			"value": "{{schema:image|first}}",
-			"type": "text"
-		},
-		{
-			"name": "language",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Sprache)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Deutsch\\\":\\\"German\\\",\\\"Englisch\\\":\\\"English\\\")}}",
-			"type": "text"
-		},
-		{
-			"name": "isbn",
-			"value": "{{schema:isbn}}",
-			"type": "text"
-		},
-		{
-			"name": "format",
-			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Einband)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Taschenbuch\\\":\\\"Paperback\\\",\\\"Gebundene Ausgabe\\\":\\\"Hardcover\\\")}}",
-			"type": "multitext"
-		},
-		{
-			"name": "lists",
-			"value": "{{selector:.serie-link|replace:\\\"/Band [0-9]/\\\":\\\"\\\"|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "book-status",
-			"value": "",
 			"type": "text"
 		},
 		{
@@ -60,14 +20,54 @@
 			"type": "date"
 		},
 		{
-			"name": "tags",
-			"value": "book",
+			"name": "format",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Einband)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Taschenbuch\\\":\\\"Paperback\\\",\\\"Gebundene Ausgabe\\\":\\\"Hardcover\\\")}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "",
 			"type": "multitext"
 		},
 		{
 			"name": "icon",
 			"value": "lucide-book",
 			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "language",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Sprache)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|replace:(\\\"Deutsch\\\":\\\"German\\\",\\\"Englisch\\\":\\\"English\\\")}}",
+			"type": "text"
+		},
+		{
+			"name": "lists",
+			"value": "{{selector:.serie-link|replace:\\\"/Band [0-9]/\\\":\\\"\\\"|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "pages",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Seitenzahl)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first}}",
+			"type": "number"
+		},
+		{
+			"name": "status-book",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "book",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.artikeldetail|join|replace:\\\"/.*?(Erscheinungsdatum)\\s+/s\\\":\\\"\\\"|split:\\\",\\\"|first|date:(\\\"YYYY\\\", \\\"DD.MM.YYYY\\\")}}",
+			"type": "number"
 		}
 	],
 	"triggers": [

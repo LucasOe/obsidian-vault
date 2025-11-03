@@ -6,7 +6,7 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.book-status:
+  note.status-book:
     displayName: Status
   note.author:
     displayName: Author
@@ -25,7 +25,7 @@ views:
     name: Reading
     filters:
       or:
-        - note["book-status"].contains("Reading")
+        - note["status-book"].contains("Reading")
     order:
       - file.name
       - author
@@ -36,8 +36,8 @@ views:
     name: To Read
     filters:
       or:
-        - note["book-status"].contains("To Read")
-        - note["book-status"].isEmpty()
+        - note["status-book"].contains("To Read")
+        - note["status-book"].isEmpty()
     order:
       - file.name
       - author
@@ -48,7 +48,7 @@ views:
     name: Completed
     filters:
       or:
-        - note["book-status"].contains("Completed")
+        - note["status-book"].contains("Completed")
     order:
       - file.name
       - author
@@ -64,7 +64,7 @@ views:
     name: Dropped
     filters:
       or:
-        - note["book-status"].contains("Dropped")
+        - note["status-book"].contains("Dropped")
     order:
       - file.name
       - author

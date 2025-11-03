@@ -10,48 +10,8 @@
 			"type": "multitext"
 		},
 		{
-			"name": "genres",
-			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|replace:\\\"Audiobook\\\":\\\"\\\"}}",
-			"type": "multitext"
-		},
-		{
-			"name": "pages",
-			"value": "{{schema:numberOfPages}}",
-			"type": "number"
-		},
-		{
-			"name": "year",
-			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"Published \\\"|last|date:\\\"YYYY\\\"}}",
-			"type": "number"
-		},
-		{
 			"name": "cover",
 			"value": "{{schema:image}}",
-			"type": "text"
-		},
-		{
-			"name": "language",
-			"value": "{{schema:inLanguage}}",
-			"type": "text"
-		},
-		{
-			"name": "isbn",
-			"value": "{{schema:isbn}}",
-			"type": "text"
-		},
-		{
-			"name": "format",
-			"value": "{{schema:bookFormat|split:\\\"/\\\"|last|replace:\\\"Audible Audio\\\":\\\"Audiobook\\\"}}",
-			"type": "multitext"
-		},
-		{
-			"name": "lists",
-			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:[\\(\\)#]|first|trim|wikilink}}",
-			"type": "multitext"
-		},
-		{
-			"name": "book-status",
-			"value": "",
 			"type": "text"
 		},
 		{
@@ -60,13 +20,53 @@
 			"type": "date"
 		},
 		{
-			"name": "tags",
-			"value": "book",
+			"name": "format",
+			"value": "{{schema:bookFormat|split:\\\"/\\\"|last|replace:\\\"Audible Audio\\\":\\\"Audiobook\\\"}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genres",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|replace:\\\"Audiobook\\\":\\\"\\\"}}",
 			"type": "multitext"
 		},
 		{
 			"name": "icon",
 			"value": "lucide-book",
+			"type": "text"
+		},
+		{
+			"name": "pages",
+			"value": "{{schema:numberOfPages}}",
+			"type": "number"
+		},
+		{
+			"name": "language",
+			"value": "{{schema:inLanguage}}",
+			"type": "text"
+		},
+		{
+			"name": "lists",
+			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:[\\(\\)#]|first|trim|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"Published \\\"|last|date:\\\"YYYY\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "status-book",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "book",
+			"type": "multitext"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
 			"type": "text"
 		}
 	],

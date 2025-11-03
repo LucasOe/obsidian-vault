@@ -1,10 +1,10 @@
 ---
+color: "#e5c07b"
 cssclasses:
   - max
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
-color: "#e5c07b"
 icon: lucide-tv
 ---
 

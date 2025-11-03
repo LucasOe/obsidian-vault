@@ -5,9 +5,19 @@
 	"noteContentFormat": "# Summary\n\n{{description}}",
 	"properties": [
 		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
 			"name": "director",
 			"value": "{{schema:director[*].name|wikilink|join}}",
 			"type": "multitext"
+		},
+		{
+			"name": "date",
+			"value": "",
+			"type": "date"
 		},
 		{
 			"name": "genres",
@@ -20,13 +30,8 @@
 			"type": "number"
 		},
 		{
-			"name": "cover",
-			"value": "{{schema:image}}",
-			"type": "text"
-		},
-		{
-			"name": "banner",
-			"value": "{{meta:property:og:image}}",
+			"name": "icon",
+			"value": "lucide-clapperboard",
 			"type": "text"
 		},
 		{
@@ -35,14 +40,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "movie-status",
+			"name": "status-movie",
 			"value": "",
 			"type": "text"
-		},
-		{
-			"name": "date",
-			"value": "",
-			"type": "date"
 		},
 		{
 			"name": "tags",
@@ -50,8 +50,8 @@
 			"type": "multitext"
 		},
 		{
-			"name": "icon",
-			"value": "lucide-clapperboard",
+			"name": "banner",
+			"value": "{{meta:property:og:image}}",
 			"type": "text"
 		}
 	],

@@ -3,17 +3,17 @@ filters:
     - file.inFolder("Templates")
 formulas:
   spacer: ""
-  progress_percent: note["watched-episodes"] / note["total-episodes"]
+  progress_percent: note["eps-watched"] / note["eps-total"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
-  next_normal: note["watched-episodes"] + 1
-  next_offset: note["watched-episodes"] + note["offset"] + 1
-  next: if(note["watched-episodes"] < note["total-episodes"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
+  next_normal: note["eps-watched"] + 1
+  next_offset: note["eps-watched"] + note["offset"] + 1
+  next: if(note["eps-watched"] < note["eps-total"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
 properties:
   file.name:
     displayName: Name
-  note.tv-status:
+  note.status-tv:
     displayName: Status
   note.year:
     displayName: Year
@@ -49,10 +49,10 @@ views:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
     groupBy:
-      property: tv-status
+      property: status-tv
       direction: DESC
     order:
-      - tv-status
+      - status-tv
       - file.name
       - year
       - formula.spacer
@@ -62,7 +62,7 @@ views:
       - property: year
         direction: DESC
     columnSize:
-      note.tv-status: 130
+      note.status-tv: 130
       file.name: 320
       note.year: 65
       formula.spacer: 450

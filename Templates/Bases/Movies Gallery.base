@@ -6,7 +6,7 @@ filters:
 properties:
   file.name:
     displayName: Name
-  note.movie-status:
+  note.status-movie:
     displayName: Status
   note.director:
     displayName: Director
@@ -23,8 +23,8 @@ views:
     name: To Watch
     filters:
       or:
-        - note["movie-status"].contains("To Watch")
-        - note["movie-status"].isEmpty()
+        - note["status-movie"].contains("To Watch")
+        - note["status-movie"].isEmpty()
     order:
       - file.name
       - year
@@ -35,7 +35,7 @@ views:
     name: Completed
     filters:
       or:
-        - note["movie-status"].contains("Completed")
+        - note["status-movie"].contains("Completed")
     order:
       - file.name
       - year

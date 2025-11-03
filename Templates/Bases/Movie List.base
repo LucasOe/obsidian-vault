@@ -4,7 +4,7 @@ filters:
 formulas:
   entries: file.backlinks.map(value.asFile()).filter(value.hasLink(file) && value.hasTag("movie")).unique()
   entries_total: formula.entries.length
-  entries_completed: formula.entries.filter(value.properties["movie-status"].contains("Completed")).length
+  entries_completed: formula.entries.filter(value.properties["status-movie"].contains("Completed")).length
   progress_percent: formula.entries_completed / formula.entries_total
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
@@ -13,7 +13,7 @@ formulas:
 properties:
   file.name:
     displayName: Name
-  note.movie-status:
+  note.status-movie:
     displayName: Status
   note.director:
     displayName: Director
@@ -63,10 +63,10 @@ views:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
     groupBy:
-      property: movie-status
+      property: status-movie
       direction: DESC
     order:
-      - movie-status
+      - status-movie
       - file.name
       - year
       - director
@@ -74,7 +74,7 @@ views:
       - property: year
         direction: DESC
     columnSize:
-      note.movie-status: 130
+      note.status-movie: 130
       file.name: 320
       note.year: 65
       note.director: 9999

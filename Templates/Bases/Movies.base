@@ -8,7 +8,7 @@ formulas:
 properties:
   file.name:
     displayName: Name
-  note.movie-status:
+  note.status-movie:
     displayName: Status
   note.director:
     displayName: Director
@@ -25,10 +25,10 @@ views:
     name: To Watch
     filters:
       or:
-        - note["movie-status"].contains("To Watch")
-        - note["movie-status"].isEmpty()
+        - note["status-movie"].contains("To Watch")
+        - note["status-movie"].isEmpty()
     order:
-      - movie-status
+      - status-movie
       - file.name
       - year
       - director
@@ -38,7 +38,7 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      note.movie-status: 130
+      note.status-movie: 130
       file.name: 470
       note.year: 65
       note.director: 290
@@ -47,9 +47,9 @@ views:
     name: Completed
     filters:
       and:
-        - note["movie-status"].contains("Completed")
+        - note["status-movie"].contains("Completed")
     order:
-      - movie-status
+      - status-movie
       - file.name
       - year
       - director
@@ -60,7 +60,7 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.movie-status: 130
+      note.status-movie: 130
       file.name: 470
       note.year: 65
       note.director: 200

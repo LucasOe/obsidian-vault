@@ -5,18 +5,33 @@
 	"noteContentFormat": "# Summary\n\n{{selector:p[itemprop=\"description\"|markdown|replace:\" \\\\[Written by MAL Rewrite\\\\]\":\"\"}}",
 	"properties": [
 		{
+			"name": "cover",
+			"value": "{{meta:property:og:image}}",
+			"type": "text"
+		},
+		{
+			"name": "eps-total",
+			"value": "{{selector:#curEps?data-num}}",
+			"type": "text"
+		},
+		{
+			"name": "eps-watched",
+			"value": "{{selector:#myinfo_watchedeps?value}}",
+			"type": "text"
+		},
+		{
 			"name": "genres",
 			"value": "Animation,{{selector:span[itemprop=\\\"genre\\\"]|slice:0,3|join}}",
 			"type": "multitext"
 		},
 		{
-			"name": "year",
-			"value": "{{selector:a[href*=\\\"myanimelist.net/anime/season/\\\"]?href|split:\\\".\\\"|last}}",
-			"type": "number"
+			"name": "date",
+			"value": "",
+			"type": "date"
 		},
 		{
-			"name": "cover",
-			"value": "{{meta:property:og:image}}",
+			"name": "icon",
+			"value": "lucide-tv",
 			"type": "text"
 		},
 		{
@@ -25,24 +40,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "tv-status",
+			"name": "status-tv",
 			"value": "",
 			"type": "text"
-		},
-		{
-			"name": "total-episodes",
-			"value": "{{selector:#curEps?data-num}}",
-			"type": "number"
-		},
-		{
-			"name": "watched-episodes",
-			"value": "{{selector:#myinfo_watchedeps?value}}",
-			"type": "number"
-		},
-		{
-			"name": "date",
-			"value": "",
-			"type": "date"
 		},
 		{
 			"name": "tags",
@@ -50,9 +50,9 @@
 			"type": "multitext"
 		},
 		{
-			"name": "icon",
-			"value": "lucide-tv",
-			"type": "text"
+			"name": "year",
+			"value": "{{selector:a[href*=\\\"myanimelist.net/anime/season/\\\"]?href|split:\\\".\\\"|last}}",
+			"type": "number"
 		}
 	],
 	"triggers": [

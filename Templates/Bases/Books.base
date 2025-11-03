@@ -8,7 +8,7 @@ formulas:
 properties:
   file.name:
     displayName: Name
-  note.book-status:
+  note.status-book:
     displayName: Status
   note.author:
     displayName: Author
@@ -27,16 +27,16 @@ views:
     name: Reading
     filters:
       or:
-        - note["book-status"].contains("Reading")
+        - note["status-book"].contains("Reading")
     order:
-      - book-status
+      - status-book
       - file.name
       - author
       - year
       - format
       - lists
     columnSize:
-      note.book-status: 130
+      note.status-book: 130
       file.name: 320
       note.author: 220
       note.year: 65
@@ -46,10 +46,10 @@ views:
     name: To Read
     filters:
       or:
-        - note["book-status"].contains("To Read")
-        - note["book-status"].isEmpty()
+        - note["status-book"].contains("To Read")
+        - note["status-book"].isEmpty()
     order:
-      - book-status
+      - status-book
       - file.name
       - author
       - year
@@ -60,7 +60,7 @@ views:
         direction: ASC
     limit: 10
     columnSize:
-      note.book-status: 130
+      note.status-book: 130
       file.name: 320
       note.author: 220
       note.year: 65
@@ -70,9 +70,9 @@ views:
     name: Completed
     filters:
       and:
-        - note["book-status"].contains("Completed")
+        - note["status-book"].contains("Completed")
     order:
-      - book-status
+      - status-book
       - file.name
       - author
       - year
@@ -86,7 +86,7 @@ views:
         direction: DESC
     limit: 100
     columnSize:
-      note.book-status: 130
+      note.status-book: 130
       file.name: 320
       note.author: 220
       note.year: 65
@@ -97,16 +97,16 @@ views:
     name: Dropped
     filters:
       and:
-        - note["book-status"].contains("Dropped")
+        - note["status-book"].contains("Dropped")
     order:
-      - book-status
+      - status-book
       - file.name
       - author
       - year
       - format
       - lists
     columnSize:
-      note.book-status: 130
+      note.status-book: 130
       file.name: 320
       note.author: 220
       note.year: 65

@@ -11,3 +11,6 @@ body {
 .multi-select-pill-remove-button {
 	cursor: pointer;
 }
+.metadata-input-longtext {
+	padding: 0;
+}

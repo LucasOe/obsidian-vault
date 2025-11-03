@@ -1,11 +1,11 @@
 ---
-folder: Objects/People/Authors
 cssclasses:
   - max
+folder: Objects/People/Authors
+icon: lucide-user-pen
 tags:
   - book-list
   - person
-icon: lucide-user-pen
 ---
 
 > [!book] Entries
