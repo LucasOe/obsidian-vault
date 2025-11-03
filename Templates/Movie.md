@@ -9,5 +9,6 @@ movie-status:
 date:
 tags:
   - movie
+icon: lucide-clapperboard
 ---
 # Summary

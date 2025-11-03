@@ -52,7 +52,7 @@
 		{
 			"name": "book-status",
 			"value": "",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "date",
@@ -63,6 +63,11 @@
 			"name": "tags",
 			"value": "book",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "lucide-book",
+			"type": "text"
 		}
 	],
 	"triggers": [

@@ -38,6 +38,11 @@
 			"name": "tags",
 			"value": "clippings",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "lucide-file",
+			"type": "text"
 		}
 	],
 	"triggers": [],

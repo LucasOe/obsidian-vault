@@ -118,8 +118,7 @@
   "baseline-style@@background-modifier-border@@dark": "#2C313C",
   "baseline-style@@background-modifier-border-hover@@dark": "#404754",
   "baseline-style@@background-modifier-border-focus@@dark": "#404754",
-  "baseline-style@@nav-item-active-style": "nav-item-subtle",
-  "baseline-style@@background-contrast-light": "contrast-light",
+  "baseline-style@@nav-item-active-style": "nav-item-baseline",
   "baseline-style@@color-red@@dark": "#E06C75",
   "baseline-style@@color-orange@@dark": "#D19A66",
   "baseline-style@@color-yellow@@dark": "#E5C07B",
@@ -143,6 +142,5 @@
   "baseline-style@@metadata-style": "metadata-default",
   "baseline-style@@metadata-heading-off": false,
   "baseline-style@@metadata-add-property-off": false,
-  "baseline-style@@prompts-style": "prompts-baseline",
-  "notebook-navigator-style-settings@@nn-navigation-pane-transparent": false
+  "baseline-style@@mobile-style": "mobile-immersive"
 }

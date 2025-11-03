@@ -5,6 +5,7 @@ cssclasses:
   - hide-metadata
 tags:
   - movie-list
+icon: lucide-clapperboard
 ---
 
 > [!movie] Entries

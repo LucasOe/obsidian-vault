@@ -6,7 +6,8 @@
     "cover",
     "banner",
     "entry",
-    "offset"
+    "offset",
+    "icon"
   ],
   "propertyPillColors": {
     "To Watch": {
@@ -42,6 +43,7 @@
   "extraCoverProperties": [],
   "bannerHeight": 250,
   "bannerHeightMobile": 150,
+  "bannerHeightPopover": 100,
   "bannerMargin": 15,
   "bannerMarginMobile": 0,
   "bannerFading": true,
@@ -53,6 +55,7 @@
   "coverHorizontalWidth": 300,
   "coverSquareWidth": 250,
   "coverCircleWidth": 250,
+  "coverMaxWidthPopover": 150,
   "progressProperties": {
     "watched-episodes": {
       "maxProperty": "total-episodes"
@@ -95,7 +98,7 @@
   "enableCustomDateFormat": false,
   "enableCustomDateFormatInBases": false,
   "enableRelativeDateColors": false,
-  "settingsTab": "OTHER",
+  "settingsTab": "PROPERTY_SETTINGS",
   "enableTaskNotesCount": false,
   "allTNTasksCount": "tn_tasks",
   "completedTNTasksCount": "tn_tasks_completed",
@@ -116,6 +119,7 @@
   "propertySearchKey": "Ctrl",
   "showTagColorSettings": false,
   "iconSizeMobile": 70,
+  "iconSizePopover": 50,
   "hidePropertiesInPropTab": false,
   "autoTasksCount": true,
   "enableColoredTagsInTagPane": false,
@@ -137,6 +141,9 @@
     }
   },
   "coverPosition": "left",
+  "enableBannersInPopover": false,
+  "enableIconsInPopover": false,
+  "enableCoversInPopover": false,
   "mySetting": "default",
   "styleFormulaTags": true
 }

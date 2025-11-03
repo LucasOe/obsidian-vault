@@ -5,6 +5,7 @@ cssclasses:
   - hide-metadata
 tags:
   - tv-series-list
+icon: lucide-tv
 ---
 
 > [!movie] Entries

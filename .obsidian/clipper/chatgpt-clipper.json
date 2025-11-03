@@ -2,11 +2,11 @@
 	"schemaVersion": "0.1.0",
 	"name": "ChatGPT",
 	"behavior": "create",
-	"noteContentFormat": "{{selectorHtml:article[data-testid*=\"conversation-turn\"]|replace:\"/<svg.*?svg>/g\":\"\"|join:\"\"|remove_html:(\".text-token-text-secondary,.text-token-text-tertiary\")|markdown|replace:(\"/\\s*###### ChatGPT said\\:\\s*/g\":\"\\n\\n\", \"/##### You said\\:\\s*/g\": \"> [!ChatGPT-prompt]\\n> \")}}",
+	"noteContentFormat": "{{selectorHtml:article[data-testid*=\"conversation-turn\"]|join:\"LINEBREAKPLACEHOLDER\"|replace:\"/<svg[^>]*>.*?<\\\\/svg>/gs\":\"\"|remove_html:(\".text-token-text-secondary,.text-token-text-tertiary\")|markdown|replace:\"##### You said:\\n\":\"[!user]\"|replace:\"###### ChatGPT said:\\n\":\"[!openai]\"|replace:\"/(?<=\\s|^)#(\\w+)/g\":\"\\\\#$1\"|replace:\"/<([^>]+)>/g\":\"\\\\<$1\\\\>\"|blockquote|replace:\"> \\n> LINEBREAKPLACEHOLDER\\n> \":\"\"}}",
 	"properties": [
 		{
 			"name": "created",
-			"value": "{{date}}",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ss.SSSZ\\\"}}",
 			"type": "date"
 		},
 		{
@@ -18,6 +18,11 @@
 			"name": "tags",
 			"value": "clippings, chatgpt",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "lucide-bot-message-square",
+			"type": "text"
 		}
 	],
 	"triggers": [

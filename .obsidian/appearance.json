@@ -7,13 +7,12 @@
   "interfaceFontFamily": "Roboto,Inter",
   "enabledCssSnippets": [
     "better-command-palette",
-    "callout-chatgpt",
-    "callouts",
     "cssclasses",
     "excalidraw",
     "base-callouts",
-    "pretty-properties",
-    "baseline"
+    "baseline",
+    "callouts",
+    "pretty-properties"
   ],
   "accentColor": "",
   "showViewHeader": true,

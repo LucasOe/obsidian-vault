@@ -14,5 +14,6 @@ book-status:
 date:
 tags:
   - book
+icon: lucide-book
 ---
 # Summary

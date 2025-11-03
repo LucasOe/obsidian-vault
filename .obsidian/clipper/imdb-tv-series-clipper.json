@@ -21,13 +21,13 @@
 		},
 		{
 			"name": "lists",
-			"value": "{{schema:name|replace:\\\":\\\":\\\"꞉\\\"}}",
+			"value": "{{schema:name|replace:\\\":\\\":\\\"꞉\\\"|wikilink}}",
 			"type": "multitext"
 		},
 		{
 			"name": "tv-status",
 			"value": "",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "total-episodes",
@@ -48,6 +48,11 @@
 			"name": "tags",
 			"value": "tv-series",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "lucide-tv",
+			"type": "text"
 		}
 	],
 	"triggers": [

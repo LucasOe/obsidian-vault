@@ -37,7 +37,7 @@
 		{
 			"name": "movie-status",
 			"value": "",
-			"type": "multitext"
+			"type": "text"
 		},
 		{
 			"name": "date",
@@ -48,6 +48,11 @@
 			"name": "tags",
 			"value": "movie",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "lucide-clapperboard",
+			"type": "text"
 		}
 	],
 	"triggers": [

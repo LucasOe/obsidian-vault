@@ -6,6 +6,7 @@ cssclasses:
 tags:
   - tv-series-list
   - person
+icon: lucide-user
 ---
 
 > [!movie] Entries

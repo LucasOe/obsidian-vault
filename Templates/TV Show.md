@@ -10,5 +10,6 @@ watched-episodes:
 date:
 tags:
   - tv-series
+icon: lucide-tv
 ---
 # Summary

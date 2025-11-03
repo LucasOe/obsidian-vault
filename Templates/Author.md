@@ -5,6 +5,7 @@ cssclasses:
 tags:
   - book-list
   - person
+icon: lucide-user-pen
 ---
 
 > [!book] Entries

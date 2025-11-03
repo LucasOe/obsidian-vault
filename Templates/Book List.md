@@ -5,6 +5,7 @@ cssclasses:
 tags:
   - book-list
 author: []
+icon: lucide-book
 ---
 
 > [!book] Entries
