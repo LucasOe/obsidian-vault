@@ -14,8 +14,13 @@
 }
 
 .excalidraw {
+	--space-factor: 0.35em;
+	
 	--button-active-bg: var(--theme-bg3) !important;
+	--button-gray-2: var(--theme-ax1) !important;
 	--button-hover-bg: var(--theme-bg3) !important;
+	--button-selected-bg: var(--theme-ax1) !important;
+	--button-selected-border: transparent !important;
 	--color-brand-active: unset !important;
 	--color-gray-50: var(--theme-bg1) !important;
 	--color-gray-70: var(--theme-tx2) !important;
@@ -38,109 +43,155 @@
 	--sidebar-bg-color: var(--theme-bg2) !important;
 	--sidebar-border-color: var(--theme-ui1) !important;
 	--text-primary-color: var(--theme-tx1) !important;
-	--button-gray-2: var(--theme-ax1) !important;
-	--button-selected-bg: var(--theme-ax1) !important;
-	--button-selected-border: transparent !important;
-	color: var(--theme-tx1) !important;
+}
+
+/* Fix Baseline Immersive view */
+body:not(.mobile-stable).is-phone .mobile-navbar,
+body:not(.mobile-stable).is-phone .mobile-toolbar {
+	position: absolute !important;
+}
+
+/* Fix screen shifting when context menu would overflow the bottom */
+.workspace-leaf:has(.excalidraw) {
+	overflow: visible;
+}
+
+/* Make top and bottom bars use the same padding */
+.excalidraw .Island.App-toolbar
+.excalidraw .Island.App-bottom-bar {
+	padding: var(--space-factor) !important;
+}
+
+/* Fix padding for zoom controls */
+.excalidraw .tray-zoom {
+	padding: 0;
+}
+
+/* Fix Undo/Redo buttons */
+.excalidraw .zoom-button,
+.excalidraw .undo-redo-buttons button {
+	width: 100%;
+	height: 100%;
 }
 
 /* Consistent Context Menu */
 .excalidraw .context-menu {
+	margin: 0;
 	padding: var(--size-2-3);
-	/* border: 1px solid var(--background-modifier-border-hover); */
 	border-radius: var(--radius-m);
-	box-shadow: var(--shadow-s);
+	border: 1px solid var(--background-modifier-border-hover);
+	
+	.context-menu-item {
+		padding: 6px 8px;
+		border-radius: var(--radius-s);
+		
+		&:hover {
+			background-color: var(--background-modifier-hover);
+		}
+		
+		& .context-menu-item__shortcut {
+			padding: 0; /* fix shortcut height */
+			border: unset;
+			background: transparent;			
+			/* Hide context menu shortcut if empty.
+			   Only useful if background isn't transparent .*/
+			&:empty {
+				display: none;
+			}
+		}
+	}
+	
+	/* Menu Seperator */
+	.context-menu-item-separator {
+		height: 0 !important;
+		margin: var(--size-2-3) calc(var(--size-2-3) * -1) !important;
+		border-top: 1px solid var(--background-modifier-border) !important;
+	}
 }
-.excalidraw .context-menu button:hover {
-	background-color: var(--background-modifier-hover);
+
+/* Make button sizes consistent */
+.excalidraw .ToolIcon__icon {
+	height: var(--default-button-size) !important;
+	width: var(--default-button-size) !important;
+	
+	/* Fix sidebar button border radius */
+	border-radius: var(--border-radius-lg) !important;
 }
-.excalidraw .context-menu button {
+
+/* Make gap sizes consistent */
+.excalidraw .App-toolbar .Stack,
+.excalidraw .App-bottom-bar .App-toolbar-content {
+	gap: var(--space-factor);
+}
+
+/* Fix Undo/Redo buttons not aligning horizontally */
+.excalidraw .App-toolbar-content > div {
 	display: flex;
-	align-items: center;
-	gap: var(--size-4-2);
-	/* padding: var(--size-4-1) var(--size-4-2); */
-	cursor: var(--cursor);
-	font-size: var(--font-ui-small);
-	border-radius: var(--radius-s);
-	white-space: nowrap;
-
-	line-height: var(--line-height-tight);
-	height: unset;
-}
-.context-menu-item-separator {
-	height: 0 !important;
-	margin: var(--size-2-3) calc(var(--size-2-3) * -1) !important;
-	border-top: 1px solid var(--background-modifier-border) !important;
 }
 
-/* Consistent Tray Menu Button Size */
-.excalidraw .ToolIcon__icon:empty {
-	display: none;
-}
-.excalidraw .dropdown-menu--mobile {
-	width: unset !important;
-}
-.excalidraw .ToolIcon__icon,
-.excalidraw .dropdown-menu-button,
-.excalidraw .App-toolbar-container .ToolIcon__icon {
-	height: var(--default-button-size);
-	width: var(--default-button-size);
-}
-.excalidraw .tray-zoom,
-.Island > .Stack > .Stack,
-.excalidraw .App-toolbar-content {
-	padding: 0 !important;
-}
-.excalidraw .tray-zoom {
-	height: var(--default-button-size);
-}
-.excalidraw .ToolIcon_type_button {
-	height: 100%;
-}
-.excalidraw .App-bottom-bar .Island {
-	--padding: 0 !important;
-	padding: 6px !important;
-}
-.excalidraw .reset-zoom-button {
-	padding: 0 0 !important;
-	width: unset !important;
-}
-.excalidraw .App-toolbar-content {
-	gap: 3px;
-}
-.excalidraw .eraser-buttons,
-.excalidraw .finalize-button,
-.excalidraw .undo-redo-buttons {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
+/* Fix toolbar style */
+.excalidraw .App-bottom-bar {	
+	width: unset; /* Fix mobile width */
+	margin: 10px !important; /* consistent margin */
+	
+	.ToolIcon_type_button {
+		height: 100%;
+	}
+	
+	/* Hide buttons if empty */
+	.ToolIcon__icon:empty {
+		display: none;
+	}
+	
+	.reset-zoom-button {
+		padding: 0 0 !important;
+		width: unset !important;
+	}
 }
 
-/* Miscellaneous */
-.excalidraw .mobile-misc-tools-container .sidebar-trigger {
-	border-radius: 0px;
+.excalidraw .dropdown-menu-button:hover {
+	background-color: var(--button-hover-bg) !important;
 }
+
+/* Fix Dropdown menu width */
+.excalidraw .dropdown-menu {
+	width: unset;
+	
+	.dropdown-menu-item {
+		padding: 6px 8px;
+		&:hover {
+			background-color: var(--button-hover-bg) !important;
+		}
+	}
+	
+	div[data-testid="canvas-background-label"] {
+		padding: 0px 8px;
+		margin-bottom: 0.25em !important;
+	}
+	
+	.color-picker-container {
+		/* Hide separator */
+		& > div:nth-child(2) {
+			display: none;
+		}
+		/* Hide currently selected background color */
+		.color-picker__button.active-color {
+			display: none;
+		}
+	}
+}
+
+/* Hide Help button */
 .excalidraw .help-icon {
 	display: none;
 }
-.excalidraw .dropdown-menu-button:hover {
-	--background: var(--button-hover-bg) !important;
+
+/* Hide toolbar in mobile view */
+.excalidraw--mobile .App-bottom-bar {
+	display: none;
 }
-.excalidraw .popover {
-	box-shadow: none !important;
-}
-.excalidraw .sidebar-tab-trigger[data-state="active"] {
-	--icon-fill-color: var(--theme-bg1) !important;
-}
-.excalidraw .App-menu__left {
-	margin-top: 3px;
-}
-.excalidraw .sidebar-trigger {
-	height: var(--default-button-size);
-	width: var(--default-button-size);
-}
-.excalidraw .layer-ui__wrapper__top-right {
-	gap: 3px;
-}
-.excalidraw .layer-ui__wrapper__top-right .ToolIcon__icon {
-	background-color: var(--theme-bg3);
+
+/* Remove 1px padding on the left and right */
+.workspace-leaf-content .excalidraw-view {
+	padding: 0;
 }

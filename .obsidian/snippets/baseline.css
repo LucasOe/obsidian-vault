@@ -4,6 +4,10 @@ body {
 	--bases-table-header-color: var(--text-normal);
 }
 
+body:not(.mobile-stable).is-mobile {
+	--tab-radius: 0;
+}
+
 /* RGB colors don't inherit from colors by default */
 body.theme-dark.css-settings-manager {
 	--color-red-rgb: 225, 109, 118;

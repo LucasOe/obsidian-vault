@@ -6,13 +6,13 @@
   "textFontFamily": "Roboto,Inter",
   "interfaceFontFamily": "Roboto,Inter",
   "enabledCssSnippets": [
-    "better-command-palette",
-    "cssclasses",
-    "excalidraw",
+    "pretty-properties",
     "base-callouts",
     "baseline",
+    "better-command-palette",
     "callouts",
-    "pretty-properties"
+    "cssclasses",
+    "excalidraw"
   ],
   "accentColor": "",
   "showViewHeader": true,
