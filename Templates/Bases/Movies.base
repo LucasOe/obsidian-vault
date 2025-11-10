@@ -41,8 +41,8 @@ views:
       note.status-movie: 130
       file.name: 470
       note.year: 65
-      note.director: 290
-      note.lists: 999
+      note.director: 200
+      note.lists: 395
   - type: table
     name: Completed
     filters:
@@ -64,5 +64,5 @@ views:
       file.name: 470
       note.year: 65
       note.director: 200
-      note.lists: 310
+      note.lists: 255
       note.date: 140

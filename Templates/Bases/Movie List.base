@@ -51,9 +51,9 @@ views:
         direction: ASC
     limit: 100
     columnSize:
-      file.name: 955
+      file.name: 975
       formula.entries_total: 85
-      formula.progress: 300
+      formula.progress: 200
   - type: table
     name: Entries
     filters:
@@ -77,4 +77,4 @@ views:
       note.status-movie: 130
       file.name: 320
       note.year: 65
-      note.director: 9999
+      note.director: 745

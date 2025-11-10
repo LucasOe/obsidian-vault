@@ -50,11 +50,11 @@ views:
       - formula.progress
     columnSize:
       note.status-tv: 130
-      file.name: 320
+      file.name: 390
       note.year: 65
-      formula.lists: 450
+      formula.lists: 345
       formula.next: 130
-      formula.progress: 300
+      formula.progress: 200
   - type: table
     name: To Watch
     filters:
@@ -74,9 +74,9 @@ views:
     limit: 10
     columnSize:
       note.status-tv: 130
-      file.name: 320
+      file.name: 390
       note.year: 65
-      formula.lists: 999
+      formula.lists: 675
   - type: table
     name: Completed
     filters:
@@ -94,7 +94,7 @@ views:
     limit: 100
     columnSize:
       note.status-tv: 130
-      file.name: 320
+      file.name: 390
       note.year: 65
-      formula.lists: 660
+      formula.lists: 535
       note.date: 140

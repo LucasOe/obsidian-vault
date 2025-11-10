@@ -31,16 +31,6 @@ properties:
     displayName: Progress
 views:
   - type: table
-    name: List
-    filters:
-      and:
-        - file.hasTag("tv-series-list")
-    order:
-      - file.name
-    limit: 100
-    columnSize:
-      file.name: 730
-  - type: table
     name: Entries
     filters:
       and:
@@ -48,9 +38,6 @@ views:
         - or:
             - lists.contains(this.file.name)
             - director.contains(this.file.name)
-    groupBy:
-      property: status-tv
-      direction: DESC
     order:
       - status-tv
       - file.name
@@ -60,11 +47,11 @@ views:
       - formula.progress
     sort:
       - property: year
-        direction: DESC
+        direction: ASC
     columnSize:
       note.status-tv: 130
       file.name: 320
       note.year: 65
-      formula.spacer: 450
+      formula.spacer: 415
       formula.next: 130
-      formula.progress: 300
+      formula.progress: 200

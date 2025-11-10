@@ -57,9 +57,9 @@ views:
     limit: 100
     columnSize:
       file.name: 450
-      note.author: 505
+      note.author: 525
       formula.entries_total: 85
-      formula.progress: 300
+      formula.progress: 200
   - type: table
     name: Entries
     filters:
@@ -68,9 +68,6 @@ views:
         - or:
             - lists.contains(this.file.name)
             - author.contains(this.file.name)
-    groupBy:
-      property: status-book
-      direction: DESC
     order:
       - entry
       - status-book
@@ -84,8 +81,8 @@ views:
       - property: year
         direction: ASC
     columnSize:
-      note.status-book: 150
-      file.name: 300
+      note.status-book: 130
+      file.name: 320
       note.year: 65
-      note.author: 300
-      note.format: 300
+      note.author: 330
+      note.format: 330

@@ -40,8 +40,8 @@ views:
       file.name: 320
       note.author: 220
       note.year: 65
-      note.format: 220
-      note.lists: 999
+      note.format: 120
+      note.lists: 405
   - type: table
     name: To Read
     filters:
@@ -64,8 +64,8 @@ views:
       file.name: 320
       note.author: 220
       note.year: 65
-      note.format: 220
-      note.lists: 360
+      note.format: 120
+      note.lists: 405
   - type: table
     name: Completed
     filters:
@@ -90,8 +90,8 @@ views:
       file.name: 320
       note.author: 220
       note.year: 65
-      note.format: 220
-      note.lists: 220
+      note.format: 120
+      note.lists: 265
       note.date: 140
   - type: table
     name: Dropped
@@ -110,5 +110,5 @@ views:
       file.name: 320
       note.author: 220
       note.year: 65
-      note.format: 220
-      note.lists: 360
+      note.format: 120
+      note.lists: 405
