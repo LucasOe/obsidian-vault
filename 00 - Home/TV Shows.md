@@ -8,10 +8,10 @@ cssclasses:
 icon: lucide-tv
 ---
 
-> [!tv|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
+> [!play|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]
 
-> [!film|purple]+ [[TV Shows Gallery.base#To Watch (Next Season)|Watch Next]]
+> [!dices|purple]+ [[TV Shows Gallery.base#To Watch (Next Season)|Watch Next]]
 > ![[TV Shows.base#To Watch]]
 
 > [!list|blue]+ [[TV Shows Gallery.base#Completed|Watch History]]

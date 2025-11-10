@@ -8,7 +8,7 @@ cssclasses:
 icon: lucide-clapperboard
 ---
 
-> [!clapperboard|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
+> [!dices|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]
 
 > [!library|purple]- Lists

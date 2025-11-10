@@ -10,9 +10,9 @@
     "base-callouts",
     "baseline",
     "better-command-palette",
-    "callouts",
     "cssclasses",
-    "excalidraw"
+    "excalidraw",
+    "callouts"
   ],
   "accentColor": "",
   "showViewHeader": true,

@@ -8,10 +8,10 @@ cssclasses:
 icon: lucide-book
 ---
 
-> [!book|green]+ [[Books Gallery.base#Reading|Currently Reading]]
+> [!play|green]+ [[Books Gallery.base#Reading|Currently Reading]]
 > ![[Books.base#Reading]]
 
-> [!book|yellow]+ [[Books Gallery.base#To Read|Read Next]]
+> [!dices|yellow]+ [[Books Gallery.base#To Read|Read Next]]
 > ![[Books.base#To Read]]
 
 > [!library|purple]- Series
