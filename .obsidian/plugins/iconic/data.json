@@ -60,9 +60,6 @@
     "author": {
       "icon": "lucide-user-pen"
     },
-    "status-book": {
-      "icon": "lucide-check-circle-2"
-    },
     "date": {
       "icon": "lucide-calendar"
     },
@@ -71,6 +68,12 @@
     },
     "entry": {
       "icon": "lucide-hash"
+    },
+    "eps-total": {
+      "icon": "lucide-binary"
+    },
+    "eps-watched": {
+      "icon": "lucide-binary"
     },
     "format": {
       "icon": "lucide-book"
@@ -84,23 +87,20 @@
     "lists": {
       "icon": "links-going-out"
     },
-    "status-movie": {
-      "icon": "lucide-check-circle-2"
-    },
     "offset": {
       "icon": "lucide-arrow-down-10"
     },
     "pages": {
       "icon": "lucide-file"
     },
-    "eps-total": {
-      "icon": "lucide-binary"
+    "status-book": {
+      "icon": "lucide-check-circle-2"
+    },
+    "status-movie": {
+      "icon": "lucide-check-circle-2"
     },
     "status-tv": {
       "icon": "lucide-check-circle-2"
-    },
-    "eps-watched": {
-      "icon": "lucide-binary"
     },
     "year": {
       "icon": "lucide-calendar"
