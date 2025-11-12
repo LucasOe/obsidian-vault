@@ -1,13 +1,12 @@
 /* Excalidraw overwrites these variables
- * https://minimal.guide/plugins/style-settings
- */
-.theme-dark {
-	--theme-bg1: var(--background-primary, var(--color-base-10));
-	--theme-bg2: var(--background-secondary, var(--color-base-00));
-	--theme-bg3: var(--interactive-hover, var(--color-base-20));
-	--theme-tx1: var(--text-normal, var(--text-normal));
-	--theme-tx2: var(--text-muted, var(--text-muted));
-	--theme-ui1: var(--divider-color, var(--color-base-20));
+ * https://minimal.guide/plugins/style-settings */
+.theme-light, .theme-dark {
+	--theme-bg1: var(--background-primary);
+	--theme-bg2: var(--background-secondary);
+	--theme-bg3: var(--interactive-hover);
+	--theme-tx1: var(--text-normal);
+	--theme-tx2: var(--text-muted);
+	--theme-ui1: var(--divider-color);
 	--theme-ax1: var(--color-accent);
 	--theme-ax2: var(--color-accent);
 	--theme-ax3: var(--color-accent);
@@ -82,7 +81,6 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 	border: 1px solid var(--background-modifier-border-hover);
 	
 	.context-menu-item {
-		padding: 6px 8px;
 		border-radius: var(--radius-s);
 		
 		&:hover {

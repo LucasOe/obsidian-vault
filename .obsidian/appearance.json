@@ -12,7 +12,8 @@
     "better-command-palette",
     "cssclasses",
     "excalidraw",
-    "callouts"
+    "callouts",
+    "prompt-callouts"
   ],
   "accentColor": "",
   "showViewHeader": true,

@@ -1,15 +1,11 @@
-/* Tweaks and adjustments for the Baseline theme */
-body {
-	--callout-padding: 8px;
-	--bases-table-header-color: var(--text-normal);
-}
-
-body:not(.mobile-stable).is-mobile {
-	--tab-radius: 0;
-}
-
-/* RGB colors don't inherit from colors by default */
-body.theme-dark.css-settings-manager {
+/* Tweaks and adjustments for the Baseline theme
+   https://github.com/aaaaalexis/obsidian-baseline/blob/main/src/app/style-settings.scss
+   https://github.com/aaaaalexis/obsidian-baseline/blob/main/src/color-schemes/atom.scss */
+body.theme-light, body.theme-dark {
+	--accent-h: 220;
+  	--accent-s: 86%;
+  	--accent-l: 65%;
+	
 	--color-red-rgb: 225, 109, 118;
 	--color-orange-rgb: 209, 154, 102;
 	--color-yellow-rgb: 229, 192, 123;
@@ -18,6 +14,31 @@ body.theme-dark.css-settings-manager {
 	--color-blue-rgb: 98, 175, 239;
 	--color-purple-rgb: 198, 120, 222;
 	--color-pink-rgb: 225, 109, 118;
+
+	--background-primary: #282C34;
+	--background-primary-alt: #31363F;
+	--background-secondary: #21252C;
+	--background-secondary-alt: #ff0000;
+	--interactive-normal: #323842;
+	--interactive-hover: #404754;
+	--background-modifier-hover: #65718440;
+	--background-modifier-active-hover: #404754;
+	--background-modifier-border: #2C313C;
+	--background-modifier-border-hover: #404754;
+	--background-modifier-border-focus: #404754;
+
+	--divider-color: #2C313C;
+
+	--text-normal: #d8dae1;
+	--text-muted: #898f9d;
+	--text-faint: #5d6370;
+	
+	--callout-padding: 8px;
+	--bases-table-header-color: var(--text-normal);
+}
+
+body:not(.mobile-stable).is-mobile {
+	--tab-radius: 0;
 }
 
 /* Fix height shift on focus */

@@ -4717,9 +4717,9 @@
 .callout[data-callout="usb"] {
     --callout-icon: lucide-usb;
 }
-.callout[data-callout="user"] {
+/* .callout[data-callout="user"] {
     --callout-icon: lucide-user;
-}
+} */
 .callout[data-callout="user-check"] {
     --callout-icon: lucide-user-check;
 }
