@@ -3,7 +3,7 @@ cssclasses:
   - max
   - hide-metadata
 folder: Objects/TV Show Lists
-icon: lucide-tv
+icon: LiTv
 tags:
   - tv-series-list
 ---

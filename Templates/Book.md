@@ -6,7 +6,7 @@ folder: Objects/Books
 format:
   - Paperback
 genres:
-icon: lucide-book
+icon: LiBook
 isbn:
 language:
 lists:

@@ -1,11 +1,11 @@
 ---
 cssclasses:
   - max
+  - hide-metadata
 folder: Objects/People/Authors
-icon: lucide-user-pen
+icon: LiUserPen
 tags:
-  - book-list
-  - person
+  - person/author
 ---
 
 > [!book] Entries

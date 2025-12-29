@@ -5,9 +5,8 @@ cssclasses:
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
-icon: lucide-tv
+icon: LiTv
 ---
-
 > [!play|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]
 

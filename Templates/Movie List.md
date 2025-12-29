@@ -3,7 +3,7 @@ cssclasses:
   - max
   - hide-metadata
 folder: Objects/Movie Lists
-icon: lucide-clapperboard
+icon: LiClapperboard
 tags:
   - movie-list
 ---

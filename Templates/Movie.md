@@ -4,7 +4,7 @@ date:
 director:
 folder: Objects/Movies
 genres:
-icon: lucide-clapperboard
+icon: LiClapperboard
 lists:
 status-movie:
 tags:

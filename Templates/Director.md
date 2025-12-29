@@ -3,10 +3,9 @@ cssclasses:
   - max
   - hide-metadata
 folder: Objects/People/Directors
-icon: lucide-user
+icon: LiUser
 tags:
-  - tv-series-list
-  - person
+  - person/director
 ---
 
 > [!movie] Entries

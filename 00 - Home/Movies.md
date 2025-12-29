@@ -5,9 +5,8 @@ cssclasses:
   - hide-metadata
   - callout-title-color
   - hide-bases-toolbar
-icon: lucide-clapperboard
+icon: LiClapperboard
 ---
-
 > [!dices|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]
 

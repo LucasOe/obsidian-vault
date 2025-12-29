@@ -5,7 +5,7 @@ eps-total:
 eps-watched:
 folder: Objects/TV Shows
 genres:
-icon: lucide-tv
+icon: LiTv
 lists:
 status-tv:
 tags:

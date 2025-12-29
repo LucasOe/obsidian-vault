@@ -3,7 +3,7 @@ author: []
 cssclasses:
   - max
 folder: Objects/Book Lists
-icon: lucide-book
+icon: LiBook
 tags:
   - book-list
 ---
