@@ -6,47 +6,47 @@
   --nav-item-color: var(--folder-color);
   --nav-item-color-hover: var(--folder-color);
   --nav-item-color-active: var(--folder-color);
-  
+
   .tree-item-self .tree-item-icon {
 	  --icon-color: var(--folder-color);
   }
-  
+
   /* Colors */
   &:nth-child(11n + 2),
   &[data-foldernumber="1"] {
 	  --folder-color: #E06C75;
   }
-  
+
   &:nth-child(11n + 3),
   &[data-foldernumber="2"] {
 	  --folder-color: #D19A66;
   }
-  
+
   &:nth-child(11n + 4),
   &[data-foldernumber="3"] {
 	  --folder-color: #E5C07B;
   }
-  
+
   &:nth-child(11n + 5),
   &[data-foldernumber="4"] {
 	  --folder-color: #98C379;
   }
-  
+
   &:nth-child(11n + 6),
   &[data-foldernumber="5"] {
 	  --folder-color: #56B6C2;
   }
-  
+
   &:nth-child(11n + 7),
   &[data-foldernumber="6"] {
 	  --folder-color: #61AFEF;
   }
-  
+
   &:nth-child(11n + 8),
   &[data-foldernumber="7"] {
 	  --folder-color: #C678DD;
   }
-  
+
   &:nth-child(11n + 9),
   &[data-foldernumber="8"] {
 	  --folder-color: #C678DD;

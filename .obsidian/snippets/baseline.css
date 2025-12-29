@@ -5,7 +5,7 @@ body.theme-light, body.theme-dark {
 	--accent-h: 220;
   	--accent-s: 86%;
   	--accent-l: 65%;
-	
+
 	--color-red-rgb: 225, 109, 118;
 	--color-orange-rgb: 209, 154, 102;
 	--color-yellow-rgb: 229, 192, 123;
@@ -32,7 +32,7 @@ body.theme-light, body.theme-dark {
 	--text-normal: #d8dae1;
 	--text-muted: #898f9d;
 	--text-faint: #5d6370;
-	
+
 	--callout-padding: 8px;
 	--list-indent-editing: 0;
 	--bases-table-header-color: var(--text-normal);

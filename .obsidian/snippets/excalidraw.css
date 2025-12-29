@@ -14,7 +14,7 @@
 
 .excalidraw {
 	--space-factor: 0.35em;
-	
+
 	--button-active-bg: var(--theme-bg3) !important;
 	--button-gray-2: var(--theme-ax1) !important;
 	--button-hover-bg: var(--theme-bg3) !important;
@@ -79,18 +79,18 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 	padding: var(--size-2-3);
 	border-radius: var(--radius-m);
 	border: 1px solid var(--background-modifier-border-hover);
-	
+
 	.context-menu-item {
 		border-radius: var(--radius-s);
-		
+
 		&:hover {
 			background-color: var(--background-modifier-hover);
 		}
-		
+
 		& .context-menu-item__shortcut {
 			padding: 0; /* fix shortcut height */
 			border: unset;
-			background: transparent;			
+			background: transparent;
 			/* Hide context menu shortcut if empty.
 			   Only useful if background isn't transparent .*/
 			&:empty {
@@ -98,7 +98,7 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 			}
 		}
 	}
-	
+
 	/* Menu Seperator */
 	.context-menu-item-separator {
 		height: 0 !important;
@@ -111,7 +111,7 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 .excalidraw .ToolIcon__icon {
 	height: var(--default-button-size) !important;
 	width: var(--default-button-size) !important;
-	
+
 	/* Fix sidebar button border radius */
 	border-radius: var(--border-radius-lg) !important;
 }
@@ -128,19 +128,19 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 }
 
 /* Fix toolbar style */
-.excalidraw .App-bottom-bar {	
+.excalidraw .App-bottom-bar {
 	width: unset; /* Fix mobile width */
 	margin: 10px !important; /* consistent margin */
-	
+
 	.ToolIcon_type_button {
 		height: 100%;
 	}
-	
+
 	/* Hide buttons if empty */
 	.ToolIcon__icon:empty {
 		display: none;
 	}
-	
+
 	.reset-zoom-button {
 		padding: 0 0 !important;
 		width: unset !important;
@@ -154,19 +154,19 @@ body:not(.mobile-stable).is-phone .mobile-toolbar {
 /* Fix Dropdown menu width */
 .excalidraw .dropdown-menu {
 	width: unset;
-	
+
 	.dropdown-menu-item {
 		padding: 6px 8px;
 		&:hover {
 			background-color: var(--button-hover-bg) !important;
 		}
 	}
-	
+
 	div[data-testid="canvas-background-label"] {
 		padding: 0px 8px;
 		margin-bottom: 0.25em !important;
 	}
-	
+
 	.color-picker-container {
 		/* Hide separator */
 		& > div:nth-child(2) {

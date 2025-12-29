@@ -28,7 +28,7 @@
 	--bases-table-border-color: var(--background-modifier-border);
 	--table-border-color: var(--background-modifier-border);
 	--bases-cards-group-padding: var(--size-4-2);
-	
+
 	background-color: var(--background-primary);
 }
 .bases-cards-item {

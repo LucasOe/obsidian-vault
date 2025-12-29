@@ -19,7 +19,7 @@
 .hide-bases-toolbar {
     .bases-toolbar-item {
         display: none;
-        
+
         &.bases-toolbar-views-menu, &.bases-toolbar-result-count, &.bases-toolbar-new-item-menu {
             display: block;
         }
