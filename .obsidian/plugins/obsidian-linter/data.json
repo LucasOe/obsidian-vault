@@ -103,7 +103,7 @@
       "punctuation-to-remove": ".,;:!。，；：！"
     },
     "footnote-after-punctuation": {
-      "enabled": true
+      "enabled": false
     },
     "move-footnotes-to-the-bottom": {
       "enabled": false
@@ -118,18 +118,18 @@
       "skip-words-with-multiple-capitals": false
     },
     "blockquote-style": {
-      "enabled": true,
+      "enabled": false,
       "style": "space"
     },
     "convert-bullet-list-markers": {
-      "enabled": true
+      "enabled": false
     },
     "default-language-for-code-fences": {
       "enabled": false,
       "default-language": ""
     },
     "emphasis-style": {
-      "enabled": true,
+      "enabled": false,
       "style": "underscore"
     },
     "no-bare-urls": {
@@ -137,34 +137,34 @@
       "no-bare-uris": false
     },
     "ordered-list-style": {
-      "enabled": true,
+      "enabled": false,
       "number-style": "ascending",
       "list-end-style": "."
     },
     "proper-ellipsis": {
-      "enabled": true
+      "enabled": false
     },
     "quote-style": {
-      "enabled": true,
+      "enabled": false,
       "single-quote-enabled": true,
       "single-quote-style": "‘’",
       "double-quote-enabled": true,
       "double-quote-style": "“”"
     },
     "remove-consecutive-list-markers": {
-      "enabled": true
+      "enabled": false
     },
     "remove-empty-list-markers": {
-      "enabled": true
+      "enabled": false
     },
     "remove-hyphenated-line-breaks": {
-      "enabled": true
+      "enabled": false
     },
     "remove-multiple-spaces": {
-      "enabled": true
+      "enabled": false
     },
     "strong-style": {
-      "enabled": true,
+      "enabled": false,
       "style": "asterisk"
     },
     "two-spaces-between-lines-with-content": {
@@ -172,39 +172,39 @@
       "line-break-indicator": "  "
     },
     "unordered-list-style": {
-      "enabled": true,
+      "enabled": false,
       "list-style": "-"
     },
     "compact-yaml": {
-      "enabled": true,
+      "enabled": false,
       "inner-new-lines": false
     },
     "consecutive-blank-lines": {
-      "enabled": true
+      "enabled": false
     },
     "convert-spaces-to-tabs": {
       "enabled": false,
       "tabsize": ""
     },
     "empty-line-around-blockquotes": {
-      "enabled": true
+      "enabled": false
     },
     "empty-line-around-code-fences": {
-      "enabled": true
+      "enabled": false
     },
     "empty-line-around-math-blocks": {
-      "enabled": true
+      "enabled": false
     },
     "empty-line-around-tables": {
-      "enabled": true
+      "enabled": false
     },
     "heading-blank-lines": {
-      "enabled": true,
+      "enabled": false,
       "bottom": true,
       "empty-line-after-yaml": false
     },
     "line-break-at-document-end": {
-      "enabled": true
+      "enabled": false
     },
     "move-math-block-indicators-to-their-own-line": {
       "enabled": false
@@ -213,10 +213,10 @@
       "enabled": false
     },
     "remove-empty-lines-between-list-markers-and-checklists": {
-      "enabled": true
+      "enabled": false
     },
     "remove-link-spacing": {
-      "enabled": true
+      "enabled": false
     },
     "remove-space-around-characters": {
       "enabled": false,
@@ -231,43 +231,43 @@
       "characters-to-remove-space-after": "¿¡‘“(["
     },
     "space-after-list-markers": {
-      "enabled": true
+      "enabled": false
     },
     "space-between-chinese-japanese-or-korean-and-english-or-numbers": {
-      "enabled": true,
+      "enabled": false,
       "english-symbols-punctuation-before": "-+;:'\"°%$)]",
       "english-symbols-punctuation-after": "-+'\"([¥$"
     },
     "trailing-spaces": {
-      "enabled": true,
+      "enabled": false,
       "two-space-line-break": false
     },
     "add-blockquote-indentation-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "prevent-double-checklist-indicator-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "prevent-double-list-item-indicator-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "proper-ellipsis-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-hyphens-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-leading-or-trailing-whitespace-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-leftover-footnotes-from-quote-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "remove-multiple-blank-lines-on-paste": {
-      "enabled": true
+      "enabled": false
     },
     "empty-line-around-horizontal-rules": {
-      "enabled": true
+      "enabled": false
     }
   },
   "lintOnSave": true,

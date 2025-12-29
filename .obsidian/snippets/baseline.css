@@ -34,6 +34,7 @@ body.theme-light, body.theme-dark {
 	--text-faint: #5d6370;
 	
 	--callout-padding: 8px;
+	--list-indent-editing: 0;
 	--bases-table-header-color: var(--text-normal);
 }
 

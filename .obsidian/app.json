@@ -9,7 +9,7 @@
   "showLineNumber": false,
   "showIndentGuide": false,
   "showInlineTitle": true,
-  "useTab": true,
+  "useTab": false,
   "smartIndentList": true,
   "pdfExportSettings": {
     "includeName": true,

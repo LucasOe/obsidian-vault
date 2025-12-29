@@ -95,7 +95,6 @@
   "baseline-style@@color-scheme-light": "default-light",
   "baseline-style@@color-scheme-dark": "default-dark",
   "baseline-style@@layout-style": "layout-baseline",
-  "baseline-style@@input-style": "input-baseline",
   "baseline-style@@status-bar-style": "status-bar-baseline",
   "baseline-style@@labeled-tabs": "labeled-tabs-off",
   "baseline-style@@stacked-nav-off": true,
@@ -121,13 +120,11 @@
   "baseline-style@@metadata-style": "metadata-block",
   "baseline-style@@metadata-heading-off": true,
   "baseline-style@@metadata-add-property-off": false,
-  "baseline-style@@mobile-style": "mobile-immersive",
   "baseline-style@@mode-switcher-off": false,
   "baseline-style@@colorful-headings-text": false,
   "baseline-style@@metadata-link-nowrap": true,
   "baseline-style@@inline-title-block-off": true,
   "baseline-style@@tabs-style": "tabs-default",
-  "baseline-style@@nav-header-align": "Start",
   "baseline-style@@colorful-frame": false,
   "baseline-style@@nav-indentation-guide-width": "0px"
 }

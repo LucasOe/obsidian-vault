@@ -1,19 +1,19 @@
 [
   "table-editor-obsidian",
   "auto-template-trigger",
-  "template-folder",
-  "cursor-goaway",
-  "obsidian-excalidraw-plugin",
+  "obsidian-better-command-palette",
+  "obsidian-view-mode-by-frontmatter",
   "highlightr-plugin",
+  "iconic",
   "languagetool",
   "obsidian-linter",
+  "markdownlint",
+  "notebook-navigator",
   "url-into-selection",
+  "pretty-properties",
   "obsidian-reading-time",
   "obsidian-smart-typography",
-  "obsidian-view-mode-by-frontmatter",
   "obsidian-style-settings",
-  "pretty-properties",
-  "obsidian-better-command-palette",
-  "notebook-navigator",
-  "iconic"
+  "template-folder",
+  "obsidian-excalidraw-plugin"
 ]

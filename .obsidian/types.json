@@ -47,6 +47,7 @@
     "status-movie": "multitext",
     "status-tv": "multitext",
     "tags": "tags",
-    "year": "number"
+    "year": "number",
+    "excalidraw-export-internal-links": "checkbox"
   }
 }
