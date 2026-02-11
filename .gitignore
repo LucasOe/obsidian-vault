@@ -5,6 +5,8 @@
 !.obsidian
 !.obsidian/**
 !.gitignore
+!.editorconfig
+!.markdownlint.json
 # Objects
 !Objects
 !objects/*

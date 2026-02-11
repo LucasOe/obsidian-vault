@@ -6,6 +6,7 @@ cssclasses:
   - callout-title-color
   - hide-bases-toolbar
 icon: LiBook
+description: Book Database
 ---
 > [!play|green]+ [[Books Gallery.base#Reading|Currently Reading]]
 > ![[Books.base#Reading]]

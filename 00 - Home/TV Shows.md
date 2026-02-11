@@ -6,6 +6,7 @@ cssclasses:
   - callout-title-color
   - hide-bases-toolbar
 icon: LiTv
+description: TV Show Database
 ---
 > [!play|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]

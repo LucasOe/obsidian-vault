@@ -1,4 +1,5 @@
 {
   "showDiagnostics": false,
-  "lintOnSave": true
+  "lintOnSave": true,
+  "configFilePath": ""
 }

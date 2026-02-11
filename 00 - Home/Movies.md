@@ -6,6 +6,7 @@ cssclasses:
   - callout-title-color
   - hide-bases-toolbar
 icon: LiClapperboard
+description: Movie Database
 ---
 > [!dices|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]

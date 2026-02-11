@@ -1,3 +1,5 @@
 {
-  "folderSpecificTemplates": []
+  "folderSpecificTemplates": [],
+  "disablePrompt": false,
+  "debug": false
 }
