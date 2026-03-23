@@ -4,9 +4,10 @@ filters:
     - not:
         - file.inFolder("Templates")
 formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   random: random()
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-book:
     displayName: Status
@@ -30,14 +31,14 @@ views:
         - note["status-book"].contains("Reading")
     order:
       - status-book
-      - file.name
+      - formula.title_or_name
       - author
       - year
       - format
       - lists
     columnSize:
       note.status-book: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.author: 220
       note.year: 65
       note.format: 120
@@ -50,7 +51,7 @@ views:
         - note["status-book"].isEmpty()
     order:
       - status-book
-      - file.name
+      - formula.title_or_name
       - author
       - year
       - format
@@ -61,7 +62,7 @@ views:
     limit: 10
     columnSize:
       note.status-book: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.author: 220
       note.year: 65
       note.format: 120
@@ -73,7 +74,7 @@ views:
         - note["status-book"].contains("Completed")
     order:
       - status-book
-      - file.name
+      - formula.title_or_name
       - author
       - year
       - format
@@ -87,7 +88,7 @@ views:
     limit: 100
     columnSize:
       note.status-book: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.author: 220
       note.year: 65
       note.format: 120
@@ -100,14 +101,14 @@ views:
         - note["status-book"].contains("Dropped")
     order:
       - status-book
-      - file.name
+      - formula.title_or_name
       - author
       - year
       - format
       - lists
     columnSize:
       note.status-book: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.author: 220
       note.year: 65
       note.format: 120

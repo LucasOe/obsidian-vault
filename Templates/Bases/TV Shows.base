@@ -4,12 +4,13 @@ filters:
     - not:
         - file.inFolder("Templates")
 formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   random: random()
   progress_percent: note["eps-watched"] / note["eps-total"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
-  lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
+  lists: if(note["lists"].isEmpty(), list(file.asLink(title_or_name + " ↺")), note["lists"])
   backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
   backlink_first: formula.backlinks.filter(value.properties["status-tv"].contains("To Watch")).sort()[0]
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
@@ -17,7 +18,7 @@ formulas:
   next_offset: note["eps-watched"] + note["offset"] + 1
   next: if(note["eps-watched"] < note["eps-total"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-tv:
     displayName: Status
@@ -43,14 +44,14 @@ views:
         - note["status-tv"].contains("Watching")
     order:
       - status-tv
-      - file.name
+      - formula.title_or_name
       - year
       - formula.lists
       - formula.next
       - formula.progress
     columnSize:
       note.status-tv: 130
-      file.name: 390
+      formula.title_or_name: 390
       note.year: 65
       formula.lists: 345
       formula.next: 130
@@ -65,7 +66,7 @@ views:
             - note["status-tv"].isEmpty()
     order:
       - status-tv
-      - file.name
+      - formula.title_or_name
       - year
       - formula.lists
     sort:
@@ -74,7 +75,7 @@ views:
     limit: 10
     columnSize:
       note.status-tv: 130
-      file.name: 390
+      formula.title_or_name: 390
       note.year: 65
       formula.lists: 675
   - type: table
@@ -84,7 +85,7 @@ views:
         - note["status-tv"].contains("Completed")
     order:
       - status-tv
-      - file.name
+      - formula.title_or_name
       - year
       - formula.lists
       - date
@@ -94,7 +95,7 @@ views:
     limit: 100
     columnSize:
       note.status-tv: 130
-      file.name: 390
+      formula.title_or_name: 390
       note.year: 65
       formula.lists: 535
       note.date: 140

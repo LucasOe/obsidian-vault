@@ -2,6 +2,7 @@ filters:
   not:
     - file.inFolder("Templates")
 formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   spacer: ""
   progress_percent: note["eps-watched"] / note["eps-total"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
@@ -11,7 +12,7 @@ formulas:
   next_offset: note["eps-watched"] + note["offset"] + 1
   next: if(note["eps-watched"] < note["eps-total"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-tv:
     displayName: Status
@@ -36,11 +37,11 @@ views:
       and:
         - file.hasTag("tv-series")
         - or:
-            - lists.contains(this.file.name)
-            - director.contains(this.file.name)
+            - lists.contains(this.title_or_name)
+            - director.contains(this.title_or_name)
     order:
       - status-tv
-      - file.name
+      - formula.title_or_name
       - year
       - formula.spacer
       - formula.next
@@ -50,7 +51,7 @@ views:
         direction: ASC
     columnSize:
       note.status-tv: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.year: 65
       formula.spacer: 415
       formula.next: 130

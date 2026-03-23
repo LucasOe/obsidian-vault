@@ -2,6 +2,7 @@ filters:
   not:
     - file.inFolder("Templates")
 formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   entries: file.backlinks.map(value.asFile()).filter(value.hasLink(file) && value.hasTag("movie")).unique()
   entries_total: formula.entries.length
   entries_completed: formula.entries.filter(value.properties["status-movie"].contains("Completed")).length
@@ -11,7 +12,7 @@ formulas:
   progress: formula.progress_bar + " " + formula.progress_text
   is_finished: formula.progress_percent >= 1.0
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-movie:
     displayName: Status
@@ -41,17 +42,17 @@ views:
       property: formula.is_finished
       direction: ASC
     order:
-      - file.name
+      - formula.title_or_name
       - formula.entries_total
       - formula.progress
     sort:
       - property: formula.progress_percent
         direction: DESC
-      - property: file.name
+      - property: formula.title_or_name
         direction: ASC
     limit: 100
     columnSize:
-      file.name: 975
+      formula.title_or_name: 975
       formula.entries_total: 85
       formula.progress: 200
   - type: table
@@ -60,14 +61,14 @@ views:
       and:
         - file.hasTag("movie")
         - or:
-            - lists.contains(this.file.name)
-            - director.contains(this.file.name)
+            - lists.contains(this.title_or_name)
+            - director.contains(this.title_or_name)
     groupBy:
       property: status-movie
       direction: DESC
     order:
       - status-movie
-      - file.name
+      - formula.title_or_name
       - year
       - director
     sort:
@@ -75,6 +76,6 @@ views:
         direction: DESC
     columnSize:
       note.status-movie: 130
-      file.name: 320
+      formula.title_or_name: 320
       note.year: 65
       note.director: 745

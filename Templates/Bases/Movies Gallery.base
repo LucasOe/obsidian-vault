@@ -3,8 +3,10 @@ filters:
     - file.hasTag("movie")
     - not:
         - file.inFolder("Templates")
+formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-movie:
     displayName: Status
@@ -26,7 +28,7 @@ views:
         - note["status-movie"].contains("To Watch")
         - note["status-movie"].isEmpty()
     order:
-      - file.name
+      - formula.title_or_name
       - year
     image: cover
     imageAspectRatio: 1.55
@@ -37,7 +39,7 @@ views:
       or:
         - note["status-movie"].contains("Completed")
     order:
-      - file.name
+      - formula.title_or_name
       - year
     sort:
       - property: date

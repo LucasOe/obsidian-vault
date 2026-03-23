@@ -4,16 +4,17 @@ filters:
     - not:
         - file.inFolder("Templates")
 formulas:
+  title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   progress_percent: note["eps-watched"] / note["eps-total"]
   progress_bar: ("●●●●●●●●●●".slice(0, formula.progress_percent * 10)) + ("○○○○○○○○○○".slice(0, 10 - (formula.progress_percent * 10).floor()))
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
-  lists: if(note["lists"].isEmpty(), list(file.asLink(file.name + " ↺")), note["lists"])
+  lists: if(note["lists"].isEmpty(), list(file.asLink(title_or_name + " ↺")), note["lists"])
   backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
   backlink_first: formula.backlinks.filter(value.properties["status-tv"].contains("To Watch")).sort()[0]
   is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
 properties:
-  file.name:
+  formula.title_or_name:
     displayName: Name
   note.status-tv:
     displayName: Status
@@ -34,7 +35,7 @@ views:
       or:
         - note["status-tv"].contains("Watching")
     order:
-      - file.name
+      - formula.title_or_name
       - year
       - formula.progress
     image: cover
@@ -49,7 +50,7 @@ views:
             - note["status-tv"].contains("To Watch")
             - note["status-tv"].isEmpty()
     order:
-      - file.name
+      - formula.title_or_name
       - year
     sort:
       - property: date
@@ -64,7 +65,7 @@ views:
         - note["status-tv"].contains("To Watch")
         - note["status-tv"].isEmpty()
     order:
-      - file.name
+      - formula.title_or_name
       - year
     sort:
       - property: date
@@ -78,7 +79,7 @@ views:
       or:
         - note["status-tv"].contains("Completed")
     order:
-      - file.name
+      - formula.title_or_name
       - year
     sort:
       - property: date
