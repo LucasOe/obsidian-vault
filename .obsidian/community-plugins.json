@@ -11,5 +11,6 @@
   "obsidian-style-settings",
   "template-folder",
   "obsidian-excalidraw-plugin",
-  "markdownlint"
+  "markdownlint",
+  "obsidian-front-matter-title-plugin"
 ]
