@@ -7,7 +7,8 @@
     "banner",
     "entry",
     "offset",
-    "icon"
+    "icon",
+    "title"
   ],
   "propertyPillColors": {
     "To Watch": {
@@ -76,6 +77,7 @@
   "showColorSettings": false,
   "showTextColorSettings": false,
   "showHiddenSettings": false,
+  "showHiddenEmptySettings": false,
   "iconsFolder": "",
   "iconSize": 70,
   "iconTopMargin": 70,
@@ -98,7 +100,7 @@
   "enableCustomDateFormat": false,
   "enableCustomDateFormatInBases": false,
   "enableRelativeDateColors": false,
-  "settingsTab": "PROPERTY_SETTINGS",
+  "settingsTab": "ICONS",
   "enableTaskNotesCount": false,
   "allTNTasksCount": "tn_tasks",
   "completedTNTasksCount": "tn_tasks_completed",
@@ -154,6 +156,8 @@
   "hideMetadataContainerIfAllPropertiesHiddenReading": true,
   "autoHidePropertiesWithBanner": false,
   "hideCoverCollapsed": false,
+  "hidePropTitle": false,
+  "hideAddPropertyButton": false,
   "enableBases": true,
   "mySetting": "default",
   "styleFormulaTags": true
