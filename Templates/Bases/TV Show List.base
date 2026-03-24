@@ -37,8 +37,8 @@ views:
       and:
         - file.hasTag("tv-series")
         - or:
-            - lists.contains(this.title_or_name)
-            - director.contains(this.title_or_name)
+            - lists.contains(this.file.name)
+            - director.contains(this.file.name)
     order:
       - status-tv
       - formula.title_or_name

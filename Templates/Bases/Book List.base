@@ -67,8 +67,8 @@ views:
       and:
         - file.hasTag("book")
         - or:
-            - lists.contains(this.title_or_name)
-            - author.contains(this.title_or_name)
+            - lists.contains(this.file.name)
+            - author.contains(this.file.name)
     order:
       - entry
       - status-book
@@ -82,6 +82,7 @@ views:
       - property: year
         direction: ASC
     columnSize:
+      note.entry: 85
       note.status-book: 130
       formula.title_or_name: 320
       note.year: 65

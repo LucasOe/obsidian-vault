@@ -61,8 +61,8 @@ views:
       and:
         - file.hasTag("movie")
         - or:
-            - lists.contains(this.title_or_name)
-            - director.contains(this.title_or_name)
+            - lists.contains(this.file.name)
+            - director.contains(this.file.name)
     groupBy:
       property: status-movie
       direction: DESC
