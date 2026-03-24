@@ -1,0 +1,7 @@
+body .prompt .prompt-input-container:has(.prompt-input:placeholder-shown) + .prompt-results .suggestion-item {
+	display: none;
+}
+
+body .prompt {
+	min-height: var(--prompt-max-height);
+}

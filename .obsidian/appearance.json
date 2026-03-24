@@ -13,7 +13,8 @@
     "callouts",
     "prompt-callouts",
     "base-callouts",
-    "pretty-properties"
+    "pretty-properties",
+    "quick-switcher"
   ],
   "accentColor": "",
   "showViewHeader": true,
