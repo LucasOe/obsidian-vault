@@ -1,7 +1,9 @@
+/* Disable results from history */
 body .prompt .prompt-input-container:has(.prompt-input:placeholder-shown) + .prompt-results .suggestion-item {
 	display: none;
 }
 
+/* Always make prompt the full height */
 body .prompt {
 	min-height: var(--prompt-max-height);
 }

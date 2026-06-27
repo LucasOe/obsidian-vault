@@ -7,7 +7,6 @@
   "interfaceFontFamily": "Roboto,Inter",
   "enabledCssSnippets": [
     "baseline",
-    "better-command-palette",
     "cssclasses",
     "excalidraw",
     "callouts",

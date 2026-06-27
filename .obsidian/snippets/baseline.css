@@ -35,25 +35,12 @@ body.theme-light, body.theme-dark {
 
 	--callout-padding: 8px;
 	--list-indent-editing: 0;
-	--bases-table-header-color: var(--text-normal);
-}
 
-body:not(.mobile-stable).is-mobile {
-	--tab-radius: 0;
+	--bases-table-cell-shadow-focus: transparent;
+	--bases-table-header-color: var(--text-normal);
 }
 
 /* Fix height shift on focus */
 .bases-td:focus-within {
-	box-shadow: unset;
 	height: var(--bases-table-row-height);
-}
-
-/* Cupertine Properties */
-body.metadata-cupertino .metadata-container .metadata-property {
-	min-height: unset;
-}
-body.metadata-cupertino .metadata-container .metadata-property-key,
-body.metadata-cupertino .metadata-container .metadata-show-source-button,
-body.metadata-cupertino .metadata-container .metadata-add-button {
-	padding: 4px 16px;
 }

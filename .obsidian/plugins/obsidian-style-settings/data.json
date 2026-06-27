@@ -116,11 +116,14 @@
   "baseline-style@@row-lines": false,
   "baseline-style@@metadata-style": "metadata-block",
   "baseline-style@@metadata-heading-off": true,
-  "baseline-style@@metadata-add-property-off": false,
   "baseline-style@@mode-switcher-off": false,
   "baseline-style@@colorful-headings-text": false,
   "baseline-style@@colorful-frame": false,
   "baseline-style@@nav-indentation-guide-width": "0px",
   "baseline-style@@plugins-grid-off": false,
-  "baseline-style@@tab-stacked-spine-order": "row"
+  "baseline-style@@tab-stacked-spine-order": "row",
+  "baseline-style@@focus-view": false,
+  "baseline-style@@tab-top-left-style": "tab-top-left-icon",
+  "baseline-style@@tab-left-style": "tab-left-icon",
+  "baseline-style@@tab-right-style": "tab-right-icon"
 }

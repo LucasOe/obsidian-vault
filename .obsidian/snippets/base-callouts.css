@@ -1,7 +1,19 @@
 /* Makes Bases inside of callouts wider and fixes some styling issues */
-
 .callout:not([data-callout=note-toolbar]) .callout-content:has(.bases-embed) {
 	margin-left: 0px;
+}
+
+/* Change background and border colors */
+.bases-thead,
+.bases-tbody,
+.bases-embed .bases-view {
+	--bases-table-header-background: var(--background-primary);
+	--bases-table-header-background-hover: var(--background-primary);
+	--bases-embed-border-color: var(--background-modifier-border);
+	--bases-table-border-color: var(--background-modifier-border);
+	--table-border-color: var(--background-modifier-border);
+
+	background-color: var(--background-primary);
 }
 
 /* Undo Baseline border */
@@ -11,28 +23,13 @@
 	border-radius: 0;
 }
 
-/* Add border */
+/* Add border radius */
 .workspace-leaf-content[data-type="markdown"] .block-language-base .bases-view,
 .workspace-leaf-content[data-type="markdown"] .bases-embed .bases-view {
 	border: var(--bases-embed-border-width) solid var(--bases-embed-border-color);
     border-radius: var(--bases-embed-border-radius);
     padding: var(--bases-embed-padding);
     overflow-x: auto;
-}
-
-/* Change background and border */
-.bases-thead, .bases-tbody, .bases-embed .bases-view {
-	--bases-table-header-background: var(--background-primary);
-	--bases-table-header-background-hover: var(--background-primary);
-	--bases-embed-border-color: var(--background-modifier-border);
-	--bases-table-border-color: var(--background-modifier-border);
-	--table-border-color: var(--background-modifier-border);
-	--bases-cards-group-padding: var(--size-4-2);
-
-	background-color: var(--background-primary);
-}
-.bases-cards-item {
-	background-color: var(--background-secondary);
 }
 
 /* Hide Header Sort icon */
@@ -49,13 +46,4 @@
 /* Disable Header interaction */
 .bases-thead {
 	pointer-events: none;
-}
-
-/* Fix row height */
-.multi-select-container {
-	padding: 0px 8px;
-	padding-bottom: 1px; /* offset for the border */
-}
-.metadata-property-value .multi-select-pill {
-	line-height: 21px;
 }
