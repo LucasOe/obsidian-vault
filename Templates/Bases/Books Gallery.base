@@ -5,6 +5,9 @@ filters:
         - file.inFolder("Templates")
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).sort()
+  backlink_first: formula.backlinks.filter(value.properties["status-book"].contains("To Read")).sort()[0]
+  is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
 properties:
   formula.title_or_name:
     displayName: Name
@@ -37,9 +40,11 @@ views:
   - type: cards
     name: To Read
     filters:
-      or:
-        - note["status-book"].contains("To Read")
-        - note["status-book"].isEmpty()
+      and:
+        - formula.is_first
+        - or:
+          - note["status-book"].contains("To Read")
+          - note["status-book"].isEmpty()
     order:
       - formula.title_or_name
       - author
