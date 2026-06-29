@@ -1,5 +1,7 @@
-/* Disable results from history */
-body .prompt .prompt-input-container:has(.prompt-input:placeholder-shown) + .prompt-results .suggestion-item {
+/* Hide command and file history */
+body .prompt .prompt-input-container:has(.prompt-input[placeholder="Select a command to add..."]:placeholder-shown) + .prompt-results .suggestion-item,
+body .prompt .prompt-input-container:has(.prompt-input[placeholder="Type to search notes by title or file name..."]:placeholder-shown) + .prompt-results .suggestion-item
+{
 	display: none;
 }
 
