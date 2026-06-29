@@ -4,13 +4,3 @@ body {
 	--pill-background-hover: var(--interactive-hover);
 	--pill-color-remove: var(--text-normal);
 }
-
-.multi-select-pill {
-	max-width: unset;
-}
-.multi-select-pill-remove-button {
-	cursor: pointer;
-}
-.metadata-input-longtext {
-	padding: 0;
-}
