@@ -1,26 +1,25 @@
 {
-  "obsidian-better-command-palette:open-better-commmand-palette-tag-search": [
+  "workspace:undo-close-pane": [],
+  "insert-template": [
     {
       "modifiers": [
         "Mod",
         "Shift"
       ],
-      "key": "O"
+      "key": "T"
     }
   ],
-  "obsidian-better-command-palette:open-better-commmand-palette-file-search": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "P"
-    }
-  ],
-  "obsidian-better-command-palette:open-better-commmand-palette": [
+  "command-palette:open": [
     {
       "modifiers": [
         "Mod"
+      ],
+      "key": "P"
+    },
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
       ],
       "key": "P"
     }
@@ -30,22 +29,14 @@
       "modifiers": [
         "Mod"
       ],
-      "key": "P"
-    },
-    {
-      "modifiers": [
-        "Mod"
-      ],
       "key": "O"
-    }
-  ],
-  "command-palette:open": [
+    },
     {
       "modifiers": [
         "Mod",
         "Shift"
       ],
-      "key": "P"
+      "key": "O"
     }
   ]
 }
