@@ -2,7 +2,7 @@ filters:
   and:
     - file.hasTag("book")
     - not:
-      - file.inFolder("Templates")
+        - file.inFolder("Templates")
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   random: random()
@@ -52,8 +52,8 @@ views:
       and:
         - formula.is_first
         - or:
-          - note["status-book"].contains("To Read")
-          - note["status-book"].isEmpty()
+            - note["status-book"].contains("To Read")
+            - note["status-book"].isEmpty()
     order:
       - status-book
       - formula.title_or_name

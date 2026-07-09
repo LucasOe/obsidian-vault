@@ -43,8 +43,8 @@ views:
       and:
         - formula.is_first
         - or:
-          - note["status-book"].contains("To Read")
-          - note["status-book"].isEmpty()
+            - note["status-book"].contains("To Read")
+            - note["status-book"].isEmpty()
     order:
       - formula.title_or_name
       - author

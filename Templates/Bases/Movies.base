@@ -2,7 +2,7 @@ filters:
   and:
     - file.hasTag("movie")
     - not:
-      - file.inFolder("Templates")
+        - file.inFolder("Templates")
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   random: random()
