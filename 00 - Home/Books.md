@@ -17,5 +17,5 @@ description: Book Database
 > [!library|purple]- Series
 > ![[Book List.base#Series]]
 
-> [!list]+ [[Books Gallery.base#Completed|Reading History]]
+> [!list]- [[Books Gallery.base#Completed|Reading History]]
 > ![[Books.base#Completed]]

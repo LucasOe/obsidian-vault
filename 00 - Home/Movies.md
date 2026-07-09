@@ -14,5 +14,5 @@ description: Movie Database
 > [!library|purple]- Lists
 > ![[Movie List.base#Lists]]
 
-> [!list|blue]+ [[Movies Gallery.base#Completed|Watch History]]
+> [!list|blue]- [[Movies Gallery.base#Completed|Watch History]]
 > ![[Movies.base#Completed]]

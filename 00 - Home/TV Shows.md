@@ -14,5 +14,5 @@ description: TV Show Database
 > [!dices|purple]+ [[TV Shows Gallery.base#To Watch (Next Season)|Watch Next]]
 > ![[TV Shows.base#To Watch]]
 
-> [!list|blue]+ [[TV Shows Gallery.base#Completed|Watch History]]
+> [!list|blue]- [[TV Shows Gallery.base#Completed|Watch History]]
 > ![[TV Shows.base#Completed]]
