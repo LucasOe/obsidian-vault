@@ -13,7 +13,7 @@ formulas:
   lists: if(note["lists"].isEmpty(), list(file.asLink(title_or_name + " ↺")), note["lists"])
   backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).unique().sort()
   backlink_first: formula.backlinks.filter(value.properties["status-tv"].contains("To Watch")).sort()[0]
-  is_next_in_series: (file == formula.backlink_first) || (note["lists"].isEmpty())
+  is_next_in_series: (file == formula.backlink_first) || (formula.backlinks.isEmpty())
   next_normal: note["eps-watched"] + 1
   next_offset: note["eps-watched"] + note["offset"] + 1
   next: if(note["eps-watched"] < note["eps-total"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))

@@ -9,7 +9,7 @@ formulas:
   backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).unique()
   backlink_first: formula.backlinks.filter(value.properties["status-book"].contains("To Read"))[0]
   series_not_reading: formula.backlinks.filter(value.properties["status-book"].contains("Reading")).isEmpty()
-  is_next_in_series: (file == formula.backlink_first) || (note["lists"].isEmpty())
+  is_next_in_series: (file == formula.backlink_first) || (formula.backlinks.isEmpty())
 properties:
   formula.title_or_name:
     displayName: Name
