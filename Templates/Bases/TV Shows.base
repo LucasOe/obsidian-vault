@@ -11,9 +11,9 @@ formulas:
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
   lists: if(note["lists"].isEmpty(), list(file.asLink(title_or_name + " ↺")), note["lists"])
-  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).sort()
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("tv-series")).unique().sort()
   backlink_first: formula.backlinks.filter(value.properties["status-tv"].contains("To Watch")).sort()[0]
-  is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
+  is_next_in_series: (file == formula.backlink_first) || (note["lists"].isEmpty())
   next_normal: note["eps-watched"] + 1
   next_offset: note["eps-watched"] + note["offset"] + 1
   next: if(note["eps-watched"] < note["eps-total"], if(note["offset"],  formula.next_normal + " ↓" + formula.next_offset, formula.next_normal + ""))
@@ -60,7 +60,7 @@ views:
     name: To Watch
     filters:
       and:
-        - formula.is_first
+        - formula.is_next_in_series
         - or:
             - note["status-tv"].contains("To Watch")
             - note["status-tv"].isEmpty()

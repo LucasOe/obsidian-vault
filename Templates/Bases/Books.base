@@ -6,9 +6,10 @@ filters:
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
   random: random()
-  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).sort()
-  backlink_first: formula.backlinks.filter(value.properties["status-book"].contains("To Read")).sort()[0]
-  is_first: (file == formula.backlink_first) || (note["lists"].isEmpty())
+  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).unique()
+  backlink_first: formula.backlinks.filter(value.properties["status-book"].contains("To Read"))[0]
+  series_not_reading: formula.backlinks.filter(value.properties["status-book"].contains("Reading")).isEmpty()
+  is_next_in_series: (file == formula.backlink_first) || (note["lists"].isEmpty())
 properties:
   formula.title_or_name:
     displayName: Name
@@ -50,7 +51,8 @@ views:
     name: To Read
     filters:
       and:
-        - formula.is_first
+        - formula.is_next_in_series
+        - formula.series_not_reading
         - or:
             - note["status-book"].contains("To Read")
             - note["status-book"].isEmpty()
