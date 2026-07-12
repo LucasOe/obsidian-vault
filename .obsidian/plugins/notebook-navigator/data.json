@@ -98,7 +98,8 @@
           "transitionStyle": "hue",
           "scope": "root"
         }
-      }
+      },
+      "descendantExcludedFolders": []
     }
   ],
   "vaultTitle": "navigation",
@@ -162,7 +163,7 @@
   "colorIconOnly": false,
   "dateFormat": "MMM D, YYYY",
   "timeFormat": "h:mm a",
-  "calendarTemplateFolder": "",
+  "calendarTemplateFolder": "Templates",
   "confirmBeforeDelete": true,
   "deleteAttachments": "ask",
   "moveFileConflicts": "ask",
@@ -220,7 +221,7 @@
   "scopePropertiesToCurrentContext": false,
   "defaultListMode": "compact",
   "includeDescendantNotes": true,
-  "defaultFolderSort": "modified-desc",
+  "defaultFolderSort": "title-asc",
   "propertySortKey": "",
   "propertySortSecondary": "title",
   "manualSortPropertyKey": "sort_index",
@@ -315,6 +316,7 @@
   "calendarMonthHeadingFormat": "full",
   "calendarHighlightToday": true,
   "calendarShowFeatureImage": true,
+  "calendarShowTasks": true,
   "calendarMonthHighlights": {},
   "calendarShowWeekNumber": false,
   "calendarShowQuarter": false,
@@ -595,7 +597,7 @@
     "#404040",
     "#404040"
   ],
-  "lastShownVersion": "3.2.2",
+  "lastShownVersion": "3.2.3",
   "rootFolderOrder": [],
   "rootTagOrder": [],
   "rootPropertyOrder": [],
