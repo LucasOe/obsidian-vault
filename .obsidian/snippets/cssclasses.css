@@ -1,14 +1,13 @@
-.view-content .max {
-    --file-line-width: 100%;
-}
+/* Baseline Features: https://github.com/aaaaalexis/obsidian-baseline#features */
 
-.hide-metadata {
+/* Hide Frontmatter Properties in document */
+.frontmatter-hide {
     --metadata-display-editing: none;
     --metadata-display-reading: none;
 }
 
-/* changes the color of internal links in callout titles to the callout color */
-.callout-title-color {
+/* Changes the color of internal links in callout titles to the callout color */
+.callouts-title-color {
     .callout-title-inner > .internal-link {
         color: var(--callout-title-color);
         text-decoration-line: underline;
@@ -16,11 +15,11 @@
 }
 
 /* Hides the toolbar items Sort, Filter and Properties for Bases */
-.hide-bases-toolbar {
+.bases-reading {
     .bases-toolbar-item {
         display: none;
 
-        &.bases-toolbar-views-menu, &.bases-toolbar-result-count, &.bases-toolbar-new-item-menu {
+        &.bases-toolbar-views-menu, &.bases-toolbar-result-count, &.bases-toolbar-search, &.bases-toolbar-new-item-menu {
             display: block;
         }
     }

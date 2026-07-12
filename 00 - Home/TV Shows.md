@@ -2,9 +2,9 @@
 color: "#e5c07b"
 cssclasses:
   - max
-  - hide-metadata
-  - callout-title-color
-  - hide-bases-toolbar
+  - frontmatter-hide
+  - callouts-title-color
+  - bases-reading
 icon: LiTv
 description: TV Show Database
 ---

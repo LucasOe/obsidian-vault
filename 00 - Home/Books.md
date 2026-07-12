@@ -2,11 +2,11 @@
 color: "#e06c75"
 cssclasses:
   - max
-  - hide-metadata
-  - callout-title-color
-  - hide-bases-toolbar
-icon: LiBook
+  - frontmatter-hide
+  - callouts-title-color
+  - bases-reading
 description: Book Database
+icon: LiBook
 ---
 > [!play|green]+ [[Books Gallery.base#Reading|Currently Reading]]
 > ![[Books.base#Reading]]
