@@ -25,7 +25,7 @@
   "livePreview": true,
   "autoPairBrackets": false,
   "focusNewTab": true,
-  "mobileQuickRibbonItem": "graph:Open graph view",
+  "mobileQuickRibbonItem": "",
   "mobileToolbarCommands": [
     "editor:toggle-bold",
     "editor:toggle-italics",
@@ -35,7 +35,7 @@
     "editor:cycle-list-checklist",
     "editor:insert-link"
   ],
-  "mobilePullAction": "editor:save-file",
+  "mobilePullAction": "",
   "defaultViewMode": "source",
   "userIgnoreFilters": [
     "00 - Home/",

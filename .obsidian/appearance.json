@@ -20,5 +20,6 @@
   "nativeMenus": false,
   "baseFontSize": 18,
   "showRibbon": false,
-  "theme": "system"
+  "theme": "system",
+  "floatingNavigation": true
 }
