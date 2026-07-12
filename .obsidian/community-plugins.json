@@ -1,6 +1,5 @@
 [
   "table-editor-obsidian",
-  "obsidian-view-mode-by-frontmatter",
   "highlightr-plugin",
   "iconic",
   "obsidian-linter",
@@ -10,5 +9,5 @@
   "obsidian-style-settings",
   "template-folder",
   "markdownlint",
-  "property-over-file-name"
+  "obsidian-front-matter-title-plugin"
 ]
