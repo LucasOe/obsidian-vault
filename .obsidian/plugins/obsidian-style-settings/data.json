@@ -125,5 +125,6 @@
   "baseline-style@@focus-view": false,
   "baseline-style@@tab-top-left-style": "tab-top-left-icon",
   "baseline-style@@tab-left-style": "tab-left-icon",
-  "baseline-style@@tab-right-style": "tab-right-icon"
+  "baseline-style@@tab-right-style": "tab-right-icon",
+  "baseline-style@@block-width-off": false
 }
