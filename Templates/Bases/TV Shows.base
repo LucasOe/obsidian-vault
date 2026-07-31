@@ -42,6 +42,7 @@ views:
     filters:
       or:
         - note["status-tv"].contains("Watching")
+        - note["status-tv"].isEmpty()
     order:
       - status-tv
       - formula.title_or_name
@@ -63,7 +64,6 @@ views:
         - formula.is_next_in_series
         - or:
             - note["status-tv"].contains("To Watch")
-            - note["status-tv"].isEmpty()
     order:
       - status-tv
       - formula.title_or_name

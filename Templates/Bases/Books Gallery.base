@@ -5,8 +5,8 @@ filters:
         - file.inFolder("Templates")
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
-  backlinks: note["lists"].map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).unique()
-  backlinks_sorted: formula.backlinks.map([(if(value.hasProperty("entry"), value.properties.entry, if(value.hasProperty("year"), value.properties.year, value.name))), value]).sort().map(value[1])
+  backlinks: if(note["lists"].isEmpty(), note["author"],  note["lists"]).map(value.asFile().backlinks.map(value.asFile())).flat().filter(value.hasTag("book")).unique()
+  backlinks_sorted: formula.backlinks.map([(if(!value.properties.entry.isEmpty(), value.properties.entry, if(value.hasProperty("year"), value.properties.year, value.name))), value]).sort().map(value[1])
   backlink_first: formula.backlinks_sorted.filter(value.properties["status-book"].contains("To Read"))[0]
   series_not_reading: formula.backlinks.filter(value.properties["status-book"].contains("Reading")).isEmpty()
   is_next_in_series: (file == formula.backlink_first) || (formula.backlinks.isEmpty())
@@ -33,6 +33,7 @@ views:
     filters:
       or:
         - note["status-book"].contains("Reading")
+        - note["status-book"].isEmpty()
     order:
       - formula.title_or_name
       - author
@@ -47,7 +48,6 @@ views:
         - formula.series_not_reading
         - or:
             - note["status-book"].contains("To Read")
-            - note["status-book"].isEmpty()
     order:
       - formula.title_or_name
       - author
