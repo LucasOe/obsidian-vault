@@ -8,6 +8,7 @@ cssclasses:
 description: Book Database
 icon: LiBook
 ---
+
 > [!play|green]+ [[Books Gallery.base#Reading|Currently Reading]]
 > ![[Books.base#Reading]]
 

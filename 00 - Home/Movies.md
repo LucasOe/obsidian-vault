@@ -8,6 +8,7 @@ cssclasses:
 description: Movie Database
 icon: LiClapperboard
 ---
+
 > [!dices|green]+ [[Movies Gallery.base#To Watch|Watch Next]]
 > ![[Movies.base#To Watch]]
 

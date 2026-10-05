@@ -8,6 +8,7 @@ cssclasses:
 description: TV Show Database
 icon: LiTv
 ---
+
 > [!play|green]+ [[TV Shows Gallery.base#Watching|Currently Watching]]
 > ![[TV Shows.base#Watching]]
 
