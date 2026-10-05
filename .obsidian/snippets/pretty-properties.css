@@ -4,3 +4,11 @@ body {
 	--pill-background-hover: var(--interactive-hover);
 	--pill-color-remove: var(--text-normal);
 }
+
+/* Style all list elements like pills */
+.value-list-element {
+	background-color: var(--pill-background);
+	padding: 0 var(--pill-padding-x);
+	border: var(--pill-border-width) solid var(--pill-border-color);
+	border-radius: var(--pill-radius);
+}
