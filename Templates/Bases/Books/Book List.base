@@ -3,6 +3,7 @@ filters:
     - file.inFolder("Templates")
 formulas:
   title_or_name: if(note["title"], link(file.name, note["title"]), link(file.name))
+  author: note["author"]
   entries: file.backlinks.map(value.asFile()).filter(value.hasLink(file) && value.hasTag("book")).unique()
   entries_total: formula.entries.length
   entries_completed: formula.entries.filter(value.properties["status-book"].contains("Completed")).length
@@ -11,9 +12,12 @@ formulas:
   progress_text: if(formula.progress_percent > 0, (formula.progress_percent * 100).round(), "0") + "%"
   progress: formula.progress_bar + " " + formula.progress_text
   is_finished: formula.progress_percent >= 1.0
+  other_lists: note["lists"].filter(value.asFile() != this.file)
 properties:
   formula.title_or_name:
     displayName: Name
+  formula.author:
+    displayName: Author
   note.entry:
     displayName: Entry
   note.status-book:
@@ -36,6 +40,8 @@ properties:
     displayName: Progress
   formula.is_finished:
     displayName: Finished
+  formula.other_lists:
+    displayName: Series
 views:
   - type: table
     name: Series
@@ -47,7 +53,7 @@ views:
       direction: ASC
     order:
       - formula.title_or_name
-      - author
+      - formula.author
       - formula.entries_total
       - formula.progress
     sort:
@@ -58,7 +64,7 @@ views:
     limit: 100
     columnSize:
       formula.title_or_name: 450
-      note.author: 525
+      formula.author: 525
       formula.entries_total: 85
       formula.progress: 200
   - type: table
@@ -74,7 +80,7 @@ views:
       - status-book
       - formula.title_or_name
       - year
-      - author
+      - formula.other_lists
       - format
     sort:
       - property: entry
@@ -82,9 +88,9 @@ views:
       - property: year
         direction: ASC
     columnSize:
-      note.entry: 85
+      note.entry: 65
       note.status-book: 130
       formula.title_or_name: 320
       note.year: 65
-      note.author: 330
-      note.format: 330
+      formula.other_lists: 430
+      note.format: 235
