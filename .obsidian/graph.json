@@ -8,17 +8,59 @@
   "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "tag:#person  ",
+      "query": "[\"status-book\":\"To Read\"]",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 15637403
       }
     },
     {
-      "query": "tag:#book  ",
+      "query": "[\"status-book\":\"Dropped\"]",
+      "color": {
+        "a": 1,
+        "rgb": 15637403
+      }
+    },
+    {
+      "query": "[\"status-book\":\"Completed\"]",
       "color": {
         "a": 1,
         "rgb": 14701138
+      }
+    },
+    {
+      "query": "[\"status-movie\":\"To Watch\"]",
+      "color": {
+        "a": 1,
+        "rgb": 14151848
+      }
+    },
+    {
+      "query": "[\"status-movie\":\"Completed\"]",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    },
+    {
+      "query": "[\"status-tv\":\"To Watch\"]",
+      "color": {
+        "a": 1,
+        "rgb": 12249561
+      }
+    },
+    {
+      "query": "[\"status-tv\":\"Dropped\"]",
+      "color": {
+        "a": 1,
+        "rgb": 12249561
+      }
+    },
+    {
+      "query": "[\"status-tv\":\"Completed\"]",
+      "color": {
+        "a": 1,
+        "rgb": 5431473
       }
     },
     {
@@ -29,13 +71,6 @@
       }
     },
     {
-      "query": "tag:#movie  ",
-      "color": {
-        "a": 1,
-        "rgb": 11657298
-      }
-    },
-    {
       "query": "tag:#movie-list  ",
       "color": {
         "a": 1,
@@ -43,17 +78,17 @@
       }
     },
     {
-      "query": "tag:#tv-series  ",
-      "color": {
-        "a": 1,
-        "rgb": 5431473
-      }
-    },
-    {
       "query": "tag:#tv-series-list  ",
       "color": {
         "a": 1,
         "rgb": 5395168
+      }
+    },
+    {
+      "query": "tag:#person  ",
+      "color": {
+        "a": 1,
+        "rgb": 5419488
       }
     }
   ],
@@ -67,6 +102,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 30,
-  "scale": 0.36288736930123094,
-  "close": false
+  "scale": 0.3039777569486149,
+  "close": true
 }
