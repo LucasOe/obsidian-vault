@@ -585,14 +585,14 @@
   },
   "propertyBackgroundColors": {
     "key:format=audiobook": "rgba(var(--color-cyan-rgb), 0.25)",
-    "key:genres=animation": "rgba(var(--color-cyan-rgb), 0.25)"
+    "key:genres=animation": "rgba(var(--color-cyan-rgb), 0.25)",
     "key:status-book=completed": "rgba(var(--color-blue-rgb), 0.25)",
     "key:status-book=reading": "rgba(var(--color-green-rgb), 0.25)",
     "key:status-book=to read": "rgba(var(--color-yellow-rgb), 0.25)",
     "key:status-movie=completed": "rgba(var(--color-blue-rgb), 0.25)",
     "key:status-movie=to watch": "rgba(var(--color-yellow-rgb), 0.25)",
     "key:status-tv=completed": "rgba(var(--color-blue-rgb), 0.25)",
-    "key:status-tv=watching": "rgba(var(--color-green-rgb), 0.25)",
+    "key:status-tv=watching": "rgba(var(--color-green-rgb), 0.25)"
   },
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
